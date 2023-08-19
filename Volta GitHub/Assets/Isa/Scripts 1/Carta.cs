@@ -14,7 +14,8 @@ public class Carta : MonoBehaviour
     {
         if (Input.GetButtonDown("E") && tocando == true)
         {
-            e.SetActive(true);
+            e.SetActive(false);
+            carta.SetActive(true);
             //carta.isTrigger = true;
         }
     }
@@ -22,7 +23,8 @@ public class Carta : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            carta.SetActive(true);
+            carta.SetActive(false);
+            e.SetActive(true);
             tocando = true;
 
         }
