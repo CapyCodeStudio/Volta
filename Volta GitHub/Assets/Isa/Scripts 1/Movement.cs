@@ -53,7 +53,8 @@ public class Movement : MonoBehaviour
 
         // Movimentar o personagem
         characterController.Move(moveDirection * moveSpeed * Time.deltaTime);
-        
+
+       
 
     }
 }
