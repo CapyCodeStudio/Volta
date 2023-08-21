@@ -11,6 +11,7 @@ public class Movement : MonoBehaviour
     private CharacterController characterController;
     private Vector3 moveDirection;
     private Animator animator;
+    public bool fire3;
 
     private void Start()
     {
@@ -57,6 +58,12 @@ public class Movement : MonoBehaviour
         if (Input.GetButtonDown("Fire3"))
         {
             moveSpeed = 10;
+            fire3 = true;
+        }
+        else
+        {
+            moveSpeed = 5;
+            fire3 = false;
         }
 
        
