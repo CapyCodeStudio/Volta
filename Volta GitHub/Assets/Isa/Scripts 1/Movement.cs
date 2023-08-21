@@ -11,7 +11,10 @@ public class Movement : MonoBehaviour
     private CharacterController characterController;
     private Vector3 moveDirection;
     private Animator animator;
-    public bool fire3;
+
+    public float runMultiplier = 2f;
+  
+    private bool isGrounded;
 
     private void Start()
     {
@@ -35,6 +38,7 @@ public class Movement : MonoBehaviour
 
         moveDirection = forward * verticalInput + right * horizontalInput;
 
+       
         // Pular
         if (characterController.isGrounded)
         {
@@ -50,24 +54,18 @@ public class Movement : MonoBehaviour
         }
 
         // Aplicar gravidade
-        moveDirection.y -= 9.81f * Time.deltaTime;
+        moveDirection.y -= 0 * Time.deltaTime;
 
         // Movimentar o personagem
         characterController.Move(moveDirection * moveSpeed * Time.deltaTime);
 
-        if (Input.GetButtonDown("Fire3"))
+        if (Input.GetButton("Fire3")) // Botão de corrida
         {
-            moveSpeed = 10;
-            fire3 = true;
+            moveDirection *= runMultiplier;
         }
-        else
-        {
-            moveSpeed = 5;
-            fire3 = false;
-        }
+        characterController.Move(moveDirection * moveSpeed * Time.deltaTime);
 
-       
-
+    
     }
 }
 
