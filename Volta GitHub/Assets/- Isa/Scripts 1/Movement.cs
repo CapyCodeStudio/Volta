@@ -10,13 +10,12 @@ public class Movement : MonoBehaviour
 
     private CharacterController characterController;
     private Vector3 moveDirection;
+
     private Animator animator;
-    public bool fire3;
 
     private void Start()
     {
         characterController = GetComponent<CharacterController>();
-        animator = GetComponent<Animator>();
     }
 
     private void Update()
@@ -24,6 +23,10 @@ public class Movement : MonoBehaviour
         // Movimentação horizontal e vertical
         float horizontalInput = Input.GetAxis("Horizontal");
         float verticalInput = Input.GetAxis("Vertical");
+        if (Input.GetButtonDown("Vertical"))
+        {
+            animator.SetBool("Walk,", true);
+        }
 
         // Direção de movimento relativa à câmera
         Vector3 forward = cameraTransform.forward;
@@ -41,33 +44,14 @@ public class Movement : MonoBehaviour
             if (Input.GetButtonDown("Jump"))
             {
                 moveDirection.y = jumpForce;
-                animator.SetBool("Jump", true);
-            }
-            else
-            {
-                animator.SetBool("Jump", false);
             }
         }
 
         // Aplicar gravidade
-        moveDirection.y -= 9.81f * Time.deltaTime;
+        moveDirection.y -= 0 * Time.deltaTime;
 
         // Movimentar o personagem
         characterController.Move(moveDirection * moveSpeed * Time.deltaTime);
-
-        if (Input.GetButtonDown("Fire3"))
-        {
-            moveSpeed = 10;
-            fire3 = true;
-        }
-        else
-        {
-            moveSpeed = 5;
-            fire3 = false;
-        }
-
-       
-
     }
-}
 
+}
