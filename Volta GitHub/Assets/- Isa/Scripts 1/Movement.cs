@@ -10,36 +10,22 @@ public class Movement : MonoBehaviour
 
     private CharacterController characterController;
     private Vector3 moveDirection;
+
     private Animator animator;
-
-    public float runMultiplier = 2f;
-
-    private bool isGrounded;
 
     private void Start()
     {
         characterController = GetComponent<CharacterController>();
-        animator = GetComponent<Animator>();
     }
-
 
     private void Update()
     {
-   
         // Movimentação horizontal e vertical
         float horizontalInput = Input.GetAxis("Horizontal");
         float verticalInput = Input.GetAxis("Vertical");
         if (Input.GetButtonDown("Vertical"))
         {
-            animator.SetBool("Walk", true);
-        }
-        else if (Input.GetButtonDown("Horizontal"))
-        {
-            animator.SetBool("Walk", true);
-        }
-        else
-        {
-            animator.SetBool("Walk", false );
+            animator.SetBool("Walk,", true);
         }
 
         // Direção de movimento relativa à câmera
@@ -58,34 +44,14 @@ public class Movement : MonoBehaviour
             if (Input.GetButtonDown("Jump"))
             {
                 moveDirection.y = jumpForce;
-                animator.SetBool("Jump", true);
-            }
-            else
-            {
-                animator.SetBool("Jump", false);
-
             }
         }
 
         // Aplicar gravidade
-        moveDirection.y -= 0 * Time.deltaTime; // Use um valor apropriado para a gravidade
-
-        // Verificar se o jogador está correndo
-        bool isRunning = Input.GetButton("Fire3");
-
-        if (isRunning)
-        {
-            moveDirection *= runMultiplier;
-            animator.SetBool("Run", isRunning);
-        }
+        moveDirection.y -= 0 * Time.deltaTime;
 
         // Movimentar o personagem
         characterController.Move(moveDirection * moveSpeed * Time.deltaTime);
-
-        // Atualizar parâmetros do Animator
-        float moveMagnitude = new Vector2(horizontalInput, verticalInput).sqrMagnitude;
-        animator.SetFloat("Walk", moveMagnitude);
-        animator.SetBool("Run", isRunning);
-
     }
+
 }
