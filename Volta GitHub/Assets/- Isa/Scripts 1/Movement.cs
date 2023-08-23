@@ -10,12 +10,16 @@ public class Movement : MonoBehaviour
 
     private CharacterController characterController;
     private Vector3 moveDirection;
-
     private Animator animator;
+
+    public float runMultiplier = 2f;
+
+    private bool isGrounded;
 
     private void Start()
     {
         characterController = GetComponent<CharacterController>();
+        animator = GetComponent<Animator>();
     }
 
     private void Update()
@@ -23,10 +27,6 @@ public class Movement : MonoBehaviour
         // Movimentação horizontal e vertical
         float horizontalInput = Input.GetAxis("Horizontal");
         float verticalInput = Input.GetAxis("Vertical");
-        if (Input.GetButtonDown("Vertical"))
-        {
-            animator.SetBool("Walk,", true);
-        }
 
         // Direção de movimento relativa à câmera
         Vector3 forward = cameraTransform.forward;
@@ -38,12 +38,18 @@ public class Movement : MonoBehaviour
 
         moveDirection = forward * verticalInput + right * horizontalInput;
 
+
         // Pular
         if (characterController.isGrounded)
         {
             if (Input.GetButtonDown("Jump"))
             {
                 moveDirection.y = jumpForce;
+                animator.SetBool("Jump", true);
+            }
+            else
+            {
+                animator.SetBool("Jump", false);
             }
         }
 
@@ -52,6 +58,15 @@ public class Movement : MonoBehaviour
 
         // Movimentar o personagem
         characterController.Move(moveDirection * moveSpeed * Time.deltaTime);
-    }
 
+        if (Input.GetButton("Fire3")) // Botão de corrida
+        {
+            moveDirection *= runMultiplier;
+            animator.SetBool("Run", true);
+        }
+        characterController.Move(moveDirection * moveSpeed * Time.deltaTime);
+
+
+    }
 }
+    
