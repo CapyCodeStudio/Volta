@@ -16,6 +16,7 @@ public class Carta : MonoBehaviour
         {
             e.SetActive(false);
             carta.SetActive(true);
+            Time.timeScale = 0;
             //carta.isTrigger = true;
         }
     }
@@ -26,6 +27,7 @@ public class Carta : MonoBehaviour
             carta.SetActive(false);
             e.SetActive(true);
             tocando = true;
+            Time.timeScale = 1;
 
         }
 
@@ -35,6 +37,7 @@ public class Carta : MonoBehaviour
         carta.SetActive(false);
         e.SetActive(false);
         tocando = false;
+        Time.timeScale = 1;
         //carta.isTrigger = false;
 
     }
