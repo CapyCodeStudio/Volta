@@ -62,7 +62,31 @@ public class Movement : MonoBehaviour
             maximumSpeed = 10;
         }
 
-        if (Input.GetButtonDown("Horizontal"))
+        if (Input.GetButton("Fire3") && Input.GetButton("A"))
+        {
+            animator.SetBool("WalkL", false);
+            animator.SetBool("RunL", true);
+            maximumSpeed = 20;
+        }
+        else
+        {
+            animator.SetBool("RunL", false);
+            maximumSpeed = 10;
+        }
+
+        if (Input.GetButton("Fire3") && Input.GetButton("D"))
+        {
+            animator.SetBool("WalkR", false);
+            animator.SetBool("RunR", true);
+            maximumSpeed = 20;
+        }
+        else
+        {
+            animator.SetBool("RunR", false);
+            maximumSpeed = 10;
+        }
+
+        if (Input.GetButton("D"))
         {
             animator.SetBool("WalkR", true);
         }
@@ -71,7 +95,7 @@ public class Movement : MonoBehaviour
             animator.SetBool("WalkR", false);
         }
 
-        if (Input.GetButtonUp("Horizontal"))
+        if (Input.GetButton("A"))
         {
             animator.SetBool("WalkL", true);
         }
