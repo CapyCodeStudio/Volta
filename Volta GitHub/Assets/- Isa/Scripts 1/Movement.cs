@@ -5,23 +5,41 @@ using UnityEngine;
 
 public class Movement : MonoBehaviour
 {
-    public Transform cameraTransform;
-    public float moveSpeed = 5.0f;
-    public float jumpForce = 5.0f;
-    public float rotationSpeed = 2.0f;
-    public Animator animator;
+    [SerializeField]
+    private float maximumSpeed;
 
+    [SerializeField]
+    private float rotationSpeed;
+
+    [SerializeField]
+    private float jumpSpeed;
+
+    [SerializeField]
+    private Transform cameraTransform;
+
+    private int moveSpeed = 5;
+
+    private Animator animator;
+    //private Rigidbody body;
     private CharacterController characterController;
-    private Vector3 moveDirection;
 
-    private void Start()
+
+    // Start is called before the first frame update
+    void Start()
     {
+        animator = GetComponent<Animator>();
+        //body = GetComponent<Rigidbody>();
         characterController = GetComponent<CharacterController>();
+
     }
 
-    private void Update()
+    // Update is called once per frame
+    void Update()
     {
-        if (Input.GetButton("Vertical") || Input.GetButton("Horizontal"))
+        float horizontalInput = Input.GetAxis("Horizontal");
+        float verticalInput = Input.GetAxis("Vertical");
+
+        if (Input.GetButton("Vertical"))
         {
             animator.SetBool("Walk", true);
         }
@@ -33,56 +51,59 @@ public class Movement : MonoBehaviour
         if (Input.GetButton("Fire3") && Input.GetButton("Vertical") || Input.GetButton("Fire3") && Input.GetButton("Horizontal"))
         {
             animator.SetBool("Walk", false);
+            animator.SetBool("WalkR", false);
+            animator.SetBool("WalkL", false);
             animator.SetBool("Run", true);
-            moveSpeed = 10;
+            maximumSpeed = 20;
         }
         else
         {
             animator.SetBool("Run", false);
-            moveSpeed = 5;
+            maximumSpeed = 10;
         }
 
-        // Movimentação horizontal e vertical
-        float horizontalInput = Input.GetAxis("Horizontal");
-        float verticalInput = Input.GetAxis("Vertical");
-
-        // Direção de movimento relativa à câmera
-        Vector3 cameraForward = cameraTransform.forward;
-        Vector3 cameraRight = cameraTransform.right;
-        cameraForward.y = 0; // Garantir que o movimento seja horizontal apenas
-        cameraRight.y = 0;
-        Vector3 moveDirection = (cameraForward.normalized * verticalInput + cameraRight.normalized * horizontalInput).normalized;
-
-
-        // Rotação do personagem para a direção de movimento
-        if (moveDirection != Vector3.zero)
+        if (Input.GetButtonDown("Horizontal"))
         {
+            animator.SetBool("WalkR", true);
+        }
+        else
+        {
+            animator.SetBool("WalkR", false);
+        }
+
+        if (Input.GetButtonUp("Horizontal"))
+        {
+            animator.SetBool("WalkL", true);
+        }
+        else
+        {
+            animator.SetBool("WalkL", false);
+        }
+
+        Vector3 cameraForward = Vector3.Scale(cameraTransform.forward, new Vector3(1, 0, 1)).normalized;
+        Vector3 moveDirection = (verticalInput * cameraForward + horizontalInput * cameraTransform.right).normalized;
+
+        if (moveDirection.magnitude > 0.1f)
+        {
+            // Rotação
             Quaternion targetRotation = Quaternion.LookRotation(moveDirection);
-            transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, rotationSpeed * Time.deltaTime);
+            transform.rotation = Quaternion.RotateTowards(transform.rotation, targetRotation, Time.deltaTime * 500);
+
+            // Movimentar o personagem
+            Vector3 move = moveDirection * moveSpeed * Time.deltaTime;
+            transform.position += move;
         }
 
-        moveDirection = cameraForward * verticalInput + cameraRight * horizontalInput;
-
-        // Pular
-        if (characterController.isGrounded)
-        {
-            if (Input.GetButtonDown("Jump"))
-            {
-                moveDirection.y = jumpForce;
-                animator.SetBool("Jump", true);
-            }
-            else
-            {
-                animator.SetBool("Jump", false);
-            }
-        }
-        
-        // Aplicar gravidade
-        moveDirection.y -= 9.81f * Time.deltaTime;
-
-        // Movimentar o personagem
-        characterController.Move(moveDirection * moveSpeed * Time.deltaTime);  
     }
-
+    private void OnApplicationFocus(bool focus)
+    {
+        if (focus)
+        {
+            Cursor.lockState = CursorLockMode.Locked;
+        }
+        else
+        {
+            Cursor.lockState = CursorLockMode.None;
+        }
+    }
 }
-
