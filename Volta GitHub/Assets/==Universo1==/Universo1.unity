@@ -14290,13 +14290,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1253864052}
-  m_LocalRotation: {x: 0.49848056, y: -0.5015148, z: -0.5015147, w: 0.4984807}
-  m_LocalPosition: {x: -0.12481354, y: 0.35946095, z: 0.05378718}
-  m_LocalScale: {x: 0.05569826, y: 0.18547407, z: 0.055698268}
+  m_LocalRotation: {x: -0, y: -0.70710677, z: -0.000000029802319, w: 0.7071068}
+  m_LocalPosition: {x: 1.0500083, y: 0, z: 1.2600101}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 543450651667043722}
-  m_RootOrder: 6
+  m_Father: {fileID: 5003109590930157437}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!1001 &1254896666
 PrefabInstance:
@@ -22732,7 +22732,11 @@ Transform:
   - {fileID: 1443777738}
   - {fileID: 178338268}
   - {fileID: 5003109590930157437}
+<<<<<<< Updated upstream
   - {fileID: 1253864056}
+=======
+  - {fileID: 338113678}
+>>>>>>> Stashed changes
   - {fileID: 947747471}
   - {fileID: 1940968342}
   - {fileID: 338113678}
@@ -23145,7 +23149,7 @@ Transform:
   - {fileID: 8312110969768784079}
   - {fileID: 4683322915291218461}
   m_Father: {fileID: 543450651667043722}
-  m_RootOrder: 10
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 90, y: 180, z: -57.985992}
 --- !u!1 &4320308401366362538
 GameObject:
@@ -23260,6 +23264,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 67221903}
+  - {fileID: 1253864056}
   m_Father: {fileID: 543450651667043722}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
