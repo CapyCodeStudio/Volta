@@ -1482,7 +1482,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 919132149273969380}
   m_LocalRotation: {x: -0, y: 0.72871, z: -0, w: 0.68482244}
-  m_LocalPosition: {x: 160, y: 0, z: 246}
+  m_LocalPosition: {x: 228.4, y: 0, z: 241.8}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2934,6 +2934,7 @@ GameObject:
   - component: {fileID: 5342211998576328897}
   - component: {fileID: 1939950084142862294}
   - component: {fileID: 5883293202485212037}
+  - component: {fileID: 5883293202485212038}
   m_Layer: 0
   m_Name: Plane.001
   m_TagString: Untagged
@@ -2955,6 +2956,22 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 4579454407841743219, guid: 123861f6b53c9394090d8eee0e04707e, type: 3}
+--- !u!54 &5883293202485212038
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5883293202485212036}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &5945774317770999611
 GameObject:
   m_ObjectHideFlags: 0
@@ -3733,7 +3750,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8735187133876896836}
   m_LocalRotation: {x: 0.08263395, y: 0.7233854, z: -0.08792958, w: 0.6798188}
-  m_LocalPosition: {x: 153.00357, y: 7.09, z: 246.27455}
+  m_LocalPosition: {x: 221.40356, y: 7.09, z: 242.07455}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
