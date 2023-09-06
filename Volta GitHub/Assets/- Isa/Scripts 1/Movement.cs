@@ -32,12 +32,15 @@ public class Movement : MonoBehaviour
         animator = GetComponent<Animator>();
         //body = GetComponent<Rigidbody>();
         characterController = GetComponent<CharacterController>();
+        
 
     }
 
     // Update is called once per frame
     void Update()
     {
+       
+
         float horizontalInput = Input.GetAxis("Horizontal");
         float verticalInput = Input.GetAxis("Vertical");
 
@@ -125,11 +128,11 @@ public class Movement : MonoBehaviour
     {
         if (focus)
         {
-            Cursor.lockState = CursorLockMode.Locked;
+            
         }
         else
         {
-            Cursor.lockState = CursorLockMode.None;
+           
         }
     }
 }
