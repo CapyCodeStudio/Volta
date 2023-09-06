@@ -22,12 +22,14 @@ public class Menu : MonoBehaviour
         {
             menuPause.SetActive(true);
             Time.timeScale = 0;
+            Cursor.lockState = CursorLockMode.None;
 
         }
         else if (Input.GetButtonDown("Cancel") && menuPause.activeSelf)
         {
             menuPause.SetActive(false);
             Time.timeScale = 1;
+            Cursor.lockState = CursorLockMode.Locked;
         }
 
     }
