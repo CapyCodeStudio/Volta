@@ -5,8 +5,7 @@ using UnityEngine;
 
 public class Movement : MonoBehaviour
 {
-    public float gravity;
-
+   
     [SerializeField]
     private float maximumSpeed;
 
@@ -22,7 +21,7 @@ public class Movement : MonoBehaviour
     private int moveSpeed = 5;
 
     private Animator animator;
-    //private Rigidbody body;
+    private Rigidbody body;
     private CharacterController characterController;
 
 
@@ -30,17 +29,14 @@ public class Movement : MonoBehaviour
     void Start()
     {
         animator = GetComponent<Animator>();
-        //body = GetComponent<Rigidbody>();
+        body = GetComponent<Rigidbody>();
         characterController = GetComponent<CharacterController>();
-        
-
+       
     }
 
     // Update is called once per frame
     void Update()
     {
-       
-
         float horizontalInput = Input.GetAxis("Horizontal");
         float verticalInput = Input.GetAxis("Vertical");
 
@@ -59,36 +55,36 @@ public class Movement : MonoBehaviour
             animator.SetBool("WalkR", false);
             animator.SetBool("WalkL", false);
             animator.SetBool("Run", true);
-            maximumSpeed = 20;
+            maximumSpeed = 40;
         }
         else
         {
             animator.SetBool("Run", false);
-            maximumSpeed = 10;
+            maximumSpeed = 20;
         }
 
         if (Input.GetButton("Fire3") && Input.GetButton("A"))
         {
             animator.SetBool("WalkL", false);
             animator.SetBool("RunL", true);
-            maximumSpeed = 20;
+            maximumSpeed = 40;
         }
         else
         {
             animator.SetBool("RunL", false);
-            maximumSpeed = 10;
+            maximumSpeed = 20;
         }
 
         if (Input.GetButton("Fire3") && Input.GetButton("D"))
         {
             animator.SetBool("WalkR", false);
             animator.SetBool("RunR", true);
-            maximumSpeed = 20;
+            maximumSpeed = 40;
         }
         else
         {
             animator.SetBool("RunR", false);
-            maximumSpeed = 10;
+            maximumSpeed = 20;
         }
 
         if (Input.GetButton("D"))
@@ -128,11 +124,11 @@ public class Movement : MonoBehaviour
     {
         if (focus)
         {
-            
+            Cursor.lockState = CursorLockMode.Locked;
         }
         else
         {
-           
+            Cursor.lockState = CursorLockMode.None;
         }
     }
 }
