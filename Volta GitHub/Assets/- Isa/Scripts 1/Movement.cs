@@ -49,7 +49,7 @@ public class Movement : MonoBehaviour
             animator.SetBool("Walk", false);
         }
 
-        if (Input.GetButton("Fire3") && Input.GetButton("Vertical") || Input.GetButton("Fire3") && Input.GetButton("Horizontal"))
+        if (Input.GetButton("Fire3") && Input.GetButton("Vertical")/* || Input.GetButton("Fire3") && Input.GetButton("Horizontal")*/)
         {
             animator.SetBool("Walk", false);
             animator.SetBool("WalkR", false);
@@ -63,7 +63,7 @@ public class Movement : MonoBehaviour
             maximumSpeed = 20;
         }
 
-        if (Input.GetButton("Fire3") && Input.GetButton("A"))
+        if (Input.GetButton("Fire3") && Input.GetButton("A") || Input.GetButton("Fire3") && Input.GetButton("Left"))
         {
             animator.SetBool("WalkL", false);
             animator.SetBool("RunL", true);
@@ -75,7 +75,7 @@ public class Movement : MonoBehaviour
             maximumSpeed = 20;
         }
 
-        if (Input.GetButton("Fire3") && Input.GetButton("D"))
+        if (Input.GetButton("Fire3") && Input.GetButton("D") || Input.GetButton("Fire3") && Input.GetButton("Right"))
         {
             animator.SetBool("WalkR", false);
             animator.SetBool("RunR", true);
@@ -87,7 +87,7 @@ public class Movement : MonoBehaviour
             maximumSpeed = 20;
         }
 
-        if (Input.GetButton("D"))
+        if (Input.GetButton("D") || Input.GetButton("Right"))
         {
             animator.SetBool("WalkR", true);
         }
@@ -96,7 +96,7 @@ public class Movement : MonoBehaviour
             animator.SetBool("WalkR", false);
         }
 
-        if (Input.GetButton("A"))
+        if (Input.GetButton("A") || Input.GetButton("Left"))
         {
             animator.SetBool("WalkL", true);
         }
