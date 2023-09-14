@@ -65,6 +65,9 @@ public class Movement : MonoBehaviour
 
         if (Input.GetButton("Fire3") && Input.GetButton("A") || Input.GetButton("Fire3") && Input.GetButton("Left"))
         {
+
+            animator.SetBool("Walk", false);
+            animator.SetBool("WalkR", false);
             animator.SetBool("WalkL", false);
             animator.SetBool("RunL", true);
             maximumSpeed = 40;
@@ -77,6 +80,9 @@ public class Movement : MonoBehaviour
 
         if (Input.GetButton("Fire3") && Input.GetButton("D") || Input.GetButton("Fire3") && Input.GetButton("Right"))
         {
+
+            animator.SetBool("Walk", false);
+            animator.SetBool("WalkL", false);
             animator.SetBool("WalkR", false);
             animator.SetBool("RunR", true);
             maximumSpeed = 40;
