@@ -10,6 +10,9 @@ public class Movement : MonoBehaviour
     private float maximumSpeed;
 
     [SerializeField]
+    private AudioSource passosAudioSource;
+
+    [SerializeField]
     private float rotationSpeed;
 
     [SerializeField]
