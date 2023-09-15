@@ -35,11 +35,22 @@ public class Menu : MonoBehaviour
     }
     public void Jogar()
     {
-        SceneManager.LoadScene(cenaDoJogo);
+        StartCoroutine(LoadScene());
+
+        
     }
     public void SairJogo()
     {
         Application.Quit();
+    }
+    public void PlayGame()
+    {
+        SceneManager.LoadScene(cenaDoJogo);
+    }
+    IEnumerator LoadScene()
+    {
+        yield return new WaitForSeconds(3);
+        SceneManager.LoadScene(cenaDoJogo);
     }
 
 
