@@ -15,8 +15,12 @@ public class Movement : MonoBehaviour
     [SerializeField]
     private float rotationSpeed;
 
-    [SerializeField]
+    /*[SerializeField]
     private float jumpSpeed;
+*/
+    private bool estaNoChao;
+    [SerializeField] private Transform veficadorChao;
+    [SerializeField] private LayerMask cenarioMask;
 
     [SerializeField]
     private Transform cameraTransform;
@@ -43,58 +47,32 @@ public class Movement : MonoBehaviour
         float horizontalInput = Input.GetAxis("Horizontal");
         float verticalInput = Input.GetAxis("Vertical");
 
+        Vector3 cameraForward = Vector3.Scale(cameraTransform.forward, new Vector3(1, 0, 1)).normalized;
+        Vector3 moveDirection = (verticalInput * cameraForward + horizontalInput * cameraTransform.right).normalized;
+
+        if (moveDirection.magnitude > 0.1f)
+        {
+            // Rotação
+            Quaternion targetRotation = Quaternion.LookRotation(moveDirection);
+            transform.rotation = Quaternion.RotateTowards(transform.rotation, targetRotation, Time.deltaTime * 500);
+
+            // Movimentar o personagem
+            Vector3 move = moveDirection * moveSpeed * Time.deltaTime;
+            transform.position += move;
+
+
+        }
         if (Input.GetButton("Vertical"))
         {
             animator.SetBool("Walk", true);
+
         }
         else
         {
             animator.SetBool("Walk", false);
         }
 
-        if (Input.GetButton("Fire3") && Input.GetButton("Vertical")/* || Input.GetButton("Fire3") && Input.GetButton("Horizontal")*/)
-        {
-            animator.SetBool("Walk", false);
-            animator.SetBool("WalkR", false);
-            animator.SetBool("WalkL", false);
-            animator.SetBool("Run", true);
-            maximumSpeed = 40;
-        }
-        else
-        {
-            animator.SetBool("Run", false);
-            maximumSpeed = 20;
-        }
 
-        if (Input.GetButton("Fire3") && Input.GetButton("A") || Input.GetButton("Fire3") && Input.GetButton("Left"))
-        {
-
-            animator.SetBool("Walk", false);
-            animator.SetBool("WalkR", false);
-            animator.SetBool("WalkL", false);
-            animator.SetBool("RunL", true);
-            maximumSpeed = 40;
-        }
-        else
-        {
-            animator.SetBool("RunL", false);
-            maximumSpeed = 20;
-        }
-
-        if (Input.GetButton("Fire3") && Input.GetButton("D") || Input.GetButton("Fire3") && Input.GetButton("Right"))
-        {
-
-            animator.SetBool("Walk", false);
-            animator.SetBool("WalkL", false);
-            animator.SetBool("WalkR", false);
-            animator.SetBool("RunR", true);
-            maximumSpeed = 40;
-        }
-        else
-        {
-            animator.SetBool("RunR", false);
-            maximumSpeed = 20;
-        }
 
         if (Input.GetButton("D") || Input.GetButton("Right"))
         {
@@ -113,22 +91,60 @@ public class Movement : MonoBehaviour
         {
             animator.SetBool("WalkL", false);
         }
-
-        Vector3 cameraForward = Vector3.Scale(cameraTransform.forward, new Vector3(1, 0, 1)).normalized;
-        Vector3 moveDirection = (verticalInput * cameraForward + horizontalInput * cameraTransform.right).normalized;
-
-        if (moveDirection.magnitude > 0.1f)
+        if (Input.GetButton("Fire3") && Input.GetButton("Vertical")/* || Input.GetButton("Fire3") && Input.GetButton("Horizontal")*/)
         {
-            // Rotação
-            Quaternion targetRotation = Quaternion.LookRotation(moveDirection);
-            transform.rotation = Quaternion.RotateTowards(transform.rotation, targetRotation, Time.deltaTime * 500);
+            animator.SetBool("Walk", false);
+            animator.SetBool("WalkR", false);
+            animator.SetBool("WalkL", false);
+            animator.SetBool("Run", true);
+            Vector3 move = moveDirection * maximumSpeed * Time.deltaTime;
+            transform.position += move;
+            
+        }
+        else
+        {
+            animator.SetBool("Run", false);
+            Vector3 move = moveDirection * moveSpeed * Time.deltaTime;
+            transform.position += move;
 
-            // Movimentar o personagem
+        }
+
+        if (Input.GetButton("Fire3") && Input.GetButton("A") || Input.GetButton("Fire3") && Input.GetButton("Left"))
+        {
+
+            animator.SetBool("Walk", false);
+            animator.SetBool("WalkR", false);
+            animator.SetBool("WalkL", false);
+            animator.SetBool("RunL", true);
+            Vector3 move = moveDirection * maximumSpeed * Time.deltaTime;
+            transform.position += move;
+        }
+        else
+        {
+            animator.SetBool("RunL", false);
             Vector3 move = moveDirection * moveSpeed * Time.deltaTime;
             transform.position += move;
         }
 
+        if (Input.GetButton("Fire3") && Input.GetButton("D") || Input.GetButton("Fire3") && Input.GetButton("Right"))
+        {
+
+            animator.SetBool("Walk", false);
+            animator.SetBool("WalkL", false);
+            animator.SetBool("WalkR", false);
+            animator.SetBool("RunR", true);
+            Vector3 move = moveDirection * maximumSpeed * Time.deltaTime;
+            transform.position += move;
+        }
+        else
+        {
+            animator.SetBool("RunR", false);
+            Vector3 move = moveDirection * moveSpeed * Time.deltaTime;
+            transform.position += move;
+        }
+        
     }
+
     private void OnApplicationFocus(bool focus)
     {
         if (focus)
@@ -140,4 +156,6 @@ public class Movement : MonoBehaviour
             Cursor.lockState = CursorLockMode.None;
         }
     }
+
+
 }
