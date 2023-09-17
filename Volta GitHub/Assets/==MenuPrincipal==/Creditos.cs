@@ -4,15 +4,32 @@ using UnityEngine;
 
 public class Creditos : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public GameObject cutscenecreditos;
+
+    private void Start()
     {
         
+        if (cutscenecreditos != null)
+        {
+            cutscenecreditos.SetActive(false);
+        }
     }
 
-    // Update is called once per frame
-    void Update()
+    public void AtivarCutscene()
     {
         
+        if (cutscenecreditos != null)
+        {
+            cutscenecreditos.SetActive(true);
+        }
+    }
+
+    public void DesativarCutscene()
+    {
+        
+        if (cutscenecreditos != null)
+        {
+            cutscenecreditos.SetActive(false);
+        }
     }
 }
