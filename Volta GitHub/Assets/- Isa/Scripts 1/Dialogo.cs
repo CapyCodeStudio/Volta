@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
-
+using System;
 
 public class Dialogo : MonoBehaviour
 {
@@ -14,21 +14,24 @@ public class Dialogo : MonoBehaviour
 
     private void Start()
     {
+
         // Defina as frases do diálogo (substitua pelo seu próprio diálogo)
         sentences = new string[]
         {
-            "Olá, jogador!",
-            "Bem-vindo ao meu jogo.",
-            "Estou feliz que você esteja aqui.",
-            "Vamos começar!"
+            "Durante muito tempo eu não quis aceitar que aquilo realmente aconteceu comigo." 
+            + Environment.NewLine + "Estou feliz que você esteja aqui."
+            
         };
 
         // Inicie o diálogo
         StartCoroutine(StartDialog());
+        
     }
 
     private IEnumerator StartDialog()
     {
+        yield return new WaitForSeconds(6.6f);
+
         foreach (char letter in sentences[currentSentenceIndex])
         {
             dialogText.text += letter;
@@ -53,4 +56,5 @@ public class Dialogo : MonoBehaviour
             Debug.Log("Fim do diálogo");
         }
     }
+
 }
