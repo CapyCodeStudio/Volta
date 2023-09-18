@@ -51,17 +51,17 @@ public class Movement : MonoBehaviour
         float verticalInput = Input.GetAxis("Vertical");
 
         Vector3 cameraForward = Vector3.Scale(cameraTransform.forward, new Vector3(1, 0, 1)).normalized;
-        Vector3 moveDirection = (verticalInput * cameraForward + horizontalInput * cameraTransform.right).normalized;
+        Vector3 SimplemoveDirection = (verticalInput * cameraForward + horizontalInput * cameraTransform.right).normalized;
 
-        if (moveDirection.magnitude > 0.1f)
+        if (SimplemoveDirection.magnitude > 0.1f)
         {
             // Rotação
-            Quaternion targetRotation = Quaternion.LookRotation(moveDirection);
+            Quaternion targetRotation = Quaternion.LookRotation(SimplemoveDirection);
             transform.rotation = Quaternion.RotateTowards(transform.rotation, targetRotation, Time.deltaTime * 500);
 
             // Movimentar o personagem
-            Vector3 move = moveDirection * moveSpeed * Time.deltaTime;
-            transform.position += move;
+            Vector3 SimpleMove = SimplemoveDirection * moveSpeed * Time.deltaTime;
+            transform.position += SimpleMove;
 
 
         }
@@ -146,17 +146,7 @@ public class Movement : MonoBehaviour
              transform.position += move;*/
         }
 
-        estaNoChao = Physics.CheckSphere(veficadorChao.position, 0, cenarioMask);
-        if (Input.GetButtonDown("Jump") && estaNoChao)
-        {
-            velocidadeVertical = Mathf.Sqrt(alturaDoSalto * -2f * gravidade);
-        }
-        if (estaNoChao && velocidadeVertical < 0)
-        {
-            velocidadeVertical = -1f;
-        }
-        velocidadeVertical += gravidade * Time.deltaTime;
-       /* characterController.Move(new Vector3(0, velocidadeVertical, 0) * Time.deltaTime);*/
+        
     }
     private void OnApplicationFocus(bool focus)
     {
@@ -175,5 +165,7 @@ public class Movement : MonoBehaviour
     {
        passosAudioSource.PlayOneShot(passosAudioClip[Random.Range(0, passosAudioClip.Length)]);
     }
+
+
 
 }
