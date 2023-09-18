@@ -7,25 +7,28 @@ public class Movement : MonoBehaviour
 {
    
     [SerializeField]
-    private float maximumSpeed;
+    private float maximumSpeed = 20;
 
     [SerializeField]
     private AudioSource passosAudioSource;
 
     [SerializeField]
+    private AudioClip[] passosAudioClip;
+
+    [SerializeField]
     private float rotationSpeed;
 
-    /*[SerializeField]
-    private float jumpSpeed;
-*/
     private bool estaNoChao;
     [SerializeField] private Transform veficadorChao;
     [SerializeField] private LayerMask cenarioMask;
+    [SerializeField] private float alturaDoSalto = 5;
+    private float gravidade = -9.81f;
+    private float velocidadeVertical;
 
     [SerializeField]
     private Transform cameraTransform;
 
-    private int moveSpeed = 5;
+    private int moveSpeed = 10;
 
     private Animator animator;
     private Rigidbody body;
@@ -99,13 +102,13 @@ public class Movement : MonoBehaviour
             animator.SetBool("Run", true);
             Vector3 move = moveDirection * maximumSpeed * Time.deltaTime;
             transform.position += move;
-            
+
         }
         else
         {
             animator.SetBool("Run", false);
-            Vector3 move = moveDirection * moveSpeed * Time.deltaTime;
-            transform.position += move;
+            /*Vector3 move = moveDirection * moveSpeed * Time.deltaTime;
+            transform.position += move;*/
 
         }
 
@@ -122,8 +125,8 @@ public class Movement : MonoBehaviour
         else
         {
             animator.SetBool("RunL", false);
-            Vector3 move = moveDirection * moveSpeed * Time.deltaTime;
-            transform.position += move;
+            /*Vector3 move = moveDirection * moveSpeed * Time.deltaTime;
+            transform.position += move;*/
         }
 
         if (Input.GetButton("Fire3") && Input.GetButton("D") || Input.GetButton("Fire3") && Input.GetButton("Right"))
@@ -139,12 +142,22 @@ public class Movement : MonoBehaviour
         else
         {
             animator.SetBool("RunR", false);
-            Vector3 move = moveDirection * moveSpeed * Time.deltaTime;
-            transform.position += move;
+            /* Vector3 move = moveDirection * moveSpeed * Time.deltaTime;
+             transform.position += move;*/
         }
-        
-    }
 
+        estaNoChao = Physics.CheckSphere(veficadorChao.position, 0, cenarioMask);
+        if (Input.GetButtonDown("Jump") && estaNoChao)
+        {
+            velocidadeVertical = Mathf.Sqrt(alturaDoSalto * -2f * gravidade);
+        }
+        if (estaNoChao && velocidadeVertical < 0)
+        {
+            velocidadeVertical = -1f;
+        }
+        velocidadeVertical += gravidade * Time.deltaTime;
+       /* characterController.Move(new Vector3(0, velocidadeVertical, 0) * Time.deltaTime);*/
+    }
     private void OnApplicationFocus(bool focus)
     {
         if (focus)
@@ -157,5 +170,10 @@ public class Movement : MonoBehaviour
         }
     }
 
+    
+    public void Passos()
+    {
+       passosAudioSource.PlayOneShot(passosAudioClip[Random.Range(0, passosAudioClip.Length)]);
+    }
 
 }
