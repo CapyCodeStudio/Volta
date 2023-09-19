@@ -20,7 +20,7 @@ public class AntiAliasing : MonoBehaviour
 
         private void UpdateAntialiasingSettings()
         {
-            int qualityLevel = highQualityAA ? 0 : 1; // Defina os índices de qualidade para as configurações desejadas
+            int qualityLevel = highQualityAA ? 0 : 4; // Defina os índices de qualidade para as configurações desejadas
             QualitySettings.SetQualityLevel(qualityLevel);
         }
 }
