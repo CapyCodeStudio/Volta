@@ -31,7 +31,7 @@ public class Movement : MonoBehaviour
     private int moveSpeed = 10;
 
     private Animator animator;
-    private Rigidbody body;
+    //private Rigidbody body;
     private CharacterController characterController;
 
 
@@ -39,7 +39,7 @@ public class Movement : MonoBehaviour
     void Start()
     {
         animator = GetComponent<Animator>();
-        body = GetComponent<Rigidbody>();
+        //body = GetComponent<Rigidbody>();
         characterController = GetComponent<CharacterController>();
        
     }
@@ -100,8 +100,8 @@ public class Movement : MonoBehaviour
             animator.SetBool("WalkR", false);
             animator.SetBool("WalkL", false);
             animator.SetBool("Run", true);
-            Vector3 move = moveDirection * maximumSpeed * Time.deltaTime;
-            transform.position += move;
+            Vector3 SimpleMove = SimplemoveDirection * maximumSpeed * Time.deltaTime;
+            transform.position += SimpleMove;
 
         }
         else
@@ -119,7 +119,7 @@ public class Movement : MonoBehaviour
             animator.SetBool("WalkR", false);
             animator.SetBool("WalkL", false);
             animator.SetBool("RunL", true);
-            Vector3 move = moveDirection * maximumSpeed * Time.deltaTime;
+            Vector3 move = SimplemoveDirection * maximumSpeed * Time.deltaTime;
             transform.position += move;
         }
         else
@@ -136,7 +136,7 @@ public class Movement : MonoBehaviour
             animator.SetBool("WalkL", false);
             animator.SetBool("WalkR", false);
             animator.SetBool("RunR", true);
-            Vector3 move = moveDirection * maximumSpeed * Time.deltaTime;
+            Vector3 move = SimplemoveDirection * maximumSpeed * Time.deltaTime;
             transform.position += move;
         }
         else
