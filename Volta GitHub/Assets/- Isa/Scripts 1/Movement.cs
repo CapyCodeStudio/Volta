@@ -18,13 +18,6 @@ public class Movement : MonoBehaviour
     [SerializeField]
     private float rotationSpeed;
 
-    private bool estaNoChao;
-    [SerializeField] private Transform veficadorChao;
-    [SerializeField] private LayerMask cenarioMask;
-    [SerializeField] private float alturaDoSalto = 5;
-    private float gravidade = -9.81f;
-    private float velocidadeVertical;
-
     [SerializeField]
     private Transform cameraTransform;
 
@@ -34,6 +27,16 @@ public class Movement : MonoBehaviour
     private Rigidbody body;
     private CharacterController characterController;
 
+    [SerializeField] private LayerMask layerGround;
+    [SerializeField] private Transform groundChecker;
+    [SerializeField] private float radiusChecker;
+
+    [SerializeField] private float maxHeight;
+    [SerializeField] private float timeToMaxHeight;
+    private Vector3 _yJumpForce;
+    private float _jumpSpeed;
+    private float _gravity;
+
 
     // Start is called before the first frame update
     void Start()
@@ -41,7 +44,8 @@ public class Movement : MonoBehaviour
         animator = GetComponent<Animator>();
         body = GetComponent<Rigidbody>();
         characterController = GetComponent<CharacterController>();
-       
+        SetGravity();
+
     }
 
     // Update is called once per frame
@@ -49,6 +53,9 @@ public class Movement : MonoBehaviour
     {
         float horizontalInput = Input.GetAxis("Horizontal");
         float verticalInput = Input.GetAxis("Vertical");
+
+        JumpForce();
+        GravityForce();
 
         Vector3 cameraForward = Vector3.Scale(cameraTransform.forward, new Vector3(1, 0, 1)).normalized;
         Vector3 SimplemoveDirection = (verticalInput * cameraForward + horizontalInput * cameraTransform.right).normalized;
@@ -145,11 +152,7 @@ public class Movement : MonoBehaviour
             /* Vector3 move = moveDirection * moveSpeed * Time.deltaTime;
              transform.position += move;*/
         }
-        if (Input.GetButtonDown("Jump"))
-        {
-            body.AddForce(new Vector3 (0, alturaDoSalto, 0));
-        }
-
+       
         
     }
     private void OnApplicationFocus(bool focus)
@@ -168,6 +171,46 @@ public class Movement : MonoBehaviour
     public void Passos()
     {
        passosAudioSource.PlayOneShot(passosAudioClip[Random.Range(0, passosAudioClip.Length)]);
+    }
+
+    private void SetGravity()
+    {
+        _gravity = (2 * maxHeight) / Mathf.Pow(timeToMaxHeight, 2);
+        _jumpSpeed = _gravity * timeToMaxHeight;
+    }
+
+    private void GravityForce()
+    {
+        _yJumpForce += _gravity * Time.deltaTime * Vector3.down;
+        characterController.Move(_yJumpForce);
+
+        if (IsGrounded() == true) _yJumpForce = Vector3.zero;
+    }
+
+    private void JumpForce()
+    {
+        if (IsGrounded() == true)
+        {
+            if (Input.GetButton("Jump"))
+            {
+                _yJumpForce = _jumpSpeed * Vector3.up;
+                characterController.Move(_yJumpForce);
+
+                animator.SetBool("Jump", true);
+            }
+        }
+        else animator.SetBool("Jump", false);
+    }
+
+    private bool IsGrounded()
+    {
+        bool isGrounded = Physics.CheckSphere(groundChecker.position, radiusChecker, layerGround);
+        return isGrounded;
+    }
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.DrawSphere(groundChecker.position, radiusChecker);
     }
 
 
