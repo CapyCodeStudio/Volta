@@ -31,7 +31,7 @@ public class Movement : MonoBehaviour
     private int moveSpeed = 10;
 
     private Animator animator;
-    //private Rigidbody body;
+    private Rigidbody body;
     private CharacterController characterController;
 
 
@@ -39,7 +39,7 @@ public class Movement : MonoBehaviour
     void Start()
     {
         animator = GetComponent<Animator>();
-        //body = GetComponent<Rigidbody>();
+        body = GetComponent<Rigidbody>();
         characterController = GetComponent<CharacterController>();
        
     }
@@ -144,6 +144,10 @@ public class Movement : MonoBehaviour
             animator.SetBool("RunR", false);
             /* Vector3 move = moveDirection * moveSpeed * Time.deltaTime;
              transform.position += move;*/
+        }
+        if (Input.GetButtonDown("Jump"))
+        {
+            body.AddForce(new Vector3 (0, alturaDoSalto, 0));
         }
 
         
