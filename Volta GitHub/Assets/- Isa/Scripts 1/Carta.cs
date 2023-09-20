@@ -19,6 +19,15 @@ public class Carta : MonoBehaviour
             Time.timeScale = 0;
             //carta.isTrigger = true;
         }
+        
+       /* if (Time.timeScale == 0 && Input.GetButtonDown("E")) 
+        {
+            e.SetActive(false);
+            carta.SetActive(false);
+            Time.timeScale = 1;
+        }*/
+
+       
     }
     public void OnTriggerEnter(Collider collision)
     {

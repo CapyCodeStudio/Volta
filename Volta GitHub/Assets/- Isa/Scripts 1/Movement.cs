@@ -5,7 +5,10 @@ using UnityEngine;
 
 public class Movement : MonoBehaviour
 {
-   
+    public float forwardSpeed = 8, strafeSpeed = 5, gravityModifier = 5, interactionDistance = 5;
+
+    Transform cam;//Objeto que carrega a posição da câmera para o raycast
+
     [SerializeField]
     private float maximumSpeed = 20;
 
@@ -51,27 +54,11 @@ public class Movement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        float horizontalInput = Input.GetAxis("Horizontal");
-        float verticalInput = Input.GetAxis("Vertical");
-
+    
         JumpForce();
         GravityForce();
+        Controls();
 
-        Vector3 cameraForward = Vector3.Scale(cameraTransform.forward, new Vector3(1, 0, 1)).normalized;
-        Vector3 SimplemoveDirection = (verticalInput * cameraForward + horizontalInput * cameraTransform.right).normalized;
-
-        if (SimplemoveDirection.magnitude > 0.1f)
-        {
-            // Rotação
-            Quaternion targetRotation = Quaternion.LookRotation(SimplemoveDirection);
-            transform.rotation = Quaternion.RotateTowards(transform.rotation, targetRotation, Time.deltaTime * 500);
-
-            // Movimentar o personagem
-            Vector3 SimpleMove = SimplemoveDirection * moveSpeed * Time.deltaTime;
-            transform.position += SimpleMove;
-
-
-        }
         if (Input.GetButton("Vertical"))
         {
             animator.SetBool("Walk", true);
@@ -107,16 +94,12 @@ public class Movement : MonoBehaviour
             animator.SetBool("WalkR", false);
             animator.SetBool("WalkL", false);
             animator.SetBool("Run", true);
-            Vector3 SimpleMove = SimplemoveDirection * maximumSpeed * Time.deltaTime;
-            transform.position += SimpleMove;
-
+           
         }
         else
         {
             animator.SetBool("Run", false);
-            /*Vector3 move = moveDirection * moveSpeed * Time.deltaTime;
-            transform.position += move;*/
-
+           
         }
 
         if (Input.GetButton("Fire3") && Input.GetButton("A") || Input.GetButton("Fire3") && Input.GetButton("Left"))
@@ -126,14 +109,12 @@ public class Movement : MonoBehaviour
             animator.SetBool("WalkR", false);
             animator.SetBool("WalkL", false);
             animator.SetBool("RunL", true);
-            Vector3 move = SimplemoveDirection * maximumSpeed * Time.deltaTime;
-            transform.position += move;
+           
         }
         else
         {
             animator.SetBool("RunL", false);
-            /*Vector3 move = moveDirection * moveSpeed * Time.deltaTime;
-            transform.position += move;*/
+            
         }
 
         if (Input.GetButton("Fire3") && Input.GetButton("D") || Input.GetButton("Fire3") && Input.GetButton("Right"))
@@ -143,17 +124,27 @@ public class Movement : MonoBehaviour
             animator.SetBool("WalkL", false);
             animator.SetBool("WalkR", false);
             animator.SetBool("RunR", true);
-            Vector3 move = SimplemoveDirection * maximumSpeed * Time.deltaTime;
-            transform.position += move;
+           
         }
         else
         {
             animator.SetBool("RunR", false);
-            /* Vector3 move = moveDirection * moveSpeed * Time.deltaTime;
-             transform.position += move;*/
+            
         }
        
         
+    }
+    void Controls()
+    {
+    float forWardInput = Input.GetAxisRaw("Vertical");
+    float strafeInput = Input.GetAxisRaw("Horizontal");
+
+    Vector3 strafe = strafeInput * strafeSpeed * transform.right;
+    Vector3 forward = forWardInput * forwardSpeed * transform.forward;
+    Vector3 vertical = _gravity * Time.deltaTime * Vector3.up;
+
+    Vector3 finalVelocity = forward + strafe + vertical;
+    characterController.Move(finalVelocity * Time.deltaTime);
     }
     private void OnApplicationFocus(bool focus)
     {
@@ -167,7 +158,6 @@ public class Movement : MonoBehaviour
         }
     }
 
-    
     public void Passos()
     {
        passosAudioSource.PlayOneShot(passosAudioClip[Random.Range(0, passosAudioClip.Length)]);
