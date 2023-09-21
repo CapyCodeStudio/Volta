@@ -5,29 +5,25 @@ using UnityEngine;
 
 public class Movement : MonoBehaviour
 {
-    public float forwardSpeed = 8, strafeSpeed = 5, gravityModifier = 5, interactionDistance = 5;
+    [SerializeField]private AudioSource passosAudioSource;
+    [SerializeField] private AudioClip[] passosAudioClip;
 
-    Transform cam;//Objeto que carrega a posição da câmera para o raycast
+    [SerializeField] private AudioSource correrAudioSource;
+    [SerializeField] private AudioClip[] correrAudioClip;
 
-    [SerializeField]
-    private float maximumSpeed = 20;
+    [SerializeField] private AudioSource puloAudioSource;
+    [SerializeField] private AudioClip[] puloAudioClip;
 
-    [SerializeField]
-    private AudioSource passosAudioSource;
-
-    [SerializeField]
-    private AudioClip[] passosAudioClip;
-
-    [SerializeField]
-    private float rotationSpeed;
-
-    [SerializeField]
-    private Transform cameraTransform;
-
-    private int moveSpeed = 10;
-
+    public Transform cam;
     private Animator animator;
-    private Rigidbody body;
+
+    public float moveSpeed = 5;
+
+    public float turnSmoothTime = 0.1f;
+    float turnSmoothVelocity;
+
+    [SerializeField] private float speedRun = 15;
+
     private CharacterController characterController;
 
     [SerializeField] private LayerMask layerGround;
@@ -36,28 +32,39 @@ public class Movement : MonoBehaviour
 
     [SerializeField] private float maxHeight;
     [SerializeField] private float timeToMaxHeight;
-    private Vector3 _yJumpForce;
-    private float _jumpSpeed;
-    private float _gravity;
+    private Vector3 jumpForce;
+    private float jumpSpeed;
+    private float gravity;
 
-
-    // Start is called before the first frame update
     void Start()
     {
         animator = GetComponent<Animator>();
-        body = GetComponent<Rigidbody>();
         characterController = GetComponent<CharacterController>();
         SetGravity();
-
     }
 
-    // Update is called once per frame
     void Update()
     {
-    
+
         JumpForce();
         GravityForce();
-        Controls();
+        //Passos();
+
+        float horizontal = Input.GetAxisRaw("Horizontal");
+        float vertical = Input.GetAxisRaw("Vertical");
+
+        Vector3 direction = new Vector3(horizontal, 0f, vertical).normalized;
+
+        if (direction.magnitude >= 0.1f)
+        {
+
+            float targetAngle = Mathf.Atan2(direction.x, direction.z) * Mathf.Rad2Deg + cam.eulerAngles.y;
+            float angle = Mathf.SmoothDampAngle(transform.eulerAngles.y, targetAngle, ref turnSmoothVelocity, turnSmoothTime);
+            transform.rotation = Quaternion.Euler(0f, angle, 0f);
+
+            Vector3 moveDir = Quaternion.Euler(0f, targetAngle, 0f) * Vector3.forward;
+            characterController.Move(moveDir.normalized * moveSpeed * Time.deltaTime);
+        }
 
         if (Input.GetButton("Vertical"))
         {
@@ -68,8 +75,6 @@ public class Movement : MonoBehaviour
         {
             animator.SetBool("Walk", false);
         }
-
-
 
         if (Input.GetButton("D") || Input.GetButton("Right"))
         {
@@ -88,13 +93,21 @@ public class Movement : MonoBehaviour
         {
             animator.SetBool("WalkL", false);
         }
+
         if (Input.GetButton("Fire3") && Input.GetButton("Vertical")/* || Input.GetButton("Fire3") && Input.GetButton("Horizontal")*/)
         {
             animator.SetBool("Walk", false);
             animator.SetBool("WalkR", false);
             animator.SetBool("WalkL", false);
             animator.SetBool("Run", true);
-           
+
+            float targetAngle = Mathf.Atan2(direction.x, direction.z) * Mathf.Rad2Deg + cam.eulerAngles.y;
+            float angle = Mathf.SmoothDampAngle(transform.eulerAngles.y, targetAngle, ref turnSmoothVelocity, turnSmoothTime);
+            transform.rotation = Quaternion.Euler(0f, angle, 0f);
+
+            Vector3 moveDir = Quaternion.Euler(0f, targetAngle, 0f) * Vector3.forward;
+            characterController.Move(moveDir.normalized * speedRun * Time.deltaTime);
+            
         }
         else
         {
@@ -109,7 +122,13 @@ public class Movement : MonoBehaviour
             animator.SetBool("WalkR", false);
             animator.SetBool("WalkL", false);
             animator.SetBool("RunL", true);
-           
+           /* float targetAngle = Mathf.Atan2(direction.x, direction.z) * Mathf.Rad2Deg + cam.eulerAngles.y;
+            float angle = Mathf.SmoothDampAngle(transform.eulerAngles.y, targetAngle, ref turnSmoothVelocity, turnSmoothTime);
+            transform.rotation = Quaternion.Euler(0f, angle, 0f);
+
+            Vector3 moveDir = Quaternion.Euler(0f, targetAngle, 0f) * Vector3.forward;
+            characterController.Move(moveDir.normalized * speedRun * Time.deltaTime);*/
+
         }
         else
         {
@@ -124,28 +143,23 @@ public class Movement : MonoBehaviour
             animator.SetBool("WalkL", false);
             animator.SetBool("WalkR", false);
             animator.SetBool("RunR", true);
-           
+
+           /* float targetAngle = Mathf.Atan2(direction.x, direction.z) * Mathf.Rad2Deg + cam.eulerAngles.y;
+            float angle = Mathf.SmoothDampAngle(transform.eulerAngles.y, targetAngle, ref turnSmoothVelocity, turnSmoothTime);
+            transform.rotation = Quaternion.Euler(0f, angle, 0f);
+
+            Vector3 moveDir = Quaternion.Euler(0f, targetAngle, 0f) * Vector3.forward;
+            characterController.Move(moveDir.normalized * speedRun * Time.deltaTime);*/
+
         }
         else
         {
             animator.SetBool("RunR", false);
             
         }
-       
-        
+             
     }
-    void Controls()
-    {
-    float forWardInput = Input.GetAxisRaw("Vertical");
-    float strafeInput = Input.GetAxisRaw("Horizontal");
-
-    Vector3 strafe = strafeInput * strafeSpeed * transform.right;
-    Vector3 forward = forWardInput * forwardSpeed * transform.forward;
-    Vector3 vertical = _gravity * Time.deltaTime * Vector3.up;
-
-    Vector3 finalVelocity = forward + strafe + vertical;
-    characterController.Move(finalVelocity * Time.deltaTime);
-    }
+   
     private void OnApplicationFocus(bool focus)
     {
         if (focus)
@@ -160,21 +174,35 @@ public class Movement : MonoBehaviour
 
     public void Passos()
     {
-       passosAudioSource.PlayOneShot(passosAudioClip[Random.Range(0, passosAudioClip.Length)]);
+       if (animator.GetBool("Walk") || animator.GetBool("WalkL") || animator.GetBool("WalkR")) 
+        {
+            print("andando");
+            passosAudioSource.PlayOneShot(passosAudioClip[Random.Range(0, passosAudioClip.Length)]);
+       }   
+    }
+
+    public void Correr()
+    {
+        correrAudioSource.PlayOneShot(correrAudioClip[Random.Range(0, correrAudioClip.Length)]);
+    }
+
+    public void Pulo()
+    {
+        correrAudioSource.PlayOneShot(correrAudioClip[Random.Range(0, correrAudioClip.Length)]);
     }
 
     private void SetGravity()
     {
-        _gravity = (2 * maxHeight) / Mathf.Pow(timeToMaxHeight, 2);
-        _jumpSpeed = _gravity * timeToMaxHeight;
+        gravity = (2 * maxHeight) / Mathf.Pow(timeToMaxHeight, 2);
+        jumpSpeed = gravity * timeToMaxHeight;
     }
 
     private void GravityForce()
     {
-        _yJumpForce += _gravity * Time.deltaTime * Vector3.down;
-        characterController.Move(_yJumpForce);
+        jumpForce += gravity * Time.deltaTime * Vector3.down;
+        characterController.Move(jumpForce);
 
-        if (IsGrounded() == true) _yJumpForce = Vector3.zero;
+        if (IsGrounded() == true) jumpForce = Vector3.zero;
     }
 
     private void JumpForce()
@@ -183,8 +211,8 @@ public class Movement : MonoBehaviour
         {
             if (Input.GetButton("Jump"))
             {
-                _yJumpForce = _jumpSpeed * Vector3.up;
-                characterController.Move(_yJumpForce);
+                jumpForce = jumpSpeed * Vector3.up;
+                characterController.Move(jumpForce);
 
                 animator.SetBool("Jump", true);
             }
@@ -202,7 +230,5 @@ public class Movement : MonoBehaviour
     {
         Gizmos.DrawSphere(groundChecker.position, radiusChecker);
     }
-
-
 
 }

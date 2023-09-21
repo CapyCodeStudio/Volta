@@ -507,6 +507,10 @@ PrefabInstance:
       propertyPath: yarnProject
       value: 
       objectReference: {fileID: 7545569452688597077, guid: f559065e3ab65c740b8643d8d414bc08, type: 3}
+    - target: {fileID: 3579681405068720530, guid: 7f29e5f7ffdea4a6793cefb278b61f0c, type: 3}
+      propertyPath: lineProvider
+      value: 
+      objectReference: {fileID: 1608389237}
     - target: {fileID: 7778558434935992803, guid: 7f29e5f7ffdea4a6793cefb278b61f0c, type: 3}
       propertyPath: m_SizeDelta.x
       value: 0
@@ -701,6 +705,29 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1608389233 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2753718018764665327, guid: 7f29e5f7ffdea4a6793cefb278b61f0c, type: 3}
+  m_PrefabInstance: {fileID: 1387313700}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1608389237
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1608389233}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9c1f487b798d402db42bc11cee5b810, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  stringsTable:
+    m_TableReference:
+      m_TableCollectionName: GUID:334e76f009687324a8e20b9778288cc6
+  assetTable:
+    m_TableReference:
+      m_TableCollectionName: 
 --- !u!1 &1774934443
 GameObject:
   m_ObjectHideFlags: 0
