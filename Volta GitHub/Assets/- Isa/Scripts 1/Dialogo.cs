@@ -7,23 +7,26 @@ using System;
 public class Dialogo : MonoBehaviour
 {
     public TextMeshProUGUI dialogText;
-    private string[] sentences; // Uma matriz de frases do diálogo
-    private int currentSentenceIndex = 0; // Índice da frase atual
+    private string[] sentences; // Uma matriz de frases do diï¿½logo
+    private int currentSentenceIndex = 0; // ï¿½ndice da frase atual
     public float displayTimePerCharacter = 0.05f; // Tempo para exibir cada caractere
     public float pauseBetweenSentences = 1.0f; // Tempo de pausa entre frases
 
     private void Start()
     {
 
-        // Defina as frases do diálogo (substitua pelo seu próprio diálogo)
+        // Defina as frases do diï¿½logo (substitua pelo seu prï¿½prio diï¿½logo)
         sentences = new string[]
         {
-            "Durante muito tempo eu não quis aceitar que aquilo realmente aconteceu comigo." 
-            + Environment.NewLine + "Estou feliz que você esteja aqui."
+            "HÃ¡ 16 anos eles partiram.      " 
+            + Environment.NewLine + "Lembro-me daquela noite como se fosse ontem; era vÃ©spera do meu aniversÃ¡rio.                                        Como de costume, eles sempre apareciam Ã  meia-noite para me parabenizar. Mas naquela noite foi diferente.         "
+            + Environment.NewLine + "Eu estava deitado, fingindo estar dormindo, e de vez em quando espiava o relÃ³gio. Os minutos pareciam interminÃ¡veis e o silÃªncio tomou conta.                    "
+            + Environment.NewLine + "Minutos depois, tomei coragem e saÃ­ do quarto. Procurei por toda a casa, nem sinal. SaÃ­ na rua e chamei pelos seus nomes e nada. Resolvi voltar e dormir, torcendo que eles aparecessem na manhÃ£ seguinte.                 "
+            + Environment.NewLine + "Nunca mais os encontrei, nem mesmo em meus sonhos. Desde aquele dia, passei meus anos vivendo sozinho aqui nesta casa. No mistÃ©rio daquela noite, aqui, minha alma persiste.            "
             
         };
 
-        // Inicie o diálogo
+        // Inicie o diï¿½logo
         StartCoroutine(StartDialog());
         
     }
@@ -40,20 +43,20 @@ public class Dialogo : MonoBehaviour
 
         yield return new WaitForSeconds(pauseBetweenSentences);
 
-        // Avance para a próxima frase
+        // Avance para a prï¿½xima frase
         currentSentenceIndex++;
 
-        // Verifique se há mais frases
+        // Verifique se hï¿½ mais frases
         if (currentSentenceIndex < sentences.Length)
         {
-            // Inicie a próxima frase
+            // Inicie a prï¿½xima frase
             dialogText.text = "";
             StartCoroutine(StartDialog());
         }
         else
         {
-            // Fim do diálogo, você pode adicionar a lógica desejada aqui
-            Debug.Log("Fim do diálogo");
+            // Fim do diï¿½logo, vocï¿½ pode adicionar a lï¿½gica desejada aqui
+            Debug.Log("Fim do diï¿½logo");
         }
     }
 

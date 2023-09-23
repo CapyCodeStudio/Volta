@@ -1403,7 +1403,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 198268431}
   m_LocalRotation: {x: 0.009604893, y: 0.98954344, z: -0.12028129, w: 0.0790186}
-  m_LocalPosition: {x: 286.73117, y: 108.11, z: 705.8859}
+  m_LocalPosition: {x: 286.73117, y: 108.17999, z: 705.8859}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -7022,8 +7022,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 642266264}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 6.58, y: 0.432, z: 24.25}
-  m_LocalScale: {x: 1, y: 0.018664, z: 1}
+  m_LocalPosition: {x: 6.4201, y: 0.432, z: 24.25}
+  m_LocalScale: {x: 0.6802, y: 0.018664, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1640052231}
@@ -8259,8 +8259,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 760965795}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 5.33, y: 0.437, z: 25.09}
-  m_LocalScale: {x: 1, y: 0.03593241, z: 1}
+  m_LocalPosition: {x: 5.1646, y: 0.437, z: 25.09}
+  m_LocalScale: {x: 0.6692, y: 0.03593241, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1640052231}
@@ -16203,7 +16203,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1064376691}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.15998185, y: 7.090004, z: -7.000021}
+  m_LocalPosition: {x: 0.15998185, y: 7.0899963, z: -7.000021}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -23542,7 +23542,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1880410599}
   m_LocalRotation: {x: -0, y: 0.9968268, z: -0, w: 0.07960056}
-  m_LocalPosition: {x: 288, y: 101.02, z: 699}
+  m_LocalPosition: {x: 288, y: 101.09, z: 699}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -23585,11 +23585,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cfdb09f06edd31449b2695a2ba52ca4c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  veficadorChao: {fileID: 1932961859}
-  cenarioMask:
+  moveSpeed: 0
+  groundDrag: 0
+  jumpForce: 0
+  jumpCooldown: 0
+  airMultiplier: 0
+  walkSpeed: 0
+  sprintSpeed: 0
+  jumpKey: 32
+  playerHeight: 0
+  whatIsGround:
     serializedVersion: 2
-    m_Bits: 64
-  alturaDoSalto: 1
+    m_Bits: 0
+  orientation: {fileID: 0}
 --- !u!1 &1893986709
 GameObject:
   m_ObjectHideFlags: 0
