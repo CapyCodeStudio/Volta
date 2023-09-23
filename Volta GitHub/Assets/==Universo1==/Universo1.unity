@@ -14,7 +14,7 @@ OcclusionCullingSettings:
 RenderSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 9
-  m_Fog: 1
+  m_Fog: 0
   m_FogColor: {r: 0.7254902, g: 0.8117648, b: 0.7960785, a: 0.72156864}
   m_FogMode: 3
   m_FogDensity: 0.02
@@ -23459,7 +23459,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1880410599}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d076bbffe11da53469384363c2f02310, type: 3}
   m_Name: 
@@ -23565,7 +23565,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1880410599}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e49c39e58b6461c42ac2f2b86c3e7855, type: 3}
   m_Name: 
@@ -23580,16 +23580,24 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1880410599}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cfdb09f06edd31449b2695a2ba52ca4c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  veficadorChao: {fileID: 1932961859}
-  cenarioMask:
+  moveSpeed: 0
+  groundDrag: 0
+  jumpForce: 0
+  jumpCooldown: 0
+  airMultiplier: 0
+  walkSpeed: 0
+  sprintSpeed: 0
+  jumpKey: 32
+  playerHeight: 0
+  whatIsGround:
     serializedVersion: 2
-    m_Bits: 64
-  alturaDoSalto: 1
+    m_Bits: 0
+  orientation: {fileID: 0}
 --- !u!1 &1893986709
 GameObject:
   m_ObjectHideFlags: 0
