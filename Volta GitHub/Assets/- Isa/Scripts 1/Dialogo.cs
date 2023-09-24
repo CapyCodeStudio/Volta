@@ -18,11 +18,12 @@ public class Dialogo : MonoBehaviour
         // Defina as frases do di�logo (substitua pelo seu pr�prio di�logo)
         sentences = new string[]
         {
-            "Há 16 anos eles partiram.      " 
-            + Environment.NewLine + "Lembro-me daquela noite como se fosse ontem; era véspera do meu aniversário.                                        Como de costume, eles sempre apareciam à meia-noite para me parabenizar. Mas naquela noite foi diferente.         "
-            + Environment.NewLine + "Eu estava deitado, fingindo estar dormindo, e de vez em quando espiava o relógio. Os minutos pareciam intermináveis e o silêncio tomou conta.                    "
-            + Environment.NewLine + "Minutos depois, tomei coragem e saí do quarto. Procurei por toda a casa, nem sinal. Saí na rua e chamei pelos seus nomes e nada. Resolvi voltar e dormir, torcendo que eles aparecessem na manhã seguinte.                 "
-            + Environment.NewLine + "Nunca mais os encontrei, nem mesmo em meus sonhos. Desde aquele dia, passei meus anos vivendo sozinho aqui nesta casa. No mistério daquela noite, aqui, minha alma persiste.            "
+            "Há 6 anos eles partiram.      " 
+            + Environment.NewLine + "Lembro-me daquela noite como se fosse ontem; era véspera do meu aniversário."
+            + Environment.NewLine + "Como de costume, eles sempre apareciam à meia-noite para me parabenizar. Mas naquela noite foi diferente."
+            + Environment.NewLine + "Eu estava deitado, fingindo estar dormindo, e de vez em quando espiava o relógio. Os minutos pareciam intermináveis e o silêncio tomou conta."
+            + Environment.NewLine + "Minutos depois, tomei coragem e saí do quarto. Procurei por toda a casa, nem sinal. Saí na rua e chamei pelos seus nomes e nada. Resolvi voltar e dormir, torcendo que eles aparecessem na manhã seguinte."
+            + Environment.NewLine + "Nunca mais os encontrei, nem mesmo em meus sonhos. Desde aquele dia, passei meus anos vivendo sozinho aqui nesta casa. No mistério daquela noite, aqui, minha alma persiste."
             
         };
 
