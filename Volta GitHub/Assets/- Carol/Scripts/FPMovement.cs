@@ -77,4 +77,3 @@ public class FPMovement : MonoBehaviour
         #endregion
     }
 }
-
