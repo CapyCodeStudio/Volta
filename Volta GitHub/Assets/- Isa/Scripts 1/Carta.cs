@@ -10,23 +10,32 @@ public class Carta : MonoBehaviour
     public GameObject e;
     public GameObject carta;
 
+
     private void Update()
     {
-        if (Input.GetButtonDown("E") && tocando == true)
+        if (tocando)
         {
-            e.SetActive(false);
-            carta.SetActive(true);
-            Time.timeScale = 0;
-            //carta.isTrigger = true;
+            e.SetActive(true);
+            print("tocou true");
+            if (Input.GetButtonDown("E"))
+            {
+                print("aperto o botao");
+                carta.SetActive(true);
+                e.SetActive(false);
+                Time.timeScale = 0;
+                //carta.isTrigger = true;
+                /*if (Input.GetButtonDown("E") && carta == true)
+                {
+                    carta.SetActive(false);
+                    e.SetActive(false);
+                    Time .timeScale = 1;
+                }*/
+
+            }
         }
 
 
-        if (Time.timeScale == 0 && Input.GetButtonDown("E")) 
-        {
-             e.SetActive(false);
-             carta.SetActive(false);
-             Time.timeScale = 1;
-        }
+        
 
 
     }
@@ -34,22 +43,18 @@ public class Carta : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            carta.SetActive(false);
-            e.SetActive(true);
+            print("passou");
             tocando = true;
-            Time.timeScale = 1;
-
         }
 
     }
     public void OnTriggerExit(Collider collision)
     {
-        carta.SetActive(false);
-        e.SetActive(false);
-        tocando = false;
-        Time.timeScale = 1;
-        //carta.isTrigger = false;
-
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            print("saiu");
+            tocando = false;
+        }
     }
-
 }
+
