@@ -5,6 +5,7 @@ using Cinemachine;
 
 public static class CameraSwitcher
 {
+    public static string qualCamera = "terceira";
 
     static List<CinemachineVirtualCamera> cameras = new List<CinemachineVirtualCamera>();
 

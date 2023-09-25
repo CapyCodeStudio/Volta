@@ -19,31 +19,26 @@ public class Carta : MonoBehaviour
             print("tocou true");
             if (Input.GetButtonDown("E"))
             {
-                print("aperto o botao");
-                carta.SetActive(true);
-                e.SetActive(false);
-                Time.timeScale = 0;
-                //carta.isTrigger = true;
-                /*if (Input.GetButtonDown("E") && carta == true)
+                if (carta.activeSelf)
                 {
                     carta.SetActive(false);
                     e.SetActive(false);
-                    Time .timeScale = 1;
-                }*/
-
+                    Time.timeScale = 1;
+                } 
+                else
+                {
+                    print("aperto o botao");
+                    carta.SetActive(true);
+                    e.SetActive(false);
+                    Time.timeScale = 0;
+                }
             }
         }
-
-
-        
-
-
     }
     public void OnTriggerEnter(Collider collision)
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            print("passou");
             tocando = true;
         }
 
@@ -52,8 +47,9 @@ public class Carta : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            print("saiu");
             tocando = false;
+            e.SetActive(false);
+
         }
     }
 }

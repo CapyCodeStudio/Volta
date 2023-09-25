@@ -7,6 +7,8 @@ public class Player : MonoBehaviour
 {
     [SerializeField] CinemachineVirtualCamera thirdPersonCam;
     [SerializeField] CinemachineVirtualCamera firstPersonCam;
+    public FPMovement firstPersonCamera;
+    public Movement thirdPersonCamera;
 
     private void OnEnable()
     {
@@ -27,11 +29,25 @@ public class Player : MonoBehaviour
         {
             if (CameraSwitcher.IsActiveCamera(thirdPersonCam))
             {
+                CameraSwitcher.qualCamera = "primeira";
                 CameraSwitcher.SwitchCamera(firstPersonCam);
             }
             else if (CameraSwitcher.IsActiveCamera(firstPersonCam))
             {
+                CameraSwitcher.qualCamera = "terceira";
                 CameraSwitcher.SwitchCamera(thirdPersonCam);
+            }
+
+            if (CameraSwitcher.qualCamera == "primeira")
+            {
+                firstPersonCam.enabled = true;
+                thirdPersonCam.enabled = false;
+            }
+
+            else if (CameraSwitcher.qualCamera == "terceira")
+            {
+                    firstPersonCam.enabled = false;
+                     thirdPersonCam.enabled = true;
             }
         }
     }
