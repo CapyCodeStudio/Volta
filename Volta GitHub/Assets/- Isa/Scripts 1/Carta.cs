@@ -13,7 +13,7 @@ public class Carta : MonoBehaviour
 
     private void Update()
     {
-        if (tocando)
+        if (tocando && carta.activeSelf == false)
         {
             e.SetActive(true);
             print("tocou true");
@@ -24,13 +24,27 @@ public class Carta : MonoBehaviour
                     carta.SetActive(false);
                     e.SetActive(false);
                     Time.timeScale = 1;
-                } 
+                }
+
                 else
                 {
                     print("aperto o botao");
                     carta.SetActive(true);
                     e.SetActive(false);
                     Time.timeScale = 0;
+                }
+            }
+        }
+        
+        else if (tocando && carta.activeSelf == true)
+        {
+            if (Input.GetButtonDown("E"))
+            {
+                if (carta.activeSelf)
+                {
+                    carta.SetActive(false);
+                    e.SetActive(false);
+                    Time.timeScale = 1;
                 }
             }
         }
