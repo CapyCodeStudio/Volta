@@ -9,8 +9,7 @@ public class Carta : MonoBehaviour
     // public BoxCollider carta;
     public GameObject e;
     public GameObject carta;
-
-
+   
     private void Update()
     {
         if (tocando && carta.activeSelf == false)
