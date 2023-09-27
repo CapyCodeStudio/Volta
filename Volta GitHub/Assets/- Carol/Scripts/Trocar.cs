@@ -7,13 +7,14 @@ public class Trocar : MonoBehaviour
 {
     public CinemachineFreeLook freeLookCamera;
     public CinemachineVirtualCamera virtualCamera;
+    public GameObject mesh;
 
     private bool isFreeLookActive = true;
 
     private void Start()
     {
         // Ative a câmera Free Look inicialmente
-        freeLookCamera.Priority = 10;
+        freeLookCamera.Priority = 5;
         virtualCamera.Priority = 0;
     }
 
@@ -26,13 +27,16 @@ public class Trocar : MonoBehaviour
             {
                 // Desative a câmera Free Look e ative a câmera Virtual
                 freeLookCamera.Priority = 0;
-                virtualCamera.Priority = 10;
+                virtualCamera.Priority = 5;
+                mesh.SetActive(false);
+
             }
             else
             {
                 // Desative a câmera Virtual e ative a câmera Free Look
-                freeLookCamera.Priority = 10;
+                freeLookCamera.Priority = 5;
                 virtualCamera.Priority = 0;
+                mesh.SetActive(true);
             }
 
             // Inverta o estado
