@@ -13,19 +13,19 @@ public class Trocar : MonoBehaviour
 
     private void Start()
     {
-        // Ative a câmera Free Look inicialmente
+        // Ative a cï¿½mera Free Look inicialmente
         freeLookCamera.Priority = 5;
         virtualCamera.Priority = 0;
     }
 
     private void Update()
     {
-        // Detecte a tecla ou botão que você deseja usar para alternar as câmeras (por exemplo, a tecla C)
+        // Detecte a tecla ou botï¿½o que vocï¿½ deseja usar para alternar as cï¿½meras (por exemplo, a tecla C)
         if (Input.GetKeyDown(KeyCode.C))
         {
             if (isFreeLookActive)
             {
-                // Desative a câmera Free Look e ative a câmera Virtual
+                // Desative a cï¿½mera Free Look e ative a cï¿½mera Virtual
                 freeLookCamera.Priority = 0;
                 virtualCamera.Priority = 5;
                 mesh.SetActive(false);
@@ -33,7 +33,7 @@ public class Trocar : MonoBehaviour
             }
             else
             {
-                // Desative a câmera Virtual e ative a câmera Free Look
+                // Desative a cï¿½mera Virtual e ative a cï¿½mera Free Look
                 freeLookCamera.Priority = 5;
                 virtualCamera.Priority = 0;
                 mesh.SetActive(true);
