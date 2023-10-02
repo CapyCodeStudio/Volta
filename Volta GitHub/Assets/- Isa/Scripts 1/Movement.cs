@@ -48,7 +48,7 @@ public class Movement : MonoBehaviour
 
         JumpForce();
         GravityForce();
-        //Passos();
+        Passos();
 
         float horizontal = Input.GetAxisRaw("Horizontal");
         float vertical = Input.GetAxisRaw("Vertical");
