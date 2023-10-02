@@ -13,6 +13,8 @@ public class Menu : MonoBehaviour
     [SerializeField] private GameObject menuIdioma;
     [SerializeField] private GameObject menuAudio;
     [SerializeField] private GameObject menuGraficos;
+    [SerializeField] private GameObject carta;
+
 
     // Update is called once per frame
     private void Start()
@@ -36,7 +38,7 @@ public class Menu : MonoBehaviour
             Time.timeScale = 1;
             Cursor.lockState = CursorLockMode.Locked;
         }
-        if (Input.GetButtonDown("Cancel") && menuControles.activeSelf || Input.GetButtonDown("Cancel") && menuIdioma.activeSelf || Input.GetButtonDown("Cancel") && menuGraficos.activeSelf || Input.GetButtonDown("Cancel") && menuAudio.activeSelf)
+        if (Input.GetButtonDown("Cancel") && menuControles.activeSelf || Input.GetButtonDown("Cancel") && menuIdioma.activeSelf || Input.GetButtonDown("Cancel") && menuGraficos.activeSelf || Input.GetButtonDown("Cancel") && menuAudio.activeSelf || Input.GetButtonDown("Cancel") && carta.activeSelf)
         {
             menuPause.SetActive(false);
             Time.timeScale = 0;
