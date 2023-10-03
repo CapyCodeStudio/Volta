@@ -12,9 +12,11 @@ public class Enemy : MonoBehaviour
 {
     public float interactionDistance = 10;
     public float attackDistance = 5;
+    public float vidaPlayer = 10;
     IAStates states = IAStates.Idle;
     NavMeshAgent agent;
     public Transform target;
+
     RaycastHit[] hit;
     RaycastHit h;
     [SerializeField] private GameObject menuPerdeu;
@@ -32,7 +34,7 @@ public class Enemy : MonoBehaviour
         switch (states)
         {
             case IAStates.Idle:
-
+                print("Idle");
                 if (Physics.Linecast(transform.position, target.position, out h))
                 {
                     if (h.collider.CompareTag("Player"))
@@ -40,9 +42,11 @@ public class Enemy : MonoBehaviour
                        states = IAStates.Chasing;
                        
                     }
+
                 }
                 break;
             case IAStates.Chasing:
+                print("Chasing");
                 agent.SetDestination(target.position);
                 if (agent.remainingDistance <= agent.stoppingDistance && agent.hasPath)
                 {
@@ -50,13 +54,9 @@ public class Enemy : MonoBehaviour
                 }
                 break;
             case IAStates.Attack:
-                agent.SetDestination(target.position);
-                if (agent.remainingDistance <= agent.stoppingDistance && agent.hasPath)
-                {
-                    states = IAStates.Catch;
-                }
                 break;
             case IAStates.Catch:
+                print("Catch");
                 target.gameObject.SetActive(false);
                 break;
         }
