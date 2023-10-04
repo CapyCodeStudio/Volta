@@ -8,7 +8,7 @@ public class Patrulhar : MonoBehaviour
     NavMeshAgent agent;
     public Transform[] waypoints;
     int wayPointIndex;
-    Vector3 target;
+    [SerializeField]Vector3 target;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,7 +19,7 @@ public class Patrulhar : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Vector3.Distance(transform.position, target) < 1)
+        if (Vector3.Distance(transform.position, target) < 2)
         {
             IterateWayPointIndex();
             UpdateDestination();
