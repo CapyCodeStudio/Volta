@@ -6,59 +6,66 @@ using UnityEngine.UIElements;
 
 public enum IAStates//Modelo de máquina de estado
 {
-    Chasing, Catch, Attack
+     Chasing, Catch, Wandering
 }
 public class Enemy : MonoBehaviour
 {
-    public float interactionDistance = 10;
-    public float attackDistance = 5;
-    IAStates states = IAStates.Catch;
+    public float interactionDistance = 5;
+    IAStates states = IAStates.Wandering;
     NavMeshAgent agent;
     public Transform target;
-
-    RaycastHit[] hit;
+    RaycastHit[] hit = new RaycastHit[10];
     RaycastHit h;
-    [SerializeField] private GameObject menuPerdeu;
-
-    // Start is called before the first frame update
+  //private Animator animator;
+    private void Awake()
+    {
+      //animator = GetComponent<Animator>();
+        agent = GetComponent<NavMeshAgent>();
+        states = IAStates.Wandering;
+    }
     void Start()
     {
-        agent = GetComponent<NavMeshAgent>();
+        
+        agent.SetDestination(SetRandomNavTarget()); 
 
     }
-
-    // Update is called once per frame
     void Update()
     {
         switch (states)
         {
-            case IAStates.Chasing:
-                print("Chasing");
-                agent.SetDestination(target.position);
-                if (agent.remainingDistance <= agent.stoppingDistance && agent.hasPath)
+           case IAStates.Wandering:
+            //  animator.SetBool("Wandering", true);
+                Start();
+                if (Physics.Linecast(transform.position, target.position, out h))
                 {
                     if (h.collider.CompareTag("Player"))
                     {
-
-                        states = IAStates.Catch;
+                        states = IAStates.Chasing;
                     }
-                    
                 }
                 break;
-            case IAStates.Attack:
+            case IAStates.Chasing:
+             // animator.SetBool("Chasing", true);
+                agent.SetDestination(target.position);
+                if (agent.remainingDistance <= agent.stoppingDistance && agent.hasPath)
+                {
+                    states = IAStates.Catch;
+                }
                 break;
             case IAStates.Catch:
-                print("Catch");
-               
+                target.gameObject.SetActive(false);
                 break;
         }
     }
-    public void OnTriggerEnter(Collider collision)
+   Vector3 SetRandomNavTarget()
     {
-        if (collision.gameObject.CompareTag("Player"))
-        {
-            menuPerdeu.SetActive(true);
-        }
 
+        Vector3 randomPosition = Random.insideUnitSphere * 30;
+        randomPosition.y = 0;
+        randomPosition += transform.position;
+        UnityEngine.AI.NavMeshHit hit;
+        UnityEngine.AI.NavMesh.SamplePosition(randomPosition, out hit, 5, 1);
+        Vector3 finalPosition = hit.position;
+        return finalPosition;
     }
 }
