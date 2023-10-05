@@ -6,7 +6,7 @@ using UnityEngine.UIElements;
 
 public enum IAStates//Modelo de máquina de estado
 {
-    Chasing, Catch, Wandering
+    Chasing, Catch, Wandering, Die
 }
 public class Enemy : MonoBehaviour
 {
@@ -22,15 +22,15 @@ public class Enemy : MonoBehaviour
         //animator = GetComponent<Animator>();
         agent = GetComponent<NavMeshAgent>();
         states = IAStates.Wandering;
-        agent.SetDestination(SetRandomNavTarget());
     }
     void Update()
     {
+        
         switch (states)
         {
             case IAStates.Wandering:
                 //  animator.SetBool("Wandering", true);
-                SetRandomNavTarget();
+              
                 if (Physics.Linecast(transform.position, target.position, out h))
                 {
                     if (h.collider.CompareTag("Player"))
@@ -46,21 +46,24 @@ public class Enemy : MonoBehaviour
                 {
                     states = IAStates.Catch;
                 }
+               /* if (HP == 0)
+                {
+                    states = IAStates.Die;
+                }*/
+
                 break;
             case IAStates.Catch:
-                target.gameObject.SetActive(false);
+                
+                //target.gameObject.SetActive(false);
+                break;
+            case IAStates.Die:
+
+                
                 break;
         }
+        
+
     }
-    Vector3 SetRandomNavTarget()
-    {
-        print("bhbhbhbhb");
-        Vector3 randomPosition = Random.insideUnitSphere * 30;
-        randomPosition.y = 0;
-        randomPosition += transform.position;
-        UnityEngine.AI.NavMeshHit hit;
-        UnityEngine.AI.NavMesh.SamplePosition(randomPosition, out hit, 5, 1);
-        Vector3 finalPosition = hit.position;
-        return finalPosition;
-    }
+     
+  
 }

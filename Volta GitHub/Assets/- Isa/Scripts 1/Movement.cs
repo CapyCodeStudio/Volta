@@ -42,6 +42,7 @@ public class Movement : MonoBehaviour
         animator = GetComponent<Animator>();
         characterController = GetComponent<CharacterController>();
         SetGravity();
+        Cursor.lockState = CursorLockMode.Locked;
     }
 
     void Update()
@@ -67,7 +68,34 @@ public class Movement : MonoBehaviour
             characterController.Move(moveDir.normalized * moveSpeed * Time.deltaTime);
         }
 
-        /////////////////////////////////////////////
+        if (Input.GetButton("Vertical"))
+        {
+            animator.SetBool("Walk", true);
+
+        }
+        else
+        {
+            animator.SetBool("Walk", false);
+        }
+
+        if (Input.GetButton("D") || Input.GetButton("Right"))
+        {
+            animator.SetBool("WalkR", true);
+        }
+        else
+        {
+            animator.SetBool("WalkR", false);
+        }
+
+        if (Input.GetButton("A") || Input.GetButton("Left"))
+        {
+            animator.SetBool("WalkL", true);
+        }
+        else
+        {
+            animator.SetBool("WalkL", false);
+        }
+
 
         //Correr
         if (Input.GetButton("Fire3") && Input.GetButton("Vertical")/* || Input.GetButton("Fire3") && Input.GetButton("Horizontal")*/)
@@ -90,6 +118,9 @@ public class Movement : MonoBehaviour
             animator.SetBool("Run", false);
 
         }
+        
+        //Andar
+       
         if (Input.GetButton("Fire3") && Input.GetButton("A") || Input.GetButton("Fire3") && Input.GetButton("Left"))
         {
 
@@ -119,49 +150,6 @@ public class Movement : MonoBehaviour
 
         }
 
-        /////////////////////////////////////////////
-        
-        //Andar
-        if (Input.GetButton("Vertical"))
-        {
-            animator.SetBool("Walk", true);
-
-        }
-        else
-        {
-            animator.SetBool("Walk", false);
-        }
-
-        if (Input.GetButton("D") || Input.GetButton("Right"))
-        {
-            animator.SetBool("WalkR", true);
-        }
-        else
-        {
-            animator.SetBool("WalkR", false);
-        }
-
-        if (Input.GetButton("A") || Input.GetButton("Left"))
-        {
-            animator.SetBool("WalkL", true);
-        }
-        else
-        {
-            animator.SetBool("WalkL", false);
-        }
-
-    }
-
-    private void OnApplicationFocus(bool focus)
-    {
-        if (focus)
-        {
-            Cursor.lockState = CursorLockMode.Locked;
-        }
-        else
-        {
-            Cursor.lockState = CursorLockMode.None;
-        }
     }
 
     public void Passos()
