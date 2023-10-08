@@ -2,24 +2,26 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Net.Http.Headers;
 using UnityEngine;
-public enum Audio
-{
-    Um, Dois, Tres, Quatro
-}
-public class Radio : MonoBehaviour
-{
-    AudioSource audioS;
-    public static Radio instance;
-    
-    public static void PlaySound(Audio sound)
-    {
-       switch (sound)
-        {
-            //case Radio.Um:
 
+public class Radio : MonoBehaviour
+{ 
+    public AudioSource audioSource; 
+
+    private void OnTriggerEnter(Collider other)
+    {
+        
+        if (other.CompareTag("Player"))
+        {
+            print("musica");
+            if (!audioSource.isPlaying)
+            {
+                
+                audioSource.Play();
+            }
         }
     }
-
 }
+
+
 
 
