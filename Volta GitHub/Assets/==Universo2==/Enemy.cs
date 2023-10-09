@@ -10,7 +10,7 @@ public enum IAStates
 }
 public class Enemy : MonoBehaviour
 {
-    public float interactionDistance = 5;
+    //public float interactionDistance = 5;
     IAStates states = IAStates.Wandering;
     NavMeshAgent agent;
     public Transform target;
@@ -65,7 +65,7 @@ public class Enemy : MonoBehaviour
                 break;
             case IAStates.Die:
 
-                animator.SetBool("Murder", false);
+                animator.SetBool("Die", true);
                 break;
         }
         

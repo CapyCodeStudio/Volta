@@ -6,15 +6,6 @@ using UnityEngine;
 
 public class Movement : MonoBehaviour
 {
-    [SerializeField]private AudioSource passosAudioSource;
-    [SerializeField] private AudioClip[] passosAudioClip;
-
-    [SerializeField] private AudioSource correrAudioSource;
-    [SerializeField] private AudioClip[] correrAudioClip;
-
-    [SerializeField] private AudioSource puloAudioSource;
-    [SerializeField] private AudioClip[] puloAudioClip;
-
     public Transform cam;
     private Animator animator;
 
@@ -50,7 +41,6 @@ public class Movement : MonoBehaviour
 
         JumpForce();
         GravityForce();
-        Passos();
 
         float horizontal = Input.GetAxisRaw("Horizontal");
         float vertical = Input.GetAxisRaw("Vertical");
@@ -151,25 +141,6 @@ public class Movement : MonoBehaviour
         }
 
     }
-
-    public void Passos()
-    {
-       if (animator.GetBool("Walk") || animator.GetBool("WalkL") || animator.GetBool("WalkR")) 
-       {
-            passosAudioSource.PlayOneShot(passosAudioClip[Random.Range(0, passosAudioClip.Length)]);
-       }   
-    }
-
-    public void Correr()
-    {
-        correrAudioSource.PlayOneShot(correrAudioClip[Random.Range(0, correrAudioClip.Length)]);
-    }
-
-    public void Pulo()
-    {
-        puloAudioSource.PlayOneShot(correrAudioClip[Random.Range(0, puloAudioClip.Length)]);
-    }
-
     private void SetGravity()
     {
         gravity = (2 * maxHeight) / Mathf.Pow(timeToMaxHeight, 2);
