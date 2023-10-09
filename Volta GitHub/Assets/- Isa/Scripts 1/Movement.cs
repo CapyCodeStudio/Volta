@@ -155,8 +155,7 @@ public class Movement : MonoBehaviour
     public void Passos()
     {
        if (animator.GetBool("Walk") || animator.GetBool("WalkL") || animator.GetBool("WalkR")) 
-        {
-            print("andando");
+       {
             passosAudioSource.PlayOneShot(passosAudioClip[Random.Range(0, passosAudioClip.Length)]);
        }   
     }
@@ -168,7 +167,7 @@ public class Movement : MonoBehaviour
 
     public void Pulo()
     {
-        correrAudioSource.PlayOneShot(correrAudioClip[Random.Range(0, correrAudioClip.Length)]);
+        puloAudioSource.PlayOneShot(correrAudioClip[Random.Range(0, puloAudioClip.Length)]);
     }
 
     private void SetGravity()
