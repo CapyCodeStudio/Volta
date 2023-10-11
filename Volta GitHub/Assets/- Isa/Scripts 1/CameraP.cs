@@ -1,34 +1,42 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Cinemachine;
-using System.Runtime.CompilerServices;
+
 public class CameraP : MonoBehaviour
 {
+    public bool tocando;
     public CinemachineFreeLook freeLookCamera;
     public CinemachineVirtualCamera virtualCamera;
-    /*public GameObject comCabeca;
-    public GameObject semCabeca;*/
-    public Collider areaTrigger;
-    private void OnTriggerEnter(Collider other)
+    public GameObject trigger;
+    public GameObject mesh;
+
+    private void Update()
     {
-        print("Deu certo");
-        if (other.CompareTag("Player"))
+
+    }
+    public void OnTriggerEnter(Collider collision)
+    {
+        if (collision.gameObject.CompareTag("Player"))
         {
-            freeLookCamera.gameObject.SetActive(false);
-            virtualCamera.gameObject.SetActive(true);
-            /*comCabeca.SetActive(false);
-            semCabeca.SetActive(true);*/
+            mesh.SetActive(false);
+            tocando = true;
+            freeLookCamera.Priority = 0;
+            virtualCamera.Priority = 5;
+
         }
     }
-    private void OnTriggerExit(Collider other)
+    public void OnTriggerExit(Collider collision)
     {
-        if (other.CompareTag("Player"))
+        if (collision.gameObject.CompareTag("Player"))
         {
-            freeLookCamera.gameObject.SetActive(true);
-            virtualCamera.gameObject.SetActive(false);
-            /*comCabeca.SetActive(true);
-            semCabeca.SetActive(false);*/
+            mesh.SetActive(true);
+            tocando = false;
+            freeLookCamera.Priority = 5;
+            virtualCamera.Priority = 0;
+
         }
     }
 }
+

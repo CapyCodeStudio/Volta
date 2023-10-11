@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
@@ -8,12 +6,12 @@ public class Controles : MonoBehaviour, IPointerEnterHandler, IPointerExitHandle
 {
     private Image buttonImage;
     public Sprite activeImage;
-    private Sprite defaultImage;
+    public Sprite originalImage;
 
     private void Start()
     {
         buttonImage = GetComponent<Image>();
-        defaultImage = buttonImage.sprite;
+        originalImage = buttonImage.sprite;
     }
 
     public void OnPointerEnter(PointerEventData eventData)
@@ -23,7 +21,7 @@ public class Controles : MonoBehaviour, IPointerEnterHandler, IPointerExitHandle
 
     public void OnPointerExit(PointerEventData eventData)
     {
-        buttonImage.sprite = defaultImage;
+        buttonImage.sprite = originalImage;
     }
 
 }
