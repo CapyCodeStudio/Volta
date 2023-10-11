@@ -8,26 +8,21 @@ public class Menu : MonoBehaviour
 
     [SerializeField] private GameObject menuPause;
     [SerializeField] private string cenaDoJogo;
-
     [SerializeField] private GameObject menuControles;
-    [SerializeField] private GameObject menuIdioma;
     [SerializeField] private GameObject menuAudio;
-    [SerializeField] private GameObject menuGraficos;
     [SerializeField] private GameObject carta;
 
-
-    // Update is called once per frame
     private void Start()
     {
-        Cursor.lockState = CursorLockMode.Locked;
 
     }
     void Update()
     {
 
-        if (Input.GetButtonDown("Cancel") && !menuPause.activeSelf)
+        if(Input.GetButtonDown("Cancel") && !menuPause.activeSelf)
         {
             menuPause.SetActive(true);
+            //carta.SetActive(false);
             Time.timeScale = 0;
             Cursor.lockState = CursorLockMode.None;
 
@@ -38,12 +33,12 @@ public class Menu : MonoBehaviour
             Time.timeScale = 1;
             Cursor.lockState = CursorLockMode.Locked;
         }
-        if (Input.GetButtonDown("Cancel") && menuControles.activeSelf || Input.GetButtonDown("Cancel") && menuIdioma.activeSelf || Input.GetButtonDown("Cancel") && menuGraficos.activeSelf || Input.GetButtonDown("Cancel") && menuAudio.activeSelf || Input.GetButtonDown("Cancel") && carta.activeSelf)
+       /* if (Input.GetButtonDown("Cancel") && menuControles.activeSelf || Input.GetButtonDown("Cancel") && menuAudio.activeSelf || Input.GetButtonDown("Cancel") && carta.activeSelf)
         {
             menuPause.SetActive(false);
             Time.timeScale = 0;
             Cursor.lockState = CursorLockMode.None;
-        }
+        }*/
 
     }
     public void Jogar()
