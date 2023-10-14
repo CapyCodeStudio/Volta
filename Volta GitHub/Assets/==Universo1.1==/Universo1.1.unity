@@ -395,7 +395,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 273660913}
-  m_LocalRotation: {x: 0.0030057542, y: -0.99010175, z: 0.13866854, w: 0.021461265}
+  m_LocalRotation: {x: 0.0030057486, y: -0.9901017, z: 0.13866855, w: 0.02146123}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -3841,6 +3841,7 @@ GameObject:
   - component: {fileID: 5525565078698926732}
   - component: {fileID: 5525565078698926735}
   - component: {fileID: 5525565078698926734}
+  - component: {fileID: 5525565078698926736}
   - component: {fileID: 766977619}
   m_Layer: 0
   m_Name: Cronopio
@@ -3932,6 +3933,37 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
+--- !u!114 &5525565078698926736
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5525565078698926721}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6cb5a8ed78c68b848b36748d78e6dc48, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  passosAudioSource: {fileID: 0}
+  passosAudioClip:
+  - {fileID: 8300000, guid: 1f0199a4c6005ec4abbb302f71bc036d, type: 3}
+  - {fileID: 8300000, guid: 53e2adf2ac488ef46bb2b4074de9e363, type: 3}
+  - {fileID: 8300000, guid: a03a96c5d1e99b4409ddd79098abd9ab, type: 3}
+  - {fileID: 8300000, guid: 7187dc81f98b8be4eb97bfc4dd9a5abf, type: 3}
+  - {fileID: 8300000, guid: e3cfcb32689b274419ac73380ea96888, type: 3}
+  passosRAudioSource: {fileID: 0}
+  passosRAudioClip: []
+  passosLAudioSource: {fileID: 0}
+  passosLAudioClip: []
+  correrAudioSource: {fileID: 0}
+  correrAudioClip: []
+  correrRAudioSource: {fileID: 0}
+  correrRAudioClip: []
+  correrLAudioSource: {fileID: 0}
+  correrLAudioClip: []
+  puloAudioSource: {fileID: 0}
+  puloAudioClip: []
 --- !u!4 &5525565078740911922
 Transform:
   m_ObjectHideFlags: 0
