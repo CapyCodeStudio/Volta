@@ -14,7 +14,7 @@ public class Dialogo : MonoBehaviour
 
     private void Start()
     {
-
+        Cursor.lockState = CursorLockMode.Locked;
         // Defina as frases do di�logo (substitua pelo seu pr�prio di�logo)
         sentences = new string[]
         {
