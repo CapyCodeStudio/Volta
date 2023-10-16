@@ -7,7 +7,7 @@ using UnityEngine;
 public class Movement : MonoBehaviour
 {
     public Transform cam;
-    private Animator animator;
+    public Animator animator;
 
     public float moveSpeed = 5;
 
@@ -61,7 +61,7 @@ public class Movement : MonoBehaviour
         animator.SetBool("Walk", horizontal != 0 || vertical != 0);
 
 
-        /*if (Input.GetButton("D"))
+       /* if (Input.GetButton("D"))
         {
             animator.SetBool("Walk", true);
         }
@@ -77,8 +77,8 @@ public class Movement : MonoBehaviour
         else
         {
             animator.SetBool("Walk", false);
-        }
-        */
+        }*/
+        
 
         //Correr
         if (Input.GetButton("Fire3") && Input.GetButton("Vertical")/* || Input.GetButton("Fire3") && Input.GetButton("Horizontal")*/)
