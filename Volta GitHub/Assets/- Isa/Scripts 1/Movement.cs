@@ -41,6 +41,7 @@ public class Movement : MonoBehaviour
 
         JumpForce();
         GravityForce();
+        Bater();
 
         float horizontal = Input.GetAxisRaw("Horizontal");
         float vertical = Input.GetAxisRaw("Vertical");
@@ -57,42 +58,32 @@ public class Movement : MonoBehaviour
             Vector3 moveDir = Quaternion.Euler(0f, targetAngle, 0f) * Vector3.forward;
             characterController.Move(moveDir.normalized * moveSpeed * Time.deltaTime);
         }
+        animator.SetBool("Walk", horizontal != 0 || vertical != 0);
 
-        if (Input.GetButton("Vertical"))
+
+        /*if (Input.GetButton("D"))
         {
             animator.SetBool("Walk", true);
-
         }
         else
         {
             animator.SetBool("Walk", false);
         }
 
-        if (Input.GetButton("D") || Input.GetButton("Right"))
+        if (Input.GetButton("A"))
         {
-            animator.SetBool("WalkR", true);
+            animator.SetBool("Walk", true);
         }
         else
         {
-            animator.SetBool("WalkR", false);
+            animator.SetBool("Walk", false);
         }
-
-        if (Input.GetButton("A") || Input.GetButton("Left"))
-        {
-            animator.SetBool("WalkL", true);
-        }
-        else
-        {
-            animator.SetBool("WalkL", false);
-        }
-
+        */
 
         //Correr
         if (Input.GetButton("Fire3") && Input.GetButton("Vertical")/* || Input.GetButton("Fire3") && Input.GetButton("Horizontal")*/)
         {
             animator.SetBool("Walk", false);
-            animator.SetBool("WalkR", false);
-            animator.SetBool("WalkL", false);
             animator.SetBool("Run", true);
 
             float targetAngle = Mathf.Atan2(direction.x, direction.z) * Mathf.Rad2Deg + cam.eulerAngles.y;
@@ -115,8 +106,6 @@ public class Movement : MonoBehaviour
         {
 
             animator.SetBool("Walk", false);
-            animator.SetBool("WalkR", false);
-            animator.SetBool("WalkL", false);
             animator.SetBool("RunL", true);
         }
         else
@@ -129,8 +118,8 @@ public class Movement : MonoBehaviour
         {
 
             animator.SetBool("Walk", false);
-            animator.SetBool("WalkL", false);
-            animator.SetBool("WalkR", false);
+            animator.SetBool("Walk", false);
+            animator.SetBool("Walk", false);
             animator.SetBool("RunR", true);
 
         }
@@ -181,4 +170,23 @@ public class Movement : MonoBehaviour
         Gizmos.DrawSphere(groundChecker.position, radiusChecker);
     }
 
+    void Bater()
+    {
+        if (Input.GetButtonDown("Fire1"))
+        {
+            animator.SetBool("Attack", true);
+        }
+        else
+        {
+            animator.SetBool("Attack", false);
+        }
+        if (Input.GetButtonDown("Fire2"))
+        {
+            animator.SetBool("Attack 0", true);
+        }
+        else
+        {
+            animator.SetBool("Attack 0", false);
+        }
+    }
 }

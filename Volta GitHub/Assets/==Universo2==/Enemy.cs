@@ -16,8 +16,8 @@ public class Enemy : MonoBehaviour
     public Transform target;
     RaycastHit[] hit = new RaycastHit[10];
     RaycastHit h;
-    public Slider healthSlider;
-    public Text healthText;
+    //public Slider healthSlider;
+    //public Text healthText;
     private int vida = 100;
     private int vidaAtual;
     private Animator animator;
@@ -85,8 +85,8 @@ public class Enemy : MonoBehaviour
 
     private void UpdateHealthUI()
     {
-        healthSlider.value = (float)vidaAtual / vida; // slider
-        healthText.text = "Health: " + vidaAtual + " / " + vida; // texto
+        //healthSlider.value = (float)vidaAtual / vida; // slider
+        //healthText.text = "Health: " + vidaAtual + " / " + vida; // texto
     }
 
     private void OnTriggerEnter(Collider other)
