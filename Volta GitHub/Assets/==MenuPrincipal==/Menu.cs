@@ -5,42 +5,12 @@ using UnityEngine.SceneManagement;
 
 public class Menu : MonoBehaviour
 {
-
-    [SerializeField] private GameObject menuPause;
     [SerializeField] private string cenaDoJogo;
-    [SerializeField] private GameObject menuControles;
-    [SerializeField] private GameObject menuAudio;
-    [SerializeField] private GameObject carta;
-
     private void Start()
     {
 
     }
-    void Update()
-    {
-
-        if(Input.GetButtonDown("Cancel") && !menuPause.activeSelf)
-        {
-            menuPause.SetActive(true);
-            //carta.SetActive(false);
-            Time.timeScale = 0;
-            Cursor.lockState = CursorLockMode.None;
-
-        }
-        else if (Input.GetButtonDown("Cancel") && menuPause.activeSelf)
-        {
-            menuPause.SetActive(false);
-            Time.timeScale = 1;
-            Cursor.lockState = CursorLockMode.Locked;
-        }
-       /* if (Input.GetButtonDown("Cancel") && menuControles.activeSelf || Input.GetButtonDown("Cancel") && menuAudio.activeSelf || Input.GetButtonDown("Cancel") && carta.activeSelf)
-        {
-            menuPause.SetActive(false);
-            Time.timeScale = 0;
-            Cursor.lockState = CursorLockMode.None;
-        }*/
-
-    }
+   
     public void Jogar()
     {
         StartCoroutine(LoadScene());
