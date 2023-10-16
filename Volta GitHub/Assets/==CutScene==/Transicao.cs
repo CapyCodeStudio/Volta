@@ -9,7 +9,7 @@ public class Transicao : MonoBehaviour
     {
         Cursor.lockState = CursorLockMode.Locked;
     }
-
+     
     public string nomeDaProximaCena; // Nome da cena que você deseja carregar
 
     // Método chamado pela Timeline quando ela terminar
