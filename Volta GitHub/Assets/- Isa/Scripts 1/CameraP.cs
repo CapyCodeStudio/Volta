@@ -11,6 +11,7 @@ public class CameraP : MonoBehaviour
     public CinemachineVirtualCamera virtualCamera;
     public GameObject trigger;
     public GameObject mesh;
+    public GameObject viajante;
 
     private void Update()
     {
@@ -24,6 +25,8 @@ public class CameraP : MonoBehaviour
             tocando = true;
             freeLookCamera.Priority = 0;
             virtualCamera.Priority = 5;
+            viajante.SetActive(false);
+            
 
         }
     }
@@ -35,8 +38,10 @@ public class CameraP : MonoBehaviour
             tocando = false;
             freeLookCamera.Priority = 5;
             virtualCamera.Priority = 0;
+            viajante.SetActive(true);
 
         }
     }
+
 }
 

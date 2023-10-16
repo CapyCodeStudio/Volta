@@ -32,12 +32,12 @@ public class MenuPause : MonoBehaviour
             Time.timeScale = 1;
             Cursor.lockState = CursorLockMode.Locked;
         }
-        if (Input.GetButtonDown("Cancel") && menuControles.activeSelf || Input.GetButtonDown("Cancel") && menuAudio.activeSelf || Input.GetButtonDown("Cancel") && carta.activeSelf)
+       /* if (Input.GetButtonDown("Cancel") && menuControles.activeSelf || Input.GetButtonDown("Cancel") && menuAudio.activeSelf || Input.GetButtonDown("Cancel") && carta.activeSelf)
         {
              menuPause.SetActive(false);
-             Time.timeScale = 0;
+             Time.timeScale = 1;
              Cursor.lockState = CursorLockMode.None;
-        }
+        }*/
 
     }
 }

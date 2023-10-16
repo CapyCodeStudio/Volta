@@ -23,8 +23,8 @@ public class Carta : MonoBehaviour
                     carta.SetActive(false);
                     e.SetActive(false);
                     Time.timeScale = 1;
-                }
 
+                }
                 else
                 {
                     print("aperto o botao");
