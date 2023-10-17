@@ -97,7 +97,4 @@ public class Enemy : MonoBehaviour
             TakeDamage(10);
         }
     }
-
-
-
 }
