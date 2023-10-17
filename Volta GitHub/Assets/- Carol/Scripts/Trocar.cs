@@ -8,6 +8,7 @@ public class Trocar : MonoBehaviour
 {
     public CinemachineFreeLook freeLookCamera;
     public CinemachineVirtualCamera virtualCamera;
+    public GameObject mesh;
 
     private bool isFreeLookActive = true;
 
@@ -26,8 +27,7 @@ public class Trocar : MonoBehaviour
             { 
                 freeLookCamera.Priority = 0;
                 virtualCamera.Priority = 5;
-                /*comCabeca.SetActive(false);
-                semCabeca.SetActive(true);*/
+                mesh.SetActive(false);
 
 
             }
@@ -36,8 +36,8 @@ public class Trocar : MonoBehaviour
                
                 freeLookCamera.Priority = 5;
                 virtualCamera.Priority = 0;
-                /*comCabeca.SetActive(true);
-                semCabeca.SetActive(false);*/
+                mesh.SetActive(true);
+
             }
 
             
