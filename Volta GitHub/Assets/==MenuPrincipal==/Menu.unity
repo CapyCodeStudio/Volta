@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0, g: 0.0049941707, b: 0.088556334, a: 1}
+  m_IndirectSpecularColor: {r: 0, g: 0.0049783275, b: 0.08842687, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -6165,11 +6165,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 42b6c7ae687089b47a244b746e5e453f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  menuPause: {fileID: 0}
   cenaDoJogo: Introducao
-  menuControles: {fileID: 317246899}
-  menuAudio: {fileID: 506618596}
-  carta: {fileID: 0}
 --- !u!1 &1222952787
 GameObject:
   m_ObjectHideFlags: 0
@@ -8125,7 +8121,7 @@ AudioSource:
   MinDistance: 1
   MaxDistance: 500
   Pan2D: 0
-  rolloffMode: 0
+  rolloffMode: 1
   BypassEffects: 1
   BypassListenerEffects: 0
   BypassReverbZones: 0
@@ -8158,7 +8154,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 0
+      value: 1
       inSlope: 0
       outSlope: 0
       tangentMode: 0
