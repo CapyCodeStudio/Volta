@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 465980232}
-  m_IndirectSpecularColor: {r: 0.0011291321, g: 0.00918301, b: 0.052608475, a: 1}
+  m_IndirectSpecularColor: {r: 0.0011347184, g: 0.009221489, b: 0.052683868, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -6497,7 +6497,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Coisas ruins v\xE3o acontecer. "
+  m_text: "N\xE3o \xE9 seguro. "
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 26d4a3854f3c8a74fb028f7c4c1cbbe8, type: 2}
   m_sharedMaterial: {fileID: 1640095819935906385, guid: 26d4a3854f3c8a74fb028f7c4c1cbbe8, type: 2}
@@ -9594,7 +9594,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Eu sei que parece loucura
+  m_text: Eu sei que parece loucura...
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 26d4a3854f3c8a74fb028f7c4c1cbbe8, type: 2}
   m_sharedMaterial: {fileID: 1640095819935906385, guid: 26d4a3854f3c8a74fb028f7c4c1cbbe8, type: 2}
@@ -32330,7 +32330,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "mas, voc\xEA n\xE3o pode mais ficar a\xED."
+  m_text: "Mas, Cron\xF3pio, voc\xEA n\xE3o pode mais ficar a\xED."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 26d4a3854f3c8a74fb028f7c4c1cbbe8, type: 2}
   m_sharedMaterial: {fileID: 1640095819935906385, guid: 26d4a3854f3c8a74fb028f7c4c1cbbe8, type: 2}
@@ -38480,8 +38480,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294953216
-  m_fontColor: {r: 0, g: 0.7887945, b: 1, a: 1}
+    rgba: 4294967040
+  m_fontColor: {r: 0, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -47752,7 +47752,12 @@ Animator:
   m_ApplyRootMotion: 1
   m_LinearVelocityBlending: 0
   m_StabilizeFeet: 0
-  m_WarningMessage: 
+  m_WarningMessage: "\nBinding warning: Some generic clip(s) animate transforms that
+    are already bound by a Humanoid avatar. These transforms can only be changed
+    by Humanoid clips.\n\tTransform 'coxa.l'\n\tTransform 'Bone.001'\n\tTransform
+    'chest.r'\n\tTransform 'ded\xE3o3.r'\n\tTransform 'canela.r'\n\tTransform 'p\xE9.l'\n\tTransform
+    'quadril.l'\n\tTransform 'Bone.002'\n\tTransform 'arm.l'\n\tTransform 'Armature'\n\tand
+    more ..."
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
