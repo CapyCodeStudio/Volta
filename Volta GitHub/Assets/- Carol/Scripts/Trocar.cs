@@ -9,9 +9,11 @@ public class Trocar : MonoBehaviour
     public CinemachineFreeLook freeLookCamera;
     public CinemachineVirtualCamera virtualCamera;
     public GameObject mesh;
-    public GameObject luzPRIMEIRA;
     public GameObject luzTERCEIRA;
-
+    public GameObject luzPRIMEIRA;
+    public GameObject VoyagerPrimeira;
+    public GameObject VoyagerTERCEIRA;
+   
     private bool isFreeLookActive = true;
 
     private void Start()
@@ -30,9 +32,10 @@ public class Trocar : MonoBehaviour
                 freeLookCamera.Priority = 0;
                 virtualCamera.Priority = 5;
                 mesh.SetActive(false);
-                luzPRIMEIRA.SetActive(true); 
+                luzPRIMEIRA.SetActive(true);
                 luzTERCEIRA.SetActive(false);
-
+                VoyagerPrimeira.SetActive(true);
+                VoyagerTERCEIRA.SetActive(false);
             }
             else
             {
@@ -42,6 +45,9 @@ public class Trocar : MonoBehaviour
                 mesh.SetActive(true);
                 luzPRIMEIRA.SetActive(false);
                 luzTERCEIRA.SetActive(true);
+                VoyagerPrimeira.SetActive(false);
+                VoyagerTERCEIRA.SetActive(true);
+
             }
 
             
