@@ -281,7 +281,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 12587935}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.314827, y: 5.256, z: 39.411285}
+  m_LocalPosition: {x: -6.314827, y: 5.5125647, z: 39.411285}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1393,7 +1393,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &277405256
 Transform:
   m_ObjectHideFlags: 0
@@ -5281,7 +5281,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1009650001
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5296,6 +5296,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   freeLookCamera: {fileID: 467064979}
   virtualCamera: {fileID: 2017084890}
+  mesh: {fileID: 0}
+  luzTERCEIRA: {fileID: 0}
+  luzPRIMEIRA: {fileID: 0}
+  VoyagerPrimeira: {fileID: 0}
+  VoyagerTERCEIRA: {fileID: 0}
 --- !u!4 &1009650002
 Transform:
   m_ObjectHideFlags: 0
@@ -8167,7 +8172,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1883102188
 RectTransform:
   m_ObjectHideFlags: 0
@@ -8858,7 +8863,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2054351202}
-  m_LocalRotation: {x: 0.12066458, y: -0, z: -0, w: 0.99269336}
+  m_LocalRotation: {x: 0.12066458, y: -0.000000007450581, z: 9.313226e-10, w: 0.99269336}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -9007,7 +9012,8 @@ MonoBehaviour:
   virtualCamera: {fileID: 2017084890}
   trigger: {fileID: 2069081331}
   mesh: {fileID: 0}
-  viajante: {fileID: 0}
+  UICAVE: {fileID: 0}
+  UITUTORIAL1: {fileID: 0}
 --- !u!1 &2083607971
 GameObject:
   m_ObjectHideFlags: 0
