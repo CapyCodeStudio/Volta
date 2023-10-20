@@ -12,6 +12,21 @@ public class CameraP : MonoBehaviour
     public GameObject trigger;
     public GameObject mesh;
     public GameObject UICAVE;
+    public GameObject UITUTORIAL1; 
+    private float tempoDeEspera = 2.0f;
+
+    private void Start()
+    {
+        Invoke("AtivarUITutorial", tempoDeEspera);
+    }
+
+    private void AtivarUITutorial()
+    {
+        if (UITUTORIAL1 != null)
+        {
+            UITUTORIAL1.SetActive(true);
+        }
+    }
 
     private void Update()
     {
@@ -39,6 +54,7 @@ public class CameraP : MonoBehaviour
             freeLookCamera.Priority = 5;
             virtualCamera.Priority = 0;
             UICAVE.SetActive(true);
+           
 
         }
     }
