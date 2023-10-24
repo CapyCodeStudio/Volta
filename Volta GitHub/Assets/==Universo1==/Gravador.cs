@@ -2,46 +2,51 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Voyager : MonoBehaviour
+public class Gravador : MonoBehaviour
 {
     public bool tocando;
     public GameObject e;
-    public GameObject voyager;
-    public GameObject caraComVoyager;
- 
+    public GameObject mao;
+    public GameObject chao;
+
     private void Update()
     {
-        if (tocando && voyager.activeSelf == false)
+        print("AAAAAAA");
+        if (tocando && mao.activeSelf == false)
         {
             e.SetActive(true);
             print("tocou true");
             if (Input.GetButtonDown("E"))
             {
-                if (voyager.activeSelf)
+                if (mao.activeSelf)
                 {
-                    voyager.SetActive(false);
-                    caraComVoyager.SetActive(false);
+                    mao.SetActive(false);
+                    chao.SetActive(true);
                     e.SetActive(false);
+
+
                 }
                 else
                 {
                     print("aperto o botao");
-                    voyager.SetActive(false);
-                    caraComVoyager.SetActive(true);
+                    mao.SetActive(true);
+                    chao.SetActive(false);
                     e.SetActive(false);
+
                 }
             }
         }
 
-        else if (tocando && voyager.activeSelf == true)
+        else if (tocando && mao.activeSelf == true)
         {
             if (Input.GetButtonDown("E"))
             {
-                if (voyager.activeSelf)
+                if (mao.activeSelf)
                 {
-                    voyager.SetActive(false);
-                    caraComVoyager.SetActive(true);
+                    mao.SetActive(false);
+                    chao.SetActive(true);
                     e.SetActive(false);
+
                 }
             }
         }
@@ -64,3 +69,5 @@ public class Voyager : MonoBehaviour
         }
     }
 }
+
+

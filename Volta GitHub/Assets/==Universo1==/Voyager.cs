@@ -3,47 +3,51 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Carta : MonoBehaviour
+public class Voyager : MonoBehaviour
 {
     public bool tocando;
-    // public BoxCollider carta;
     public GameObject e;
-    public GameObject carta;
+    public GameObject cara;
+    public GameObject chao;
    
     private void Update()
     {
-        if (tocando && carta.activeSelf == false)
+        print("AAAAAAA");
+        if (tocando && cara.activeSelf == false)
         {
             e.SetActive(true);
             print("tocou true");
             if (Input.GetButtonDown("E"))
             {
-                if (carta.activeSelf)
+                if (cara.activeSelf)
                 {
-                    carta.SetActive(false);
+                    cara.SetActive(false);
+                    chao.SetActive(true);
                     e.SetActive(false);
-                    Time.timeScale = 1;
+                   
 
                 }
                 else
                 {
                     print("aperto o botao");
-                    carta.SetActive(true);
+                    cara.SetActive(true);
+                    chao.SetActive(false);
                     e.SetActive(false);
-                    Time.timeScale = 0;
+                    
                 }
             }
         }
         
-        else if (tocando && carta.activeSelf == true)
+        else if (tocando && cara.activeSelf == true)
         {
             if (Input.GetButtonDown("E"))
             {
-                if (carta.activeSelf)
+                if (cara.activeSelf)
                 {
-                    carta.SetActive(false);
+                    cara.SetActive(false);
+                    chao.SetActive(true);
                     e.SetActive(false);
-                    Time.timeScale = 1;
+                   
                 }
             }
         }
