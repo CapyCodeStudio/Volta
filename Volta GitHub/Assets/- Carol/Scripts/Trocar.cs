@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Cinemachine;
 using System.Runtime.CompilerServices;
+using UnityEngine.SceneManagement;
 
 public class Trocar : MonoBehaviour
 {
@@ -28,30 +29,43 @@ public class Trocar : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.C))
         {
             if (isFreeLookActive)
-            { 
-                freeLookCamera.Priority = 0;
-                virtualCamera.Priority = 5;
+            {
+                //Teste();
                 mesh.SetActive(false);
                 luzPRIMEIRA.SetActive(true);
                 luzTERCEIRA.SetActive(false);
                 VoyagerPrimeira.SetActive(true);
                 VoyagerTERCEIRA.SetActive(false);
+                freeLookCamera.Priority = 0;
+                virtualCamera.Priority = 5;
             }
             else
             {
-               
+                //* Terceira Pessoa
                 freeLookCamera.Priority = 5;
                 virtualCamera.Priority = 0;
-                mesh.SetActive(true);
                 luzPRIMEIRA.SetActive(false);
                 luzTERCEIRA.SetActive(true);
                 VoyagerPrimeira.SetActive(false);
                 VoyagerTERCEIRA.SetActive(true);
-
+                mesh.SetActive(true);
             }
 
             
             isFreeLookActive = !isFreeLookActive;
         }
     }
+    IEnumerator Teste()
+    {
+        mesh.SetActive(false);
+        yield return new WaitForSeconds(0.1f);
+        freeLookCamera.Priority = 0;
+        virtualCamera.Priority = 5;
+        luzPRIMEIRA.SetActive(true);
+        luzTERCEIRA.SetActive(false);
+        VoyagerPrimeira.SetActive(true);
+        VoyagerTERCEIRA.SetActive(false);
+
+    }
+
 }
