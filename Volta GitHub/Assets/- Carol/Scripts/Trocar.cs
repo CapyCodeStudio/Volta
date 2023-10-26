@@ -14,7 +14,8 @@ public class Trocar : MonoBehaviour
     public GameObject luzPRIMEIRA;
     public GameObject VoyagerPrimeira;
     public GameObject VoyagerTERCEIRA;
-   
+    public GameObject EspadaPRIMEIRA;
+    public GameObject EspadaTERCEIRA;
     private bool isFreeLookActive = true;
 
     private void Start()
@@ -38,6 +39,7 @@ public class Trocar : MonoBehaviour
                 VoyagerTERCEIRA.SetActive(false);
                 freeLookCamera.Priority = 0;
                 virtualCamera.Priority = 5;
+                
             }
             else
             {
