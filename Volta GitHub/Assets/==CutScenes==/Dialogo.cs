@@ -18,12 +18,14 @@ public class Dialogo : MonoBehaviour
         // Defina as frases do di�logo (substitua pelo seu pr�prio di�logo)
         sentences = new string[]
         {
-            "Há 6 anos eles partiram.      " 
-            + Environment.NewLine + "Lembro-me daquela noite como se fosse ontem; era véspera do meu aniversário."
-            + Environment.NewLine + "Como de costume, eles sempre apareciam à meia-noite para me parabenizar. Mas naquela noite foi diferente."
-            + Environment.NewLine + "Eu estava deitado, fingindo estar dormindo, e de vez em quando espiava o relógio. Os minutos pareciam intermináveis e o silêncio tomou conta."
-            + Environment.NewLine + "Minutos depois, tomei coragem e saí do quarto. Procurei por toda a casa, nem sinal. Saí na rua e chamei pelos seus nomes e nada. Resolvi voltar e dormir, torcendo que eles aparecessem na manhã seguinte."
-            + Environment.NewLine + "Nunca mais os encontrei, nem mesmo em meus sonhos. Desde aquele dia, passei meus anos vivendo sozinho aqui nesta casa. No mistério daquela noite, aqui, minha alma persiste."
+            "'' Eles me abandonaram." 
+            + Environment.NewLine + "Ainda tenho a memória muito vívida daquela noite; era véspera do meu aniversário, 12 anos."
+            + Environment.NewLine + "Como de costume, eles sempre apareciam à meia-noite para me parabenizar. Mas, naquela noite foi diferente."
+            + Environment.NewLine + "Eu lembro que estava deitado, e de vez em quando espiava o relógio. Os minutos pareciam intermináveis e o silêncio tomou conta."
+            + Environment.NewLine + "Pouco tempo depois, tomei coragem e saí do quarto. Procurei-os por toda a casa, nem sinal. Contudo, decidi sair na rua e os procurar, mas, nem vestígio. Resolvi voltar e dormir, torcendo que fosse algum tipo de brincadeira."
+            + Environment.NewLine + "Entretanto, nunca mais os encontrei. Desde aquele dia, passei meus anos vivendo sozinho aqui nesta casa, com grande angustia e raiva, sigo dizendo: eles me abandonaram.''"
+            + Environment.NewLine + ""
+            + Environment.NewLine + "- Cronópio"
             
         };
 
