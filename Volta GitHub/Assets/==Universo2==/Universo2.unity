@@ -511,8 +511,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 41641349}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 284.254, y: 5.356, z: 482.38098}
+  m_LocalRotation: {x: 0.085322745, y: 0.70194024, z: -0.085322745, w: 0.7019402}
+  m_LocalPosition: {x: 277.1, y: 7.19, z: 482.19998}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1145,6 +1145,8 @@ MonoBehaviour:
   luzPRIMEIRA: {fileID: 0}
   VoyagerPrimeira: {fileID: 0}
   VoyagerTERCEIRA: {fileID: 0}
+  EspadaPRIMEIRA: {fileID: 0}
+  EspadaTERCEIRA: {fileID: 0}
 --- !u!4 &67246937
 Transform:
   m_ObjectHideFlags: 0
@@ -1642,7 +1644,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed9b0619e76c75640984ad0160463aa3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 454030985}
 --- !u!195 &134431299
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -1697,7 +1698,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 859624722c090964dae94785778290ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  vida: 10
 --- !u!136 &134431302
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -2622,13 +2622,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 614d77a970c5f9449ab3ba0b8a54a3e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waypoints:
-  - {fileID: 690125797}
-  - {fileID: 942564653}
-  - {fileID: 1007144518}
-  - {fileID: 1689668624}
-  wayPointIndex: 0
-  target: {x: 0, y: 0, z: 0}
 --- !u!195 &247249493
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -2839,13 +2832,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 614d77a970c5f9449ab3ba0b8a54a3e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waypoints:
-  - {fileID: 690125797}
-  - {fileID: 942564653}
-  - {fileID: 1007144518}
-  - {fileID: 1689668624}
-  wayPointIndex: 0
-  target: {x: 0, y: 0, z: 0}
 --- !u!65 &261084904
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4045,6 +4031,7 @@ GameObject:
   - component: {fileID: 454030992}
   - component: {fileID: 454030986}
   - component: {fileID: 454030991}
+  - component: {fileID: 454030993}
   m_Layer: 0
   m_Name: Cronopio
   m_TagString: Player
@@ -4213,6 +4200,22 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 3d8f480d252db9449b2f978284506f8e, type: 3}
   - {fileID: 8300000, guid: 79e6e1370ee1ca747b469e68d0dcb0fe, type: 3}
   - {fileID: 8300000, guid: b796f7e3b1a4d7344b7ee8d6c077a68f, type: 3}
+--- !u!114 &454030993
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 454030984}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b9cca370be092c24e8b2dcc5b77a1cf0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 100
+  currentHealth: 0
+  damage: 10
+  animator: {fileID: 0}
 --- !u!1 &454604368
 GameObject:
   m_ObjectHideFlags: 0
@@ -4455,7 +4458,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed9b0619e76c75640984ad0160463aa3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 454030985}
 --- !u!195 &464646375
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -4510,7 +4512,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 859624722c090964dae94785778290ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  vida: 10
 --- !u!136 &464646378
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -4908,13 +4909,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 614d77a970c5f9449ab3ba0b8a54a3e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waypoints:
-  - {fileID: 690125797}
-  - {fileID: 942564653}
-  - {fileID: 1007144518}
-  - {fileID: 1689668624}
-  wayPointIndex: 0
-  target: {x: 0, y: 0, z: 0}
 --- !u!195 &510480698
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -5056,7 +5050,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed9b0619e76c75640984ad0160463aa3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 454030985}
 --- !u!195 &515391882
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -5111,7 +5104,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 859624722c090964dae94785778290ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  vida: 10
 --- !u!136 &515391885
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -8726,7 +8718,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed9b0619e76c75640984ad0160463aa3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 454030985}
 --- !u!195 &986228437
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -8781,7 +8772,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 859624722c090964dae94785778290ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  vida: 10
 --- !u!114 &986228440
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8794,7 +8784,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 859624722c090964dae94785778290ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  vida: 10
 --- !u!136 &986228441
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -10197,13 +10186,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 614d77a970c5f9449ab3ba0b8a54a3e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waypoints:
-  - {fileID: 690125797}
-  - {fileID: 942564653}
-  - {fileID: 1007144518}
-  - {fileID: 1689668624}
-  wayPointIndex: 0
-  target: {x: 0, y: 0, z: 0}
 --- !u!65 &1176031024
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -13408,13 +13390,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 614d77a970c5f9449ab3ba0b8a54a3e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waypoints:
-  - {fileID: 690125797}
-  - {fileID: 942564653}
-  - {fileID: 1007144518}
-  - {fileID: 1689668624}
-  wayPointIndex: 0
-  target: {x: 0, y: 0, z: 0}
 --- !u!195 &1555330650
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -14179,7 +14154,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed9b0619e76c75640984ad0160463aa3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 454030985}
 --- !u!195 &1624315188
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -14234,7 +14208,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 859624722c090964dae94785778290ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  vida: 10
 --- !u!136 &1624315191
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -14605,7 +14578,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed9b0619e76c75640984ad0160463aa3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 454030985}
 --- !u!195 &1658153804
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -14640,7 +14612,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 859624722c090964dae94785778290ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  vida: 10
 --- !u!136 &1658153806
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -16053,7 +16024,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed9b0619e76c75640984ad0160463aa3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 454030985}
 --- !u!195 &1816174989
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -16088,7 +16058,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 859624722c090964dae94785778290ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  vida: 10
 --- !u!136 &1816174991
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -16587,7 +16556,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed9b0619e76c75640984ad0160463aa3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 454030985}
 --- !u!195 &1876093120
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -16622,7 +16590,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 859624722c090964dae94785778290ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  vida: 10
 --- !u!136 &1876093122
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -16926,7 +16893,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed9b0619e76c75640984ad0160463aa3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 454030985}
 --- !u!1 &1884450135
 GameObject:
   m_ObjectHideFlags: 0
@@ -17315,7 +17281,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed9b0619e76c75640984ad0160463aa3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 454030985}
 --- !u!195 &1924841652
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -17350,7 +17315,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 859624722c090964dae94785778290ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  vida: 10
 --- !u!136 &1924841654
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -17979,13 +17943,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 614d77a970c5f9449ab3ba0b8a54a3e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waypoints:
-  - {fileID: 690125797}
-  - {fileID: 942564653}
-  - {fileID: 1007144518}
-  - {fileID: 1689668624}
-  wayPointIndex: 0
-  target: {x: 0, y: 0, z: 0}
 --- !u!65 &2001869232
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -18532,13 +18489,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 614d77a970c5f9449ab3ba0b8a54a3e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waypoints:
-  - {fileID: 690125797}
-  - {fileID: 942564653}
-  - {fileID: 1007144518}
-  - {fileID: 1689668624}
-  wayPointIndex: 0
-  target: {x: 0, y: 0, z: 0}
 --- !u!65 &2073644638
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -20707,8 +20657,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2215ff67934438440a4d03dcd6e51ef6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 0
-  triggerBox: {fileID: 0}
 --- !u!4 &4656004467442343021
 Transform:
   m_ObjectHideFlags: 0
@@ -21004,7 +20952,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed9b0619e76c75640984ad0160463aa3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 454030985}
 --- !u!195 &5866666021882888298
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -21039,7 +20986,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 859624722c090964dae94785778290ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  vida: 10
 --- !u!114 &5866666021882888300
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21052,7 +20998,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 859624722c090964dae94785778290ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  vida: 10
 --- !u!136 &5866666021882888301
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -21993,13 +21938,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 614d77a970c5f9449ab3ba0b8a54a3e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waypoints:
-  - {fileID: 690125797}
-  - {fileID: 942564653}
-  - {fileID: 1007144518}
-  - {fileID: 1689668624}
-  wayPointIndex: 0
-  target: {x: 0, y: 0, z: 0}
 --- !u!195 &9189542535908089445
 NavMeshAgent:
   m_ObjectHideFlags: 0
