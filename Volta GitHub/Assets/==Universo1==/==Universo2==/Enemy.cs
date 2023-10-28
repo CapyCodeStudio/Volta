@@ -41,30 +41,33 @@ public class Enemy : MonoBehaviour
         {
             case IAStates.Wandering:
                 animator.SetBool("Wandering", true);
-              
                 if (Physics.Linecast(transform.position, target.position, out h))
                 {
                     if (h.collider.CompareTag("Player"))
                     {
-                        states = IAStates.Walk;
+                        states = IAStates.Attack;
                     }
                 }
                 break;
             case IAStates.Walk:
-                //animator.SetBool("Catch", true);
+                /*animator.SetBool("Walk", true);
                 agent.SetDestination(target.position);
                 if (agent.remainingDistance <= agent.stoppingDistance && agent.hasPath)
                 {
                     states = IAStates.Attack;
                 }
-               
+               */
                 break;
             case IAStates.Attack:
-                animator.SetBool("Catch", true);
+                animator.SetBool("Attack", true);
+                agent.SetDestination(target.position);
+                if (agent.remainingDistance <= agent.stoppingDistance && agent.hasPath)
+                {
+                    states = IAStates.Attack;
+                }
                 //target.gameObject.SetActive(false);
                 break;
             case IAStates.Die:
-
                 animator.SetBool("Die", true);
                 break;
         }
@@ -99,11 +102,11 @@ public class Enemy : MonoBehaviour
         }
         if (other.CompareTag("Attack"))
         {
-            //animator.SetBool("Attack", true);
+            animator.SetBool("Attack", true);
         }
         else
         {
-            //animator.SetBool("Attack", false);
+            animator.SetBool("Attack", false);
         }
 
     }

@@ -16485,23 +16485,6 @@ SkinnedMeshRenderer:
     m_Center: {x: -0.0000000037252903, y: -0.008592129, z: 0.001984193}
     m_Extent: {x: 0.059747178, y: 0.08383363, z: 0.018736944}
   m_DirtyAABB: 0
---- !u!1 &1884336694 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1128758269040250, guid: f88c6ad57910d8648807bcf0c131f49d, type: 3}
-  m_PrefabInstance: {fileID: 1417524406}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1884336695
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1884336694}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ed9b0619e76c75640984ad0160463aa3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1884450135
 GameObject:
   m_ObjectHideFlags: 0
@@ -19939,7 +19922,6 @@ GameObject:
   - component: {fileID: 4456945836998672509}
   - component: {fileID: 4456945836997673661}
   - component: {fileID: 4456945836998672510}
-  - component: {fileID: 4456945836998672511}
   m_Layer: 0
   m_Name: Sword
   m_TagString: Espadao
@@ -20011,18 +19993,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.2129691, y: 0.94493717, z: 0.081171684}
   m_Center: {x: -0.00000009734444, y: -0.36292657, z: 0.0000008945168}
---- !u!114 &4456945836998672511
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4456945836995484797}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2215ff67934438440a4d03dcd6e51ef6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &4656004467442343021
 Transform:
   m_ObjectHideFlags: 0

@@ -174,19 +174,19 @@ public class Movement : MonoBehaviour
     {
         if (Input.GetButtonDown("Fire1"))
         {
-            animator.SetBool("hit1", true);
+            animator.SetBool("Attack1", true);
         }
         else
         {
-            animator.SetBool("hit1", false);
+            animator.SetBool("Attack1", false);
         }
-        if (Input.GetButtonDown("Fire2"))
+/*        if (Input.GetButtonDown("Fire2"))
         {
-            animator.SetBool("hit2", true);
+            animator.SetBool("Attack2", true);
         }
         else
         {
-            animator.SetBool("hit2", false);
-        }
+            animator.SetBool("Attack2", false);
+        }*/
     }
 }
