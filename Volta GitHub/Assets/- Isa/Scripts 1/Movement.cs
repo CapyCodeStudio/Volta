@@ -170,23 +170,5 @@ public class Movement : MonoBehaviour
         Gizmos.DrawSphere(groundChecker.position, radiusChecker);
     }
 
-    void Bater()
-    {
-        if (Input.GetButtonDown("Fire1"))
-        {
-            animator.SetBool("Attack1", true);
-        }
-        else
-        {
-            animator.SetBool("Attack1", false);
-        }
-/*        if (Input.GetButtonDown("Fire2"))
-        {
-            animator.SetBool("Attack2", true);
-        }
-        else
-        {
-            animator.SetBool("Attack2", false);
-        }*/
-    }
+    
 }
