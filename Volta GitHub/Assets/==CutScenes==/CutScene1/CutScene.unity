@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 465980232}
-  m_IndirectSpecularColor: {r: 0.0011347191, g: 0.009221527, b: 0.052683875, a: 1}
+  m_IndirectSpecularColor: {r: 0.0011347184, g: 0.009221489, b: 0.052683868, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -5997,8 +5997,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 310730164}
-  m_LocalRotation: {x: -0.03291754, y: -0.070343204, z: -0.0106877, w: 0.9969223}
-  m_LocalPosition: {x: 155.5, y: 7.800003, z: 2032}
+  m_LocalRotation: {x: 0.032917563, y: 0.07034319, z: 0.010687803, w: -0.9969223}
+  m_LocalPosition: {x: 154.00002, y: 8.5, z: 2042.0999}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -32257,6 +32257,7 @@ GameObject:
   - component: {fileID: 1509581952}
   - component: {fileID: 1509581951}
   - component: {fileID: 1509581950}
+  - component: {fileID: 1509581953}
   m_Layer: 0
   m_Name: Sphere
   m_TagString: Untagged
@@ -32342,6 +32343,26 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1509581948}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!95 &1509581953
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1509581948}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
 --- !u!1 &1515273386
 GameObject:
   m_ObjectHideFlags: 0
@@ -41755,6 +41776,8 @@ PlayableDirector:
     value: {fileID: 1509581948}
   - key: {fileID: -6568234633675818459, guid: 4bee41da57459194185fa8488c9a32a3, type: 2}
     value: {fileID: 1567078168}
+  - key: {fileID: -8031094980337153794, guid: 4bee41da57459194185fa8488c9a32a3, type: 2}
+    value: {fileID: 1509581953}
   m_ExposedReferences:
     m_References:
     - 9b8fdabc29adeae4081680f42b92e9f3: {fileID: 2143309175}
@@ -48365,7 +48388,12 @@ Animator:
   m_ApplyRootMotion: 1
   m_LinearVelocityBlending: 0
   m_StabilizeFeet: 0
-  m_WarningMessage: 
+  m_WarningMessage: "\nBinding warning: Some generic clip(s) animate transforms that
+    are already bound by a Humanoid avatar. These transforms can only be changed
+    by Humanoid clips.\n\tTransform 'coxa.l'\n\tTransform 'Bone.001'\n\tTransform
+    'chest.r'\n\tTransform 'ded\xE3o3.r'\n\tTransform 'canela.r'\n\tTransform 'p\xE9.l'\n\tTransform
+    'quadril.l'\n\tTransform 'Bone.002'\n\tTransform 'arm.l'\n\tTransform 'Armature'\n\tand
+    more ..."
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
