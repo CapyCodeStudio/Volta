@@ -1291,6 +1291,7 @@ GameObject:
   m_Component:
   - component: {fileID: 247249495}
   - component: {fileID: 247249494}
+  - component: {fileID: 247249497}
   - component: {fileID: 247249493}
   - component: {fileID: 247249496}
   m_Layer: 0
@@ -1369,6 +1370,26 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 115bf1dcb338b3b4fad10d8ea6928d50, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  agent: {fileID: 0}
+  waypoints:
+  - {fileID: 690125797}
+  - {fileID: 942564653}
+  - {fileID: 1007144518}
+  - {fileID: 1689668624}
+  wayPointIndex: 0
+  target: {x: 0, y: 0, z: 0}
+--- !u!114 &247249497
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 247249491}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6b6887ceda6f144ab9ed4c46fd044a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   waypoints:
@@ -2160,6 +2181,7 @@ GameObject:
   m_Component:
   - component: {fileID: 510480700}
   - component: {fileID: 510480699}
+  - component: {fileID: 510480702}
   - component: {fileID: 510480698}
   - component: {fileID: 510480701}
   m_Layer: 0
@@ -2238,6 +2260,26 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 115bf1dcb338b3b4fad10d8ea6928d50, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  agent: {fileID: 0}
+  waypoints:
+  - {fileID: 690125797}
+  - {fileID: 942564653}
+  - {fileID: 1007144518}
+  - {fileID: 1689668624}
+  wayPointIndex: 0
+  target: {x: 0, y: 0, z: 0}
+--- !u!114 &510480702
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 510480696}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6b6887ceda6f144ab9ed4c46fd044a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   waypoints:
@@ -6627,6 +6669,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1555330652}
   - component: {fileID: 1555330651}
+  - component: {fileID: 1555330654}
   - component: {fileID: 1555330650}
   - component: {fileID: 1555330653}
   m_Layer: 0
@@ -6705,6 +6748,26 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 115bf1dcb338b3b4fad10d8ea6928d50, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  agent: {fileID: 0}
+  waypoints:
+  - {fileID: 690125797}
+  - {fileID: 942564653}
+  - {fileID: 1007144518}
+  - {fileID: 1689668624}
+  wayPointIndex: 0
+  target: {x: 0, y: 0, z: 0}
+--- !u!114 &1555330654
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1555330648}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6b6887ceda6f144ab9ed4c46fd044a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   waypoints:
@@ -9527,6 +9590,7 @@ GameObject:
   - component: {fileID: 5866666021882888296}
   - component: {fileID: 5866666021882888302}
   - component: {fileID: 5866666021882888301}
+  - component: {fileID: 5866666021882888303}
   m_Layer: 10
   m_Name: Monstro1
   m_TagString: Enemy
@@ -10799,6 +10863,28 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   interactionDistance: 15
   target: {fileID: 454030985}
+--- !u!195 &5866666021882888303
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 919132149186199720}
+  m_Enabled: 1
+  m_AgentTypeID: 0
+  m_Radius: 1.97
+  m_Speed: 3.5
+  m_Acceleration: 8
+  avoidancePriority: 50
+  m_AngularSpeed: 120
+  m_StoppingDistance: 0
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 2
+  m_BaseOffset: 0
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4
 --- !u!4 &5974348912345260868
 Transform:
   m_ObjectHideFlags: 0
@@ -11704,8 +11790,8 @@ GameObject:
   m_Component:
   - component: {fileID: 8416102435538633945}
   - component: {fileID: 2462391782318104227}
-  - component: {fileID: 9189542535908089445}
   - component: {fileID: 9189542535908089447}
+  - component: {fileID: 9189542535908089445}
   - component: {fileID: 9189542535908089446}
   m_Layer: 0
   m_Name: monstroRig
@@ -11759,7 +11845,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 9189542535908089443}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 115bf1dcb338b3b4fad10d8ea6928d50, type: 3}
+  m_Script: {fileID: 11500000, guid: f6b6887ceda6f144ab9ed4c46fd044a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   waypoints:
