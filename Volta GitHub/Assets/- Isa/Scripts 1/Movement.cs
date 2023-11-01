@@ -60,26 +60,6 @@ public class Movement : MonoBehaviour
         }
         animator.SetBool("Walk", horizontal != 0 || vertical != 0);
 
-
-       /* if (Input.GetButton("D"))
-        {
-            animator.SetBool("Walk", true);
-        }
-        else
-        {
-            animator.SetBool("Walk", false);
-        }
-
-        if (Input.GetButton("A"))
-        {
-            animator.SetBool("Walk", true);
-        }
-        else
-        {
-            animator.SetBool("Walk", false);
-        }*/
-        
-
         //Correr
         if (Input.GetButton("Fire3") && Input.GetButton("Vertical")/* || Input.GetButton("Fire3") && Input.GetButton("Horizontal")*/)
         {
@@ -99,9 +79,17 @@ public class Movement : MonoBehaviour
             animator.SetBool("Run", false);
 
         }
-        
+        if (Input.GetButton("Fire2") && Input.GetButton("Vertical") || Input.GetButton("Fire2") && Input.GetButton("Horizontal"))
+        {
+            print("Caralho");
+            animator.SetBool("Walk", false);
+            animator.SetBool("Crouch Walk", true);
+        }
+        else
+        {
+            animator.SetBool("Crouch Walk", false);
+        }
         //Andar
-       
         if (Input.GetButton("Fire3") && Input.GetButton("A") || Input.GetButton("Fire3") && Input.GetButton("Left"))
         {
 
@@ -118,8 +106,6 @@ public class Movement : MonoBehaviour
         {
 
             animator.SetBool("Walk", false);
-            animator.SetBool("Walk", false);
-            animator.SetBool("Walk", false);
             animator.SetBool("RunR", true);
 
         }
@@ -128,15 +114,7 @@ public class Movement : MonoBehaviour
             animator.SetBool("RunR", false);
 
         }
-        if (Input.GetButton("Fire2") && Input.GetButton("Vertical")/* || Input.GetButton("Fire3") && Input.GetButton("Horizontal")*/)
-        {
-            animator.SetBool("Walk", false);
-            animator.SetBool("Crouch Walk", true);
-        }
-        else
-        {
-            animator.SetBool("Crouch Walk", false);
-        }
+        
     }
 
 
