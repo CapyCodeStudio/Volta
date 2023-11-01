@@ -41,7 +41,7 @@ public class Movement : MonoBehaviour
 
         JumpForce();
         GravityForce();
-        Bater();
+    
 
         float horizontal = Input.GetAxisRaw("Horizontal");
         float vertical = Input.GetAxisRaw("Vertical");
@@ -128,8 +128,18 @@ public class Movement : MonoBehaviour
             animator.SetBool("RunR", false);
 
         }
-
+        if (Input.GetButton("Fire2") && Input.GetButton("Vertical")/* || Input.GetButton("Fire3") && Input.GetButton("Horizontal")*/)
+        {
+            animator.SetBool("Walk", false);
+            animator.SetBool("Crouch Walk", true);
+        }
+        else
+        {
+            animator.SetBool("Crouch Walk", false);
+        }
     }
+
+
     private void SetGravity()
     {
         gravity = (2 * maxHeight) / Mathf.Pow(timeToMaxHeight, 2);
