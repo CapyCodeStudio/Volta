@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.0011347184, g: 0.009221489, b: 0.052683868, a: 1}
+  m_IndirectSpecularColor: {r: 0.0011347191, g: 0.009221527, b: 0.052683875, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1325,7 +1325,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 243214897}
-  m_LocalRotation: {x: 0.09611451, y: -0.30887324, z: 0.03139132, w: 0.9457135}
+  m_LocalRotation: {x: 0.096114516, y: -0.3088732, z: 0.03139133, w: 0.94571346}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -3617,12 +3617,12 @@ Transform:
   - {fileID: 1599656790}
   - {fileID: 1215013165}
   - {fileID: 1393137619}
-  - {fileID: 1119274462}
-  - {fileID: 1853857393}
-  - {fileID: 278750981}
   - {fileID: 1006963440}
   - {fileID: 1214883347}
   - {fileID: 1517764403}
+  - {fileID: 1119274462}
+  - {fileID: 1853857393}
+  - {fileID: 278750981}
   - {fileID: 704204968}
   m_Father: {fileID: 0}
   m_RootOrder: 4
@@ -7804,7 +7804,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 564779333}
-  m_RootOrder: 6
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: -71.323, y: -90, z: 90}
 --- !u!64 &1006963441
 MeshCollider:
@@ -9430,7 +9430,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 564779333}
-  m_RootOrder: 7
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 35.372, y: -70.508, z: 0}
 --- !u!64 &1214883348
 MeshCollider:
@@ -11642,7 +11642,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 564779333}
-  m_RootOrder: 8
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: -87.967, y: 160.908, z: -39.544}
 --- !u!64 &1517764404
 MeshCollider:
@@ -14323,7 +14323,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1800292583}
-  m_LocalRotation: {x: 0.038942493, y: 0.9181261, z: -0.09331079, w: 0.38317245}
+  m_LocalRotation: {x: 0.03894249, y: 0.9181261, z: -0.09331078, w: 0.38317242}
   m_LocalPosition: {x: 341.80005, y: 121.95, z: 966.71436}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -14534,8 +14534,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d076bbffe11da53469384363c2f02310, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cam: {fileID: 0}
-  animator: {fileID: 0}
+  cam: {fileID: 1800292589}
+  animator: {fileID: 1844990976}
   moveSpeed: 6
   turnSmoothTime: 0.1
   speedRun: 10

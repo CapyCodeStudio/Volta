@@ -12,7 +12,10 @@ public class CameraP : MonoBehaviour
     public GameObject trigger;
     public GameObject mesh;
     public GameObject UICAVE;
-    public GameObject UITUTORIAL1; 
+    public GameObject UITUTORIAL1;
+    public GameObject VoyagerTerceiraPessoa;
+    public GameObject VoyagerPrimeiraPessoa;
+
     private float tempoDeEspera = 2.0f;
 
     private void Start()
@@ -41,6 +44,7 @@ public class CameraP : MonoBehaviour
             freeLookCamera.Priority = 0;
             virtualCamera.Priority = 5;
             UICAVE.SetActive(false);
+            VoyagerTerceiraPessoa.SetActive(false);
             
 
         }
@@ -54,7 +58,9 @@ public class CameraP : MonoBehaviour
             freeLookCamera.Priority = 5;
             virtualCamera.Priority = 0;
             UICAVE.SetActive(true);
-           
+            VoyagerTerceiraPessoa.SetActive(true);
+            VoyagerPrimeiraPessoa.SetActive(false);
+
 
         }
     }

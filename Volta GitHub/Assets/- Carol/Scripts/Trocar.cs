@@ -14,14 +14,13 @@ public class Trocar : MonoBehaviour
     public GameObject luzPRIMEIRA;
     public GameObject VoyagerPrimeira;
     public GameObject VoyagerTERCEIRA;
-    public GameObject EspadaPRIMEIRA;
-    public GameObject EspadaTERCEIRA;
+
     private bool isFreeLookActive = true;
 
     private void Start()
     {
         freeLookCamera.Priority = 5;
-        virtualCamera.Priority = 0;
+        virtualCamera.Priority = 10;
     }
 
     private void Update()
