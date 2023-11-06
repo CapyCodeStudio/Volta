@@ -20,7 +20,7 @@ public class Trocar : MonoBehaviour
     private void Start()
     {
         freeLookCamera.Priority = 5;
-        virtualCamera.Priority = 10;
+        virtualCamera.Priority = 0;
     }
 
     private void Update()
