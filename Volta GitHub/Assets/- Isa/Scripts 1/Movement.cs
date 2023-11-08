@@ -88,33 +88,7 @@ public class Movement : MonoBehaviour
         else
         {
             animator.SetBool("Crouch Walk", false);
-        }
-        //Andar
-       /* if (Input.GetButton("Fire3") && Input.GetButton("A") || Input.GetButton("Fire3") && Input.GetButton("Left"))
-        {
-
-            animator.SetBool("Walk", false);
-            animator.SetBool("RunL", true);
-        }
-        else
-        {
-            animator.SetBool("RunL", false);
-
-        }
-
-        if (Input.GetButton("Fire3") && Input.GetButton("D") || Input.GetButton("Fire3") && Input.GetButton("Right"))
-        {
-
-            animator.SetBool("Walk", false);
-            animator.SetBool("RunR", true);
-
-        }
-        else
-        {
-            animator.SetBool("RunR", false);
-
-        }*/
-        
+        }     
     }
 
 
