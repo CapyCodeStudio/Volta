@@ -61,7 +61,7 @@ public class Movement : MonoBehaviour
         animator.SetBool("Walk", horizontal != 0 || vertical != 0);
 
         //Correr
-        if (Input.GetButton("Fire3") && Input.GetButton("Vertical")/* || Input.GetButton("Fire3") && Input.GetButton("Horizontal")*/)
+        if (Input.GetButton("Fire3") && Input.GetButton("Vertical")|| Input.GetButton("Fire3") && Input.GetButton("Horizontal"))
         {
             animator.SetBool("Walk", false);
             animator.SetBool("Run", true);
@@ -81,7 +81,7 @@ public class Movement : MonoBehaviour
         }
         if (Input.GetButton("Fire2") && Input.GetButton("Vertical") || Input.GetButton("Fire2") && Input.GetButton("Horizontal"))
         {
-            print("Caralho");
+            
             animator.SetBool("Walk", false);
             animator.SetBool("Crouch Walk", true);
         }
@@ -90,7 +90,7 @@ public class Movement : MonoBehaviour
             animator.SetBool("Crouch Walk", false);
         }
         //Andar
-        if (Input.GetButton("Fire3") && Input.GetButton("A") || Input.GetButton("Fire3") && Input.GetButton("Left"))
+       /* if (Input.GetButton("Fire3") && Input.GetButton("A") || Input.GetButton("Fire3") && Input.GetButton("Left"))
         {
 
             animator.SetBool("Walk", false);
@@ -113,7 +113,7 @@ public class Movement : MonoBehaviour
         {
             animator.SetBool("RunR", false);
 
-        }
+        }*/
         
     }
 

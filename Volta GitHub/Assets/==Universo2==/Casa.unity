@@ -2101,6 +2101,7 @@ GameObject:
   - component: {fileID: 277405260}
   - component: {fileID: 277405259}
   - component: {fileID: 277405257}
+  - component: {fileID: 277405262}
   m_Layer: 0
   m_Name: Cronopio (1)
   m_TagString: Player
@@ -2156,7 +2157,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cam: {fileID: 12587936}
-  animator: {fileID: 0}
+  animator: {fileID: 277405260}
   moveSpeed: 10
   turnSmoothTime: 0.1
   speedRun: 20
@@ -2177,7 +2178,7 @@ Animator:
   m_GameObject: {fileID: 277405255}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: 8f7bd16f9d2b4c3428115a945303a548, type: 3}
-  m_Controller: {fileID: 9100000, guid: 55e793705c11dca4d935f3d572f0019f, type: 2}
+  m_Controller: {fileID: 9100000, guid: 6347c92cce35feb49bfe56f834809c34, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -2205,6 +2206,32 @@ CharacterController:
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 2.42, z: 0}
+--- !u!114 &277405262
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 277405255}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6cb5a8ed78c68b848b36748d78e6dc48, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  passosAudioSource: {fileID: 0}
+  passosAudioClip: []
+  passosRAudioSource: {fileID: 0}
+  passosRAudioClip: []
+  passosLAudioSource: {fileID: 0}
+  passosLAudioClip: []
+  correrAudioSource: {fileID: 0}
+  correrAudioClip: []
+  correrRAudioSource: {fileID: 0}
+  correrRAudioClip: []
+  correrLAudioSource: {fileID: 0}
+  correrLAudioClip: []
+  puloAudioSource: {fileID: 0}
+  puloAudioClip: []
 --- !u!1 &279491390
 GameObject:
   m_ObjectHideFlags: 3
@@ -7551,7 +7578,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1078885433
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11576,7 +11603,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1883102188
 RectTransform:
   m_ObjectHideFlags: 0
