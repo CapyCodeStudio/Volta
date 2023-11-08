@@ -15,8 +15,6 @@ public class CameraP : MonoBehaviour
     public GameObject UITUTORIAL1;
     public GameObject VoyagerTerceiraPessoa;
     public GameObject VoyagerPrimeiraPessoa;
-    public GameObject GravadorPrimeira;
-    public GameObject GravadorTerceira; 
 
     private float tempoDeEspera = 2.0f;
 
