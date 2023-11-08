@@ -14,8 +14,13 @@ public class Trocar : MonoBehaviour
     public GameObject luzPRIMEIRA;
     public GameObject VoyagerPrimeira;
     public GameObject VoyagerTERCEIRA;
+    public GameObject VoyagerChaoo;
+    public GameObject GravadorChaoo;
 
     private bool isFreeLookActive = true;
+    private CameraP cameraP;
+    private bool VoyagerChao;
+    private bool GravadorChao;
 
     private void Start()
     {
@@ -26,7 +31,7 @@ public class Trocar : MonoBehaviour
     private void Update()
     {
   
-        if (Input.GetKeyDown(KeyCode.C))
+        if (Input.GetKeyDown(KeyCode.C) && cameraP.tocando == false )
         {
             if (isFreeLookActive)
             {

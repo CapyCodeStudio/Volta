@@ -49,6 +49,7 @@ public class CameraP : MonoBehaviour
             VoyagerTerceiraPessoa.SetActive(false);
             
 
+
         }
     }
     public void OnTriggerExit(Collider collision)

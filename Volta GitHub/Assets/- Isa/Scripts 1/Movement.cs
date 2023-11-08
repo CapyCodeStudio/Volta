@@ -27,6 +27,7 @@ public class Movement : MonoBehaviour
     private Vector3 jumpForce;
     private float jumpSpeed;
     private float gravity;
+    
 
     void Start()
     {
@@ -108,17 +109,23 @@ public class Movement : MonoBehaviour
 
     private void JumpForce()
     {
-        if (IsGrounded() == true)
+        if (Time.timeScale == 1)
         {
-            if (Input.GetButton("Jump"))
+            if (IsGrounded() == true)
             {
-                jumpForce = jumpSpeed * Vector3.up;
-                characterController.Move(jumpForce);
+                if (Input.GetButton("Jump"))
+                {
+                    jumpForce = jumpSpeed * Vector3.up;
+                    characterController.Move(jumpForce);
 
-                animator.SetBool("Jump", true);
+                    animator.SetBool("Jump", true);
+                }
             }
+            else animator.SetBool("Jump", false);
+        } else
+        {
+            jumpForce = Vector3.zero;
         }
-        else animator.SetBool("Jump", false);
     }
 
     private bool IsGrounded()
