@@ -12,7 +12,7 @@ public class Trocar : MonoBehaviour
     public GameObject mesh;
     public GameObject luzTERCEIRA;
     public GameObject luzPRIMEIRA;
-    public GameObject VoyagerPrimeira;
+    public GameObject VoyagerPRIMEIRA;
     public GameObject VoyagerTERCEIRA;
     public GameObject VoyagerChaoo;
     public GameObject GravadorChaoo;
@@ -39,20 +39,32 @@ public class Trocar : MonoBehaviour
                 mesh.SetActive(false);
                 luzPRIMEIRA.SetActive(true);
                 luzTERCEIRA.SetActive(false);
-                VoyagerPrimeira.SetActive(true);
+                VoyagerPRIMEIRA.SetActive(true);
                 VoyagerTERCEIRA.SetActive(false);
                 freeLookCamera.Priority = 0;
                 virtualCamera.Priority = 5;
-                
+
+                if (VoyagerChao)
+                {
+                    VoyagerChaoo.SetActive(true);
+                    VoyagerTERCEIRA.SetActive(false);
+                    VoyagerPRIMEIRA.SetActive(false);
+                }
+                else
+                {
+                    VoyagerChaoo.SetActive(false);
+                    VoyagerTERCEIRA.SetActive(true);
+                    VoyagerPRIMEIRA.SetActive(true);
+                }
             }
             else
             {
-                //* Terceira Pessoa
+                // Terceira Pessoa
                 freeLookCamera.Priority = 5;
                 virtualCamera.Priority = 0;
                 luzPRIMEIRA.SetActive(false);
                 luzTERCEIRA.SetActive(true);
-                VoyagerPrimeira.SetActive(false);
+                VoyagerPRIMEIRA.SetActive(false);
                 VoyagerTERCEIRA.SetActive(true);
                 mesh.SetActive(true);
             }
@@ -60,18 +72,9 @@ public class Trocar : MonoBehaviour
             
             isFreeLookActive = !isFreeLookActive;
         }
-    }
-    IEnumerator Teste()
-    {
-        mesh.SetActive(false);
-        yield return new WaitForSeconds(0.1f);
-        freeLookCamera.Priority = 0;
-        virtualCamera.Priority = 5;
-        luzPRIMEIRA.SetActive(true);
-        luzTERCEIRA.SetActive(false);
-        VoyagerPrimeira.SetActive(true);
-        VoyagerTERCEIRA.SetActive(false);
+
 
     }
+
 
 }

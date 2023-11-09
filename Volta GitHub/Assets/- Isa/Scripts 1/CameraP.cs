@@ -13,12 +13,16 @@ public class CameraP : MonoBehaviour
     public GameObject mesh;
     public GameObject UICAVE;
     public GameObject UITUTORIAL1;
-    public GameObject VoyagerTerceiraPessoa;
-    public GameObject VoyagerPrimeiraPessoa;
-    public GameObject GravadorPrimeira;
-    public GameObject GravadorTerceira; 
+    public GameObject VoyagerTERCEIRA;
+    public GameObject VoyagerPRIMEIRA;
+    public GameObject GravadorPRIMEIRA;
+    public GameObject GravadorTERCIERA;
+    public GameObject VoyagerChao;
+    public GameObject GravadorChao;
 
     private float tempoDeEspera = 2.0f;
+    private bool VoyagerChaoo;
+    private bool GravadorChaoo;
 
     private void Start()
     {
@@ -46,8 +50,21 @@ public class CameraP : MonoBehaviour
             freeLookCamera.Priority = 0;
             virtualCamera.Priority = 5;
             UICAVE.SetActive(false);
-            VoyagerTerceiraPessoa.SetActive(false);
-            
+            VoyagerTERCEIRA.SetActive(false);
+            VoyagerPRIMEIRA.SetActive(true);
+
+            if (VoyagerChao)
+            {
+                VoyagerChao.SetActive(true);
+                VoyagerTERCEIRA.SetActive(false);
+                VoyagerPRIMEIRA.SetActive(false);
+            }
+            else
+            {
+                VoyagerChao.SetActive(false);
+                VoyagerTERCEIRA.SetActive(true);
+                VoyagerPRIMEIRA.SetActive(true);
+            }
 
 
         }
@@ -61,12 +78,9 @@ public class CameraP : MonoBehaviour
             freeLookCamera.Priority = 5;
             virtualCamera.Priority = 0;
             UICAVE.SetActive(true);
-            VoyagerTerceiraPessoa.SetActive(true);
-            VoyagerPrimeiraPessoa.SetActive(false);
-
-
+            VoyagerTERCEIRA.SetActive(true);
+            VoyagerPRIMEIRA.SetActive(false);
         }
     }
-
 }
 
