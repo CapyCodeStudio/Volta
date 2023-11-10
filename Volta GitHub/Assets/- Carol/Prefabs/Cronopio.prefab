@@ -2141,7 +2141,6 @@ GameObject:
   - component: {fileID: 5525565079116221728}
   - component: {fileID: 5525565079116221731}
   - component: {fileID: 5525565079116221730}
-  - component: {fileID: 5525565079116221733}
   - component: {fileID: 5525565079116221732}
   m_Layer: 0
   m_Name: Cronopio
@@ -2222,28 +2221,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d076bbffe11da53469384363c2f02310, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  passosAudioSource: {fileID: 5525565077800232172}
-  passosAudioClip:
-  - {fileID: 8300000, guid: bd926afca0aa8ab48b8abfc15454bc3d, type: 3}
-  - {fileID: 8300000, guid: 9929892c95e88f24ea67533fdec16e2e, type: 3}
-  - {fileID: 8300000, guid: 4484cb0b05ef2ae4c9fffdbbbd82c5cd, type: 3}
-  - {fileID: 8300000, guid: ee5109b2ca7428843a14b6a36dda384f, type: 3}
-  - {fileID: 8300000, guid: 3c1967f6644f7ee4cb90dd9da24dd7da, type: 3}
-  correrAudioSource: {fileID: 5525565078455850048}
-  correrAudioClip:
-  - {fileID: 8300000, guid: ea7026b9fb96c374994996dba54ba526, type: 3}
-  - {fileID: 8300000, guid: 2bdf0af42858712489d89032417482a0, type: 3}
-  - {fileID: 8300000, guid: 8246f3c3f6373334d8bdd41eeb0b3945, type: 3}
-  - {fileID: 8300000, guid: 763409ee05f3fce4a8e83df52710a28e, type: 3}
-  - {fileID: 8300000, guid: 35f5fb2541d6e124ba5e61b1b007a300, type: 3}
-  puloAudioSource: {fileID: 5525565079313255909}
-  puloAudioClip:
-  - {fileID: 8300000, guid: dfeacf04bb644374ab5ab503cb4eaff7, type: 3}
-  - {fileID: 8300000, guid: 1ff6a117a03dee04fbb869f5f41037a0, type: 3}
-  - {fileID: 8300000, guid: 5039e24f35fce8b4ea426f1543234bba, type: 3}
-  - {fileID: 8300000, guid: b27347ebdc5a70b42876b9af0e9e1a41, type: 3}
-  - {fileID: 8300000, guid: 2d59a6a98991e964ebb879bed14e8b9c, type: 3}
   cam: {fileID: 0}
+  animator: {fileID: 0}
   moveSpeed: 8
   turnSmoothTime: 0.1
   speedRun: 30
@@ -2254,21 +2233,6 @@ MonoBehaviour:
   radiusChecker: 0.1
   maxHeight: 0.1
   timeToMaxHeight: 0.4
---- !u!114 &5525565079116221733
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5525565079116221741}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b02a086e06a01f1439aa47231e929c2d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  freeLookCamera: {fileID: 0}
-  virtualCamera: {fileID: 0}
-  mesh: {fileID: 5525565078222084089}
 --- !u!65 &5525565079116221732
 BoxCollider:
   m_ObjectHideFlags: 0
