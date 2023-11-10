@@ -70,12 +70,12 @@ public class Keypad : MonoBehaviour
     {
         if (tela.text == "1234")
         {
-            tela.text = "Senha Correta";
+            tela.text = "SENHA CORRETA";
             LoadScene();
         }
         else
         {
-            tela.text = "Senha Incorreta";
+            tela.text = "SENHA INCORRETA";
             Again();
 
         }

@@ -29,13 +29,13 @@ public class Keypad2 : MonoBehaviour
     {
         if (tela.text == ".-.")
         {
-            tela.text = "Senha Correta";
+            tela.text = "SENHA CORRETA";
             
             StartCoroutine(LoadSceneAfterDelay());
         }
         else
         {
-            tela.text = "Senha Incorreta";
+            tela.text = "SENHA INCORRETA";
             
             StartCoroutine(ClearTextAfterDelay());
         }
