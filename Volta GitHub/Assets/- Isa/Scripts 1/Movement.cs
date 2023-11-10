@@ -80,7 +80,7 @@ public class Movement : MonoBehaviour
             animator.SetBool("Run", false);
 
         }
-        if (Input.GetButton("Fire2") && Input.GetButton("Vertical") || Input.GetButton("Fire2") && Input.GetButton("Horizontal"))
+       /* if (Input.GetButton("Fire2") && Input.GetButton("Vertical") || Input.GetButton("Fire2") && Input.GetButton("Horizontal"))
         {
             
             animator.SetBool("Walk", false);
@@ -89,7 +89,7 @@ public class Movement : MonoBehaviour
         else
         {
             animator.SetBool("Crouch Walk", false);
-        }     
+        }     */
     }
 
 
