@@ -20,6 +20,7 @@ public class CameraP : MonoBehaviour
     public GameObject VoyagerChao;
     public GameObject GravadorChao;
 
+
     private float tempoDeEspera = 2.0f;
     private bool VoyagerChaoo;
     private bool GravadorChaoo;
@@ -80,6 +81,7 @@ public class CameraP : MonoBehaviour
             UICAVE.SetActive(true);
             VoyagerTERCEIRA.SetActive(true);
             VoyagerPRIMEIRA.SetActive(false);
+            GravadorPRIMEIRA.SetActive(false);
         }
     }
 }
