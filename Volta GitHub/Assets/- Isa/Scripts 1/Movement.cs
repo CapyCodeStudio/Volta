@@ -117,12 +117,12 @@ public class Movement : MonoBehaviour
                 {
                     jumpForce = jumpSpeed * Vector3.up;
                     characterController.Move(jumpForce);
-
                     animator.SetBool("Jump", true);
                 }
             }
             else animator.SetBool("Jump", false);
-        } else
+        } 
+        else
         {
             jumpForce = Vector3.zero;
         }
