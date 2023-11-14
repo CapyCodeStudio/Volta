@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 465980232}
-  m_IndirectSpecularColor: {r: 0.0011347184, g: 0.009221489, b: 0.052683868, a: 1}
+  m_IndirectSpecularColor: {r: 0.0011347191, g: 0.009221527, b: 0.052683875, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -24865,7 +24865,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1202110474}
   - component: {fileID: 1202110473}
-  - component: {fileID: 1202110472}
   m_Layer: 0
   m_Name: "Transi\xE7\xE3o"
   m_TagString: Untagged
@@ -24873,24 +24872,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1202110472
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1202110471}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e52de21a22b6dd44c9cc19f810c65059, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Events:
-    m_Signals:
-    - {fileID: 0}
-    m_Events:
-    - m_PersistentCalls:
-        m_Calls: []
 --- !u!114 &1202110473
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -41699,7 +41680,7 @@ PlayableDirector:
   - key: {fileID: -2948812076200951614, guid: 4bee41da57459194185fa8488c9a32a3, type: 2}
     value: {fileID: 4167172593303055607}
   - key: {fileID: -162070872683221993, guid: 4bee41da57459194185fa8488c9a32a3, type: 2}
-    value: {fileID: 1202110472}
+    value: {fileID: 0}
   - key: {fileID: -2034642222479360491, guid: 4bee41da57459194185fa8488c9a32a3, type: 2}
     value: {fileID: 1901843900}
   - key: {fileID: -4030376207802866402, guid: 4bee41da57459194185fa8488c9a32a3, type: 2}
@@ -41851,7 +41832,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Events:
     m_Signals:
-    - {fileID: 11400000, guid: b64890f97cc11f9429766a657a5c6edf, type: 2}
     - {fileID: 11400000, guid: f5694f43fbf6a784b8b2e21aded22b55, type: 2}
     m_Events:
     - m_PersistentCalls:
@@ -41867,21 +41847,7 @@ MonoBehaviour:
             m_FloatArgument: 0
             m_StringArgument: 
             m_BoolArgument: 0
-          m_CallState: 1
-    - m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 1202110471}
-          m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-          m_MethodName: 
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: 
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 1
+          m_CallState: 2
 --- !u!1 &2011433993
 GameObject:
   m_ObjectHideFlags: 0
@@ -48403,12 +48369,7 @@ Animator:
   m_ApplyRootMotion: 1
   m_LinearVelocityBlending: 0
   m_StabilizeFeet: 0
-  m_WarningMessage: "\nBinding warning: Some generic clip(s) animate transforms that
-    are already bound by a Humanoid avatar. These transforms can only be changed
-    by Humanoid clips.\n\tTransform 'coxa.l'\n\tTransform 'Bone.001'\n\tTransform
-    'chest.r'\n\tTransform 'ded\xE3o3.r'\n\tTransform 'canela.r'\n\tTransform 'p\xE9.l'\n\tTransform
-    'quadril.l'\n\tTransform 'Bone.002'\n\tTransform 'arm.l'\n\tTransform 'Armature'\n\tand
-    more ..."
+  m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0

@@ -22,6 +22,7 @@ public class TransicaoCaverna : MonoBehaviour
     {
         if(collision.gameObject.CompareTag("Player"))
         {
+
             CarregarProximaCena();
         }
     }
