@@ -76,6 +76,7 @@ public class CameraP : MonoBehaviour
         {
             mesh.SetActive(true);
             tocando = false;
+            print(tocando);
             freeLookCamera.Priority = 5;
             virtualCamera.Priority = 0;
             UICAVE.SetActive(true);
