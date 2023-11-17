@@ -5,12 +5,37 @@ using UnityEngine.SceneManagement;
 
 public class SenhaMorse : MonoBehaviour
 {
-    private void OnTriggerEnter(Collider collision)
+    //[SerializeField] public GameObject ouvirMensagem;
+    public bool tocando;
+    public void Update()
+    {
+        if (tocando)
+        {
+
+            // ouvirMensagem.SetActive(true);
+        }
+        else
+        {
+           //ouvirMensagem.SetActive(false);
+        }
+    }
+    public void OnTriggerEnter(Collider collision)
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            SceneManager.LoadScene("SenhaMorse");
+            tocando = true;
+            if (Input.GetButtonDown("C"))
+            {
+                SceneManager.LoadScene("SenhaMorse");
+            }
         }
-            
+    }
+    public void OnTriggerExit(Collider collision)
+    {
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            tocando = false;
+
+        }
     }
 }

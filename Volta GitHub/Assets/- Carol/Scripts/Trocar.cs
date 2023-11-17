@@ -31,7 +31,7 @@ public class Trocar : MonoBehaviour
     private void Update()
     {
   
-        if (Input.GetKeyDown(KeyCode.C) && cameraP.tocando == false)
+        if (Input.GetButtonDown("C") && cameraP.tocando == false)
         {
             if (isFreeLookActive)
             {
