@@ -246,7 +246,6 @@ MonoBehaviour:
   menuPause: {fileID: 1477071769}
   menuControles: {fileID: 1018004243}
   menuAudio: {fileID: 2097376370}
-  carta: {fileID: 0}
 --- !u!1 &71880898
 GameObject:
   m_ObjectHideFlags: 0
@@ -9048,7 +9047,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2060389457}
-  - component: {fileID: 2060389456}
   m_Layer: 0
   m_Name: Camera
   m_TagString: Untagged
@@ -9056,27 +9054,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &2060389456
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2060389455}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b02a086e06a01f1439aa47231e929c2d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  freeLookCamera: {fileID: 0}
-  virtualCamera: {fileID: 0}
-  mesh: {fileID: 5525565077464987733}
-  luzTERCEIRA: {fileID: 2144140136}
-  luzPRIMEIRA: {fileID: 0}
-  VoyagerPRIMEIRA: {fileID: 0}
-  VoyagerTERCEIRA: {fileID: 5150348106993794052}
-  VoyagerChaoo: {fileID: 0}
-  GravadorChaoo: {fileID: 0}
 --- !u!4 &2060389457
 Transform:
   m_ObjectHideFlags: 0
