@@ -105,6 +105,7 @@ MonoBehaviour:
   - {fileID: 4576592675486315732}
   - {fileID: -4661501542160289232}
   - {fileID: -5810247484588435697}
+  - {fileID: 5634872179116048429}
 --- !u!114 &4576592675486315732
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -133,6 +134,32 @@ MonoBehaviour:
   kernelSize:
     overrideState: 1
     value: 2
+--- !u!114 &5634872179116048429
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6050e2d5de785ce4d931e4dbdbf2d755, type: 3}
+  m_Name: ChromaticAberration
+  m_EditorClassIdentifier: 
+  active: 1
+  enabled:
+    overrideState: 1
+    value: 1
+  spectralLut:
+    overrideState: 0
+    value: {fileID: 0}
+    defaultState: 1
+  intensity:
+    overrideState: 1
+    value: 0.048
+  fastMode:
+    overrideState: 1
+    value: 1
 --- !u!114 &6345562089537452038
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -239,13 +266,13 @@ MonoBehaviour:
     value: 100
   colorFilter:
     overrideState: 1
-    value: {r: 1, g: 0.5707547, b: 0.9476715, a: 1}
+    value: {r: 0.5943396, g: 0.32800817, b: 0.56257534, a: 1}
   hueShift:
     overrideState: 1
     value: 0
   saturation:
-    overrideState: 0
-    value: 0
+    overrideState: 1
+    value: -9
   brightness:
     overrideState: 0
     value: 0
@@ -253,11 +280,11 @@ MonoBehaviour:
     overrideState: 1
     value: 0
   contrast:
-    overrideState: 0
-    value: 0
+    overrideState: 1
+    value: -3
   mixerRedOutRedIn:
     overrideState: 1
-    value: 100
+    value: 74
   mixerRedOutGreenIn:
     overrideState: 0
     value: 0
@@ -284,13 +311,13 @@ MonoBehaviour:
     value: 100
   lift:
     overrideState: 1
-    value: {x: 0.8875397, y: 0.9999999, z: 1, w: 0}
+    value: {x: 0.85648245, y: 0.9547025, z: 1, w: 0}
   gamma:
     overrideState: 1
-    value: {x: 1, y: 0.6536214, z: 0.65362155, w: 0}
+    value: {x: 1, y: 0.4494333, z: 0.24660921, w: 0}
   gain:
     overrideState: 1
-    value: {x: 0.8923713, y: 0.81916517, z: 1, w: 0}
+    value: {x: 1, y: 0.887463, z: 0, w: 0}
   masterCurve:
     overrideState: 0
     value:
