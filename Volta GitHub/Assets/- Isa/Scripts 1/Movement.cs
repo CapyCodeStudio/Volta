@@ -27,6 +27,8 @@ public class Movement : MonoBehaviour
     private Vector3 jumpForce;
     private float jumpSpeed;
     private float gravity;
+
+    public bool isJumping;
     
 
     void Start()
@@ -80,16 +82,33 @@ public class Movement : MonoBehaviour
             animator.SetBool("Run", false);
 
         }
-       /* if (Input.GetButton("Fire2") && Input.GetButton("Vertical") || Input.GetButton("Fire2") && Input.GetButton("Horizontal"))
+        if (Input.GetButtonDown("Jump") && IsGrounded())
         {
-            
-            animator.SetBool("Walk", false);
-            animator.SetBool("Crouch Walk", true);
+            isJumping = true;
+            jumpForce = jumpSpeed * Vector3.up;
+            animator.SetBool("Jump", true);
         }
-        else
+
+        if (isJumping)
         {
-            animator.SetBool("Crouch Walk", false);
-        }     */
+            GravityForce();
+
+            if (IsGrounded())
+            {
+                isJumping = false;
+                animator.SetBool("Jump", false);
+            }
+        }
+        /* if (Input.GetButton("Fire2") && Input.GetButton("Vertical") || Input.GetButton("Fire2") && Input.GetButton("Horizontal"))
+         {
+
+             animator.SetBool("Walk", false);
+             animator.SetBool("Crouch Walk", true);
+         }
+         else
+         {
+             animator.SetBool("Crouch Walk", false);
+         }     */
     }
 
 
