@@ -14,6 +14,9 @@ public class Movement : MonoBehaviour
     public float turnSmoothTime = 0.1f;
     float turnSmoothVelocity;
 
+    [SerializeField] private AudioSource passosAudioSource;
+    [SerializeField] private AudioClip[] passosAudioClip;
+
     [SerializeField] private float speedRun = 15;
 
     private CharacterController characterController;
@@ -137,6 +140,7 @@ public class Movement : MonoBehaviour
                     jumpForce = jumpSpeed * Vector3.up;
                     characterController.Move(jumpForce);
                     animator.SetBool("Jump", true);
+                    passosAudioSource.PlayOneShot(passosAudioClip[Random.Range(0, passosAudioClip.Length)]);
                 }
             }
             else animator.SetBool("Jump", false);

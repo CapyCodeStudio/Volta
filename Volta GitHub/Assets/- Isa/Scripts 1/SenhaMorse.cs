@@ -24,7 +24,7 @@ public class SenhaMorse : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
             tocando = true;
-            if (Input.GetButtonDown("E"))
+            if (Input.GetButton("E"))
             {
                 SceneManager.LoadScene("SenhaMorse");
             }
