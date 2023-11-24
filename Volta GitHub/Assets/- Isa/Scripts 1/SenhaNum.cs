@@ -9,6 +9,7 @@ public class SenhaNum : MonoBehaviour
     public bool tocando;
     public Camera main1;
     public Camera main2;
+    public GameObject voltar;
     public void OnTriggerStay(Collider collision)
     {
         if (collision.gameObject.CompareTag("Player"))
@@ -20,6 +21,7 @@ public class SenhaNum : MonoBehaviour
                 Cursor.lockState = CursorLockMode.None;
                 main1.gameObject.SetActive(false);
                 main2.gameObject.SetActive(true);
+                voltar.SetActive(true);
 
             }
         }
@@ -32,7 +34,8 @@ public class SenhaNum : MonoBehaviour
             Cursor.lockState = CursorLockMode.Locked;
             main1.gameObject.SetActive(true);
             main2.gameObject.SetActive(false);
-            
+            voltar.SetActive(false);
+
         }
     }
 
