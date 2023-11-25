@@ -2,25 +2,48 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Net.Http.Headers;
 using UnityEngine;
-
 public class Radio : MonoBehaviour
-{ 
-    public AudioSource audioSource; 
+{
+    public AudioClip audioClip; 
+    private AudioSource audioSource;
+    public GameObject luz;
 
-    private void OnTriggerEnter(Collider other)
+    void Start()
+    {
+        audioSource = gameObject.GetComponent<AudioSource>();
+        if (audioSource == null)
+        {
+            audioSource = gameObject.AddComponent<AudioSource>();
+            luz.SetActive(false);
+        }
+
+        audioSource.clip = audioClip;
+    }
+
+    void Update()
     {
         
-        if (other.CompareTag("Player"))
+        if (Input.GetButtonDown("E"))
         {
-            print("musica");
-            if (!audioSource.isPlaying)
+            
+            if (audioClip != null)
             {
                 
-                audioSource.Play();
+                audioSource.PlayOneShot(audioClip);
+                luz.SetActive(true);
+                
+            }
+            else
+            {
+                Debug.LogWarning("Nenhum áudio");
+                luz.SetActive(false);
             }
         }
     }
 }
+
+
+
 
 
 
