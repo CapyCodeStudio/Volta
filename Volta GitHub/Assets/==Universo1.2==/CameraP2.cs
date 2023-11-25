@@ -14,8 +14,6 @@ public class CameraP2 : MonoBehaviour
     public GameObject VoyagerTERCEIRA;
     public GameObject VoyagerPRIMEIRA;
 
-    private float tempoDeEspera = 2.0f;
-
     public void OnTriggerEnter(Collider collision)
     {
         if (collision.gameObject.CompareTag("Player"))
