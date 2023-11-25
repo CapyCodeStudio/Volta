@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 465980232}
-  m_IndirectSpecularColor: {r: 0.0011347191, g: 0.009221527, b: 0.052683875, a: 1}
+  m_IndirectSpecularColor: {r: 0.0011347184, g: 0.009221489, b: 0.052683868, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -6131,7 +6131,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b9a305e18de0c04dbd257a21cd47087, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sharedProfile: {fileID: 11400000, guid: 86a5a9cf6899959409e6b88a4bf05d7f, type: 2}
+  sharedProfile: {fileID: 11400000, guid: 90c51d3e7937ac14db3d36f9972ccda5, type: 2}
   isGlobal: 1
   blendDistance: 0
   weight: 1
@@ -9044,8 +9044,8 @@ Light:
   serializedVersion: 10
   m_Type: 1
   m_Shape: 0
-  m_Color: {r: 0.504717, g: 0.68320596, b: 1, a: 0.14901961}
-  m_Intensity: 0
+  m_Color: {r: 0.08962265, g: 0.18422435, b: 0.3584906, a: 0.14901961}
+  m_Intensity: 1.06
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -9102,14 +9102,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 465980231}
-  m_LocalRotation: {x: 0.107526526, y: 0.04764011, z: 0.7704696, w: -0.62653416}
+  m_LocalRotation: {x: 0.6964775, y: 0.5789996, z: -0.346561, w: 0.24407811}
   m_LocalPosition: {x: 716, y: 1368, z: 7728.9995}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1418495498}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: -12.014, y: 366.221, z: 617.58}
+  m_LocalEulerAnglesHint: {x: 47.843, y: 557.346, z: 468.267}
 --- !u!1 &466821278
 GameObject:
   m_ObjectHideFlags: 3
@@ -48369,7 +48369,12 @@ Animator:
   m_ApplyRootMotion: 1
   m_LinearVelocityBlending: 0
   m_StabilizeFeet: 0
-  m_WarningMessage: 
+  m_WarningMessage: "\nBinding warning: Some generic clip(s) animate transforms that
+    are already bound by a Humanoid avatar. These transforms can only be changed
+    by Humanoid clips.\n\tTransform 'coxa.l'\n\tTransform 'Bone.001'\n\tTransform
+    'chest.r'\n\tTransform 'ded\xE3o3.r'\n\tTransform 'canela.r'\n\tTransform 'p\xE9.l'\n\tTransform
+    'quadril.l'\n\tTransform 'Bone.002'\n\tTransform 'arm.l'\n\tTransform 'Armature'\n\tand
+    more ..."
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0

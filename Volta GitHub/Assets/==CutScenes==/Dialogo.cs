@@ -18,14 +18,14 @@ public class Dialogo : MonoBehaviour
         // Defina as frases do di�logo (substitua pelo seu pr�prio di�logo)
         sentences = new string[]
         {
-            "'' Eles me abandonaram." 
-            + Environment.NewLine + "Ainda tenho a memória muito vívida daquela noite; era véspera do meu aniversário, 12 anos."
-            + Environment.NewLine + "Como de costume, eles sempre apareciam à meia-noite para me parabenizar. Mas, naquela noite foi diferente."
-            + Environment.NewLine + "Eu lembro que estava deitado, e de vez em quando espiava o relógio. Os minutos pareciam intermináveis e o silêncio tomou conta."
-            + Environment.NewLine + "Pouco tempo depois, tomei coragem e saí do quarto. Procurei-os por toda a casa, nem sinal. Contudo, decidi sair na rua e os procurar, mas, nem vestígio. Resolvi voltar e dormir, torcendo que fosse algum tipo de brincadeira."
-            + Environment.NewLine + "Entretanto, nunca mais os encontrei. Desde aquele dia, passei meus anos vivendo sozinho aqui nesta casa, com grande angustia e raiva, sigo dizendo: eles me abandonaram.''"
-            + Environment.NewLine + ""
-            + Environment.NewLine + "- Cronópio"
+            "Os holofotes são acesos e revelam a misteriosa figura que ele era, quero dizer, eu o conhecia mas, não conhecia as suas origens. Independente disso, ele sempre foi bom comigo, era como um pai para mim." 
+            + Environment.NewLine + "Éramos sós, não tínhamos mais ninguém, mas aprendemos a lidar com a solidão de duas pessoas. Tendo aquela vida mediana e pacata, eu jamais imaginaria o que estava por vir."
+            + Environment.NewLine + " "
+            + Environment.NewLine + "Naquela noite, uma luz intensa e fantasmagórica envolveu meu avô, uma luminosidade tão brilhante que ofuscou tudo ao seu redor. Ele foi levado por aquilo, desaparecendo para sempre."
+            + Environment.NewLine + "O seu desaparecimento lançou-me uma sombra de dubiedade existencial, uma sombra da incerteza e da perda em contraste com a luz que o tirou de mim. Isso não é uma quimera; é uma realidade tangível, mas uma realidade que escapa à minha compreensão."
+            + Environment.NewLine + " "
+            + Environment.NewLine + "Havia ali nele, uma essência que o fazia ressurgir sob qualquer circunstância, razão pela qual o escolheram, por que o arrebataram de mim, por que me deixaram aprisionado aqui, sem respostas."
+            
             
         };
 
