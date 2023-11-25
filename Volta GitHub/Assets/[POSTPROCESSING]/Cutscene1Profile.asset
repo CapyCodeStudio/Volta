@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-4094940580529998203
+--- !u!114 &-8877038158051822610
 MonoBehaviour:
   m_ObjectHideFlags: 3
   m_CorrespondingSourceObject: {fileID: 0}
@@ -104,13 +104,13 @@ MonoBehaviour:
     value: 100
   lift:
     overrideState: 1
-    value: {x: 0.9845207, y: 1, z: 0.9610769, w: 0}
+    value: {x: 0.9445436, y: 1, z: 0.91365445, w: 0}
   gamma:
     overrideState: 1
-    value: {x: 1, y: 0.40119225, z: 0.46915215, w: 0}
+    value: {x: 1, y: 0.38294345, z: 0.48777425, w: 0}
   gain:
     overrideState: 1
-    value: {x: 0.33756924, y: 1, z: 0.47866783, w: 0}
+    value: {x: 0.054510713, y: 0.7770417, z: 1, w: 0}
   masterCurve:
     overrideState: 0
     value:
@@ -1311,7 +1311,7 @@ MonoBehaviour:
       - 0.5
       - 0.5
       - 0.5
---- !u!114 &-2902990872427176965
+--- !u!114 &-5906339800845871234
 MonoBehaviour:
   m_ObjectHideFlags: 3
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1320,47 +1320,26 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c1cb7e9e120078f43bce4f0b1be547a7, type: 3}
-  m_Name: AmbientOcclusion
+  m_Script: {fileID: 11500000, guid: d65e486e4de6e5448a8fbb43dc8756a0, type: 3}
+  m_Name: Grain
   m_EditorClassIdentifier: 
   active: 1
   enabled:
     overrideState: 1
-    value: 1
-  mode:
-    overrideState: 1
     value: 0
+  colored:
+    overrideState: 0
+    value: 1
   intensity:
     overrideState: 1
-    value: 1.73
-  color:
-    overrideState: 1
-    value: {r: 0.10980393, g: 0.13333334, b: 0.27450982, a: 1}
-  ambientOnly:
-    overrideState: 0
     value: 1
-  noiseFilterTolerance:
-    overrideState: 0
-    value: 0
-  blurTolerance:
-    overrideState: 0
-    value: -4.6
-  upsampleTolerance:
-    overrideState: 0
-    value: -12
-  thicknessModifier:
+  size:
     overrideState: 1
-    value: 8.43
-  directLightingStrength:
+    value: 1.37
+  lumContrib:
     overrideState: 0
-    value: 0
-  radius:
-    overrideState: 1
-    value: 0.16
-  quality:
-    overrideState: 1
-    value: 3
---- !u!114 &-365798210672232751
+    value: 0.8
+--- !u!114 &-1641362284714559027
 MonoBehaviour:
   m_ObjectHideFlags: 3
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1414,16 +1393,65 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8e6292b2c06870d4495f009f912b9600, type: 3}
-  m_Name: PosProcessamento Profile 4
+  m_Name: Cutscene1Profile
   m_EditorClassIdentifier: 
   settings:
-  - {fileID: 2902482036030461405}
-  - {fileID: -4094940580529998203}
-  - {fileID: -2902990872427176965}
-  - {fileID: 4896103682123245664}
-  - {fileID: -365798210672232751}
-  - {fileID: 8845548288488549599}
---- !u!114 &2902482036030461405
+  - {fileID: 2939471523993952657}
+  - {fileID: -8877038158051822610}
+  - {fileID: 2132513244110156539}
+  - {fileID: 5301446043783500260}
+  - {fileID: -1641362284714559027}
+  - {fileID: -5906339800845871234}
+--- !u!114 &2132513244110156539
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1cb7e9e120078f43bce4f0b1be547a7, type: 3}
+  m_Name: AmbientOcclusion
+  m_EditorClassIdentifier: 
+  active: 1
+  enabled:
+    overrideState: 1
+    value: 1
+  mode:
+    overrideState: 1
+    value: 0
+  intensity:
+    overrideState: 1
+    value: 1.73
+  color:
+    overrideState: 1
+    value: {r: 0.10980393, g: 0.13333334, b: 0.27450982, a: 1}
+  ambientOnly:
+    overrideState: 0
+    value: 1
+  noiseFilterTolerance:
+    overrideState: 0
+    value: 0
+  blurTolerance:
+    overrideState: 0
+    value: -4.6
+  upsampleTolerance:
+    overrideState: 0
+    value: -12
+  thicknessModifier:
+    overrideState: 1
+    value: 8.43
+  directLightingStrength:
+    overrideState: 0
+    value: 0
+  radius:
+    overrideState: 1
+    value: 0.16
+  quality:
+    overrideState: 1
+    value: 3
+--- !u!114 &2939471523993952657
 MonoBehaviour:
   m_ObjectHideFlags: 3
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1441,7 +1469,7 @@ MonoBehaviour:
     value: 1
   intensity:
     overrideState: 1
-    value: 0.63
+    value: 0
   threshold:
     overrideState: 0
     value: 5.91
@@ -1453,10 +1481,10 @@ MonoBehaviour:
     value: 65472
   diffusion:
     overrideState: 1
-    value: 10
+    value: 9.1
   anamorphicRatio:
     overrideState: 0
-    value: 0.01
+    value: 0
   color:
     overrideState: 1
     value: {r: 1.7098917, g: 1.7305969, b: 1.8034679, a: 1}
@@ -1470,7 +1498,7 @@ MonoBehaviour:
   dirtIntensity:
     overrideState: 0
     value: 0
---- !u!114 &4896103682123245664
+--- !u!114 &5301446043783500260
 MonoBehaviour:
   m_ObjectHideFlags: 3
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1507,31 +1535,3 @@ MonoBehaviour:
   speedDown:
     overrideState: 0
     value: 1
---- !u!114 &8845548288488549599
-MonoBehaviour:
-  m_ObjectHideFlags: 3
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d65e486e4de6e5448a8fbb43dc8756a0, type: 3}
-  m_Name: Grain
-  m_EditorClassIdentifier: 
-  active: 1
-  enabled:
-    overrideState: 1
-    value: 0
-  colored:
-    overrideState: 0
-    value: 1
-  intensity:
-    overrideState: 1
-    value: 1
-  size:
-    overrideState: 1
-    value: 1.37
-  lumContrib:
-    overrideState: 0
-    value: 0.8
