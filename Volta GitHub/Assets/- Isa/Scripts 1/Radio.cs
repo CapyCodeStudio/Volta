@@ -6,7 +6,8 @@ public class Radio : MonoBehaviour
 {
     public AudioClip audioClip; 
     private AudioSource audioSource;
-    public GameObject luz;
+    public GameObject ligado;
+    public GameObject desligado;
 
     void Start()
     {
@@ -14,7 +15,7 @@ public class Radio : MonoBehaviour
         if (audioSource == null)
         {
             audioSource = gameObject.AddComponent<AudioSource>();
-            luz.SetActive(false);
+            ligado.SetActive(false);
         }
 
         audioSource.clip = audioClip;
@@ -30,13 +31,14 @@ public class Radio : MonoBehaviour
             {
                 
                 audioSource.PlayOneShot(audioClip);
-                luz.SetActive(true);
+                ligado.SetActive(true);
+                desligado.SetActive(false);
                 
             }
             else
             {
-                Debug.LogWarning("Nenhum áudio");
-                luz.SetActive(false);
+                Debug.LogWarning("Nenhum ï¿½udio");
+                ligado.SetActive(false);
             }
         }
     }

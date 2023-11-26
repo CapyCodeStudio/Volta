@@ -12,31 +12,12 @@ public class CameraP : MonoBehaviour
     public GameObject trigger;
     public GameObject mesh;
     public GameObject UICAVE;
-    public GameObject UITUTORIAL1;
     public GameObject VoyagerTERCEIRA;
     public GameObject VoyagerPRIMEIRA;
     public GameObject GravadorPRIMEIRA;
     public GameObject GravadorTERCIERA;
     public GameObject VoyagerChao;
     public GameObject GravadorChao;
-
-
-    private float tempoDeEspera = 2.0f;
-    private bool VoyagerChaoo;
-    private bool GravadorChaoo;
-
-    private void Start()
-    {
-        Invoke("AtivarUITutorial", tempoDeEspera);
-    }
-
-    private void AtivarUITutorial()
-    {
-        if (UITUTORIAL1 != null)
-        {
-            UITUTORIAL1.SetActive(true);
-        }
-    }
 
     private void Update()
     {

@@ -16,6 +16,7 @@ public class Trocar : MonoBehaviour
     public GameObject VoyagerTERCEIRA;
     public GameObject VoyagerChaoo;
     public GameObject GravadorChaoo;
+    public GameObject FALA2;
 
     private bool isFreeLookActive = true;
     public CameraP cameraP;
@@ -54,6 +55,7 @@ public class Trocar : MonoBehaviour
                     VoyagerChaoo.SetActive(false);
                     VoyagerTERCEIRA.SetActive(false);
                     VoyagerPRIMEIRA.SetActive(true);
+                    FALA2.SetActive(true);
                 }
             }
             else
