@@ -11,7 +11,7 @@ public enum IAStates
 
 public class Enemy : MonoBehaviour
 {
-    //public float interactionDistance = 5;
+    public GameObject telaMorte;
     IAStates states = IAStates.Wandering;
     NavMeshAgent agent;
     public Transform target;
@@ -63,9 +63,10 @@ public class Enemy : MonoBehaviour
                 break;
 
             case IAStates.Catch:
-
-                target.gameObject.SetActive(false);
-
+                //target.gameObject.SetActive(false);
+                telaMorte.SetActive(true);
+                Cursor.lockState = CursorLockMode.None;
+                Time.timeScale = 0;
                 break;
 
         }
