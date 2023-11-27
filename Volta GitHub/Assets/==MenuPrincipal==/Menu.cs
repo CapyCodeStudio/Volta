@@ -8,7 +8,7 @@ public class Menu : MonoBehaviour
     [SerializeField] private string cenaDoJogo;
     private void Start()
     {
-
+        Cursor.lockState = CursorLockMode.None;
     }
    
     public void Jogar()
