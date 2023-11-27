@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.UI;
- 
+using UnityEngine.SceneManagement;
+
 public enum IAStates
 {
     Chasing, Catch, Wandering
@@ -33,40 +34,27 @@ public class Enemy : MonoBehaviour
             case IAStates.Wandering:
                
                 if (Physics.Linecast(transform.position, target.position, out h))
-
                 {
 
                     if (h.collider.CompareTag("Player"))
-
                     {
-
                         states = IAStates.Chasing;
-
                     }
-
                 }
-
                 break;
-
             case IAStates.Chasing:
-
                 agent.SetDestination(target.position);
-
                 if (agent.remainingDistance <= agent.stoppingDistance && agent.hasPath)
-
                 {
-
                     states = IAStates.Catch;
-
+                    
                 }
-
                 break;
-
             case IAStates.Catch:
-                //target.gameObject.SetActive(false);
-                telaMorte.SetActive(true);
-                Cursor.lockState = CursorLockMode.None;
-                Time.timeScale = 0;
+                if (h.collider.CompareTag("Player"))
+                {
+                    SceneManager.LoadScene("Perdeu");
+                }    
                 break;
 
         }

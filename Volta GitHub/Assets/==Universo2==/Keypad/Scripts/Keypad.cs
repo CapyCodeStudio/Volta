@@ -44,6 +44,8 @@ namespace NavKeypad
         private bool displayingResult = false;
         private bool accessWasGranted = false;
 
+        public GameObject portaAnimation;
+
         private void Awake()
         {
             ClearInput();
@@ -112,6 +114,7 @@ namespace NavKeypad
             onAccessDenied?.Invoke();
             panelMesh.material.SetVector("_EmissionColor", screenDeniedColor * screenIntensity);
             audioSource.PlayOneShot(accessDeniedSfx);
+            portaAnimation.SetActive(false);
         }
 
         private void ClearInput()
@@ -127,6 +130,7 @@ namespace NavKeypad
             onAccessGranted?.Invoke();
             panelMesh.material.SetVector("_EmissionColor", screenGrantedColor * screenIntensity);
             audioSource.PlayOneShot(accessGrantedSfx);
+            portaAnimation.SetActive(true);
             StartCoroutine(LoadSceneAfterDelay());
         }
         IEnumerator LoadSceneAfterDelay()
