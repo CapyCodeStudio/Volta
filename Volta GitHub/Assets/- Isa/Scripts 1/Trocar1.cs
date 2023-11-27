@@ -14,7 +14,8 @@ public class Trocar1 : MonoBehaviour
     public GameObject luzPRIMEIRA;
     public GameObject VoyagerPRIMEIRA;
     public GameObject VoyagerTERCEIRA;
-   
+    public CameraP2 cameraP2;
+
     private bool isFreeLookActive = true;
 
     private void Start()
@@ -26,7 +27,7 @@ public class Trocar1 : MonoBehaviour
     private void Update()
     {
 
-        if (Input.GetButtonDown("C"))
+        if (Input.GetButtonDown("C") && cameraP2.tocando == false)
         {
             if (isFreeLookActive)
             {
