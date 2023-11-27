@@ -9,7 +9,7 @@ public class LegendasUniverso1 : MonoBehaviour
     private float tempoDeEsperaAtivarF1 = 1.5f;
     private float tempoDeEsperaDesativarF1 = 3.0f;
     private float tempoDeEsperaAtivarF2 = 5.5f;
-    private float tempoDeEsperaDesativarF2 = 6.5f;
+    private float tempoDeEsperaDesativarF2 = 2.0f;
 
     private void Start()
     {
