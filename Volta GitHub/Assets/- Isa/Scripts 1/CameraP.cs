@@ -19,10 +19,6 @@ public class CameraP : MonoBehaviour
     public GameObject VoyagerChao;
     public GameObject GravadorChao;
 
-    private void Update()
-    {
-
-    }
     public void OnTriggerEnter(Collider collision)
     {
         if (collision.gameObject.CompareTag("Player"))

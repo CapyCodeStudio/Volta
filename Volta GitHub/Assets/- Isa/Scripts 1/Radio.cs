@@ -16,6 +16,7 @@ public class Radio : MonoBehaviour
         {
             audioSource = gameObject.AddComponent<AudioSource>();
             ligado.SetActive(false);
+            desligado.SetActive(true);
         }
 
         audioSource.clip = audioClip;
@@ -37,12 +38,15 @@ public class Radio : MonoBehaviour
             }
             else
             {
-                Debug.LogWarning("Nenhum �udio");
+                Debug.LogWarning("Nenhum audio");
                 ligado.SetActive(false);
+                desligado.SetActive(true);
             }
         }
     }
 }
+
+
 
 
 
