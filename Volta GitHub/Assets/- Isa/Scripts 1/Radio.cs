@@ -36,12 +36,11 @@ public class Radio : MonoBehaviour
                 desligado.SetActive(false);
                 
             }
-            else
-            {
-                Debug.LogWarning("Nenhum audio");
-                ligado.SetActive(false);
-                desligado.SetActive(true);
-            }
+        }
+        if (!audioSource.isPlaying)
+        {
+            ligado.SetActive(false);
+            desligado.SetActive(true);
         }
     }
 }
