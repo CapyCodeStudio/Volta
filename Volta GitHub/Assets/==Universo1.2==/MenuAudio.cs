@@ -9,6 +9,7 @@ public class MenuAudio : MonoBehaviour
     [SerializeField] private AudioMixer mixer;
     [SerializeField] private Slider musicaSlider;
     [SerializeField] private Slider efeitosSlider;
+    [SerializeField] private Slider ambienteSlider;
 
     public void Start()
     {
@@ -20,6 +21,8 @@ public class MenuAudio : MonoBehaviour
         {
             SetVolumeMusica();
             SetVolumeEfeitos();
+            SetVolumeAmbiente();
+
         }
 
     }
@@ -29,7 +32,6 @@ public class MenuAudio : MonoBehaviour
         mixer.SetFloat("musica", Mathf.Log10(volume) * 20);
         PlayerPrefs.SetFloat("volumeMusica", volume);
     }
-
     public void SetVolumeEfeitos()
     {
         float volume = efeitosSlider.value;
@@ -37,13 +39,22 @@ public class MenuAudio : MonoBehaviour
         PlayerPrefs.SetFloat("volumeEfeitos", volume);
     }
 
+    public void SetVolumeAmbiente()
+    {
+        float volume = ambienteSlider.value;
+        mixer.SetFloat("ambiente", Mathf.Log10(volume) * 20);
+        PlayerPrefs.SetFloat("volumeAmbiente", volume);
+    }
+
     public void LoadVolume()
     {
-        musicaSlider.value = PlayerPrefs.GetFloat("volumeMusica");
+        musicaSlider.value = PlayerPrefs.GetFloat("volumeMusica");       
         efeitosSlider.value = PlayerPrefs.GetFloat("volumeEfeitos");
+        ambienteSlider.value = PlayerPrefs.GetFloat("volumeAmbiente");
 
         SetVolumeMusica();
         SetVolumeEfeitos();
+        SetVolumeAmbiente();
     }
 
 
