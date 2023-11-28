@@ -18,6 +18,7 @@ public class CameraP : MonoBehaviour
     public GameObject GravadorTERCIERA;
     public GameObject VoyagerChao;
     public GameObject GravadorChao;
+    public GameObject GravadorPrimeira2;
 
     public void OnTriggerEnter(Collider collision)
     {
@@ -60,6 +61,7 @@ public class CameraP : MonoBehaviour
             VoyagerTERCEIRA.SetActive(true);
             VoyagerPRIMEIRA.SetActive(false);
             GravadorPRIMEIRA.SetActive(false);
+            GravadorPrimeira2.SetActive(false);
         }
     }
 }

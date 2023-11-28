@@ -7,6 +7,7 @@ using System;
 public class GravacaoUniverso1 : MonoBehaviour
 {
     public TextMeshProUGUI dialogText;
+    public GameObject collider, gravador, gravador2;
     private string[] sentences; // Uma matriz de frases do di�logo
     private int currentSentenceIndex = 0; // �ndice da frase atual
     public float displayTimePerCharacter = 0.002f; // Tempo para exibir cada caractere
@@ -33,7 +34,7 @@ public class GravacaoUniverso1 : MonoBehaviour
 
         // Inicie o di�logo
         StartCoroutine(StartDialog());
-        
+
     }
 
     private IEnumerator StartDialog()
@@ -58,7 +59,9 @@ public class GravacaoUniverso1 : MonoBehaviour
         }
         else
         {
-            // Fim do di�logo, voc� pode adicionar a l�gica desejada aqui
+            collider.SetActive(false);
+            gravador.SetActive(false);
+            gravador2.SetActive(true);
             Debug.Log("Fim do di�logo");
         }
     }
