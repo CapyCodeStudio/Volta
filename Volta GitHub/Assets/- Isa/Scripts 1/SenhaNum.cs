@@ -5,11 +5,11 @@ using UnityEngine.SceneManagement;
 
 public class SenhaNum : MonoBehaviour
 {
-    //[SerializeField] public GameObject ouvirMensagem;
     public bool tocando;
     public Camera main1;
     public Camera main2;
     public GameObject voltar;
+    public GameObject mensagem;
 
     public void OnTriggerStay(Collider collision)
     {
@@ -23,6 +23,7 @@ public class SenhaNum : MonoBehaviour
                 main1.gameObject.SetActive(false);
                 main2.gameObject.SetActive(true);
                 voltar.SetActive(true);
+                mensagem.SetActive(false);
                 
 
             }
@@ -37,7 +38,8 @@ public class SenhaNum : MonoBehaviour
             main1.gameObject.SetActive(true);
             main2.gameObject.SetActive(false);
             voltar.SetActive(false);
-            
+            mensagem.SetActive(true);
+
 
         }
     }
