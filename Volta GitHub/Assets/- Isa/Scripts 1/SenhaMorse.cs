@@ -5,21 +5,20 @@ using UnityEngine.SceneManagement;
 
 public class SenhaMorse : MonoBehaviour
 {
-    //[SerializeField] public GameObject ouvirMensagem;
     public bool tocando;
-    public void Update()
+   /* public void Update()
     {
         if (tocando)
         {
 
-            // ouvirMensagem.SetActive(true);
+            
         }
         else
         {
-           //ouvirMensagem.SetActive(false);
+           
         }
-    }
-    public void OnTriggerEnter(Collider collision)
+    }*/
+    public void OnTriggerStay(Collider collision)
     {
         if (collision.gameObject.CompareTag("Player"))
         {
