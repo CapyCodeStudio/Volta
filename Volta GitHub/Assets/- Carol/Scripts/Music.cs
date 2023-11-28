@@ -1,13 +1,15 @@
-/*using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class SoundManager : MonoBehaviour
+public class Music : MonoBehaviour
 {
     [SerializeField] Slider musicSlider;
-    // Start is called before the first frame update
+
+
+
     void Start()
     {
         if (!PlayerPrefs.HasKey("musicVolume"))
@@ -18,8 +20,6 @@ public class SoundManager : MonoBehaviour
         {
             Load();
         }
-
-        musicSlider.value = Staticos.volume;
 
     }
 
@@ -40,11 +40,4 @@ public class SoundManager : MonoBehaviour
     {
         PlayerPrefs.SetFloat("musicVolume", musicSlider.value);
     }
-
-    private void Update()
-    {
-        Staticos.volume = musicSlider.value;
-        AudioSource.volume = Staticos.volume;
-    }
 }
-*/

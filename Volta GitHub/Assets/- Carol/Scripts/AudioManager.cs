@@ -1,4 +1,4 @@
-using JetBrains.Annotations;
+/*using JetBrains.Annotations;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -57,7 +57,7 @@ public class AudioManager : MonoBehaviour
 
     private void OnApplicationFocus(bool inFocus)
     {
-        if(!inFocus)
+        if (!inFocus)
         {
             SaveSoundSettings();
         }
@@ -67,7 +67,7 @@ public class AudioManager : MonoBehaviour
     {
         musicAudio.volume = musicSlider.value;
 
-        for(int i = 0; 1< soundEffectsAudio.Length; i++)
+        for (int i = 0; 1 < soundEffectsAudio.Length; i++)
         {
             soundEffectsAudio[i].volume = sondEffectsSlider.value;
         }
@@ -82,3 +82,4 @@ public class AudioManager : MonoBehaviour
 
 
 }
+*/
