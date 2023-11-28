@@ -13,6 +13,10 @@ public class Keypad2 : MonoBehaviour
     public GameObject clear;
     public GameObject enter;
 
+    public void Start()
+    {
+       Cursor.lockState = CursorLockMode.None;
+    }
     public void b1()
     {
         tela.text = tela.text + ".";

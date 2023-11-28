@@ -6,18 +6,7 @@ using UnityEngine.SceneManagement;
 public class SenhaMorse : MonoBehaviour
 {
     public bool tocando;
-   /* public void Update()
-    {
-        if (tocando)
-        {
 
-            
-        }
-        else
-        {
-           
-        }
-    }*/
     public void OnTriggerStay(Collider collision)
     {
         if (collision.gameObject.CompareTag("Player"))
