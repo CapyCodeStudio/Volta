@@ -7,7 +7,7 @@ using System;
 public class GravacaoUniverso1 : MonoBehaviour
 {
     public TextMeshProUGUI dialogText;
-    public GameObject collider, gravador, gravador2;
+    public GameObject collider, gravador, gravador2, porta;
     private string[] sentences; // Uma matriz de frases do di�logo
     private int currentSentenceIndex = 0; // �ndice da frase atual
     public float displayTimePerCharacter = 0.002f; // Tempo para exibir cada caractere
@@ -62,6 +62,7 @@ public class GravacaoUniverso1 : MonoBehaviour
             collider.SetActive(false);
             gravador.SetActive(false);
             gravador2.SetActive(true);
+            porta.SetActive(true);
             Debug.Log("Fim do di�logo");
         }
     }
