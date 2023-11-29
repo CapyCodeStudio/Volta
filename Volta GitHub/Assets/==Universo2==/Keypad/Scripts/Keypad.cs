@@ -46,6 +46,7 @@ namespace NavKeypad
 
         public GameObject portaAberta;
         public GameObject portaFechada;
+        public GameObject fade;
 
         private void Awake()
         {
@@ -134,6 +135,7 @@ namespace NavKeypad
             audioSource.PlayOneShot(accessGrantedSfx);
             portaAberta.SetActive(true);
             portaFechada.SetActive(false);
+            fade.SetActive(true);
             StartCoroutine(LoadSceneAfterDelay());
         }
         IEnumerator LoadSceneAfterDelay()
