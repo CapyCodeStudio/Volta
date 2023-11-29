@@ -12,14 +12,12 @@ public class GravadorTocaFitas : MonoBehaviour
     public GameObject chao;
     public GameObject porta;
     public GameObject portaAnimation;
-   
+ 
     private void Update()
     {
-        print("AAAAAAA");
         if (tocando && cara.activeSelf == false)
         {
             e.SetActive(true);
-            print("tocou true");
             if (Input.GetButtonDown("E"))
             {
                 if (cara.activeSelf)
@@ -32,7 +30,6 @@ public class GravadorTocaFitas : MonoBehaviour
                 }
                 else
                 {
-                    print("aperto o botao");
                     cara.SetActive(true);
                     chao.SetActive(false);
                     e.SetActive(false);
@@ -77,7 +74,6 @@ public class GravadorTocaFitas : MonoBehaviour
 
         }
     }
-
 
 
 
