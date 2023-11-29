@@ -22,7 +22,7 @@ public class Voyager : MonoBehaviour
                 if (cara.activeSelf)
                 {
                     cara.SetActive(false);
-                    chao.SetActive(true);
+                    chao.SetActive(false);
                     e.SetActive(false);
                    
 
