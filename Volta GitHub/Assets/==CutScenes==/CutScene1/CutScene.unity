@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 465980232}
-  m_IndirectSpecularColor: {r: 0.0011347191, g: 0.009221527, b: 0.052683875, a: 1}
+  m_IndirectSpecularColor: {r: 0.0011347184, g: 0.009221489, b: 0.052683868, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -5291,7 +5291,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: -179.906}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -6032,7 +6032,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0.144, y: -91.747, z: 0.236}
 --- !u!114 &310730168
 MonoBehaviour:
@@ -6160,7 +6160,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b9a305e18de0c04dbd257a21cd47087, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sharedProfile: {fileID: 11400000, guid: 90c51d3e7937ac14db3d36f9972ccda5, type: 2}
+  sharedProfile: {fileID: 11400000, guid: af0948a9ae893c44fac908cdfde17cb4, type: 2}
   isGlobal: 1
   blendDistance: 0
   weight: 1
@@ -6392,7 +6392,7 @@ MonoBehaviour:
   m_text: "N\xE3o \xE9 seguro. "
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: f525131ca2dc5324281249244ce6ed2a, type: 2}
-  m_sharedMaterial: {fileID: 1640095819935906385, guid: 26d4a3854f3c8a74fb028f7c4c1cbbe8, type: 2}
+  m_sharedMaterial: {fileID: 1640095819935906385, guid: f525131ca2dc5324281249244ce6ed2a, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -6739,7 +6739,7 @@ RectTransform:
   - {fileID: 1567078167}
   - {fileID: 1862996907}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -6973,7 +6973,7 @@ MonoBehaviour:
   m_text: "Preciso da sua ajuda. N\xE3o demore por favor."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: f525131ca2dc5324281249244ce6ed2a, type: 2}
-  m_sharedMaterial: {fileID: 1640095819935906385, guid: 26d4a3854f3c8a74fb028f7c4c1cbbe8, type: 2}
+  m_sharedMaterial: {fileID: 1640095819935906385, guid: f525131ca2dc5324281249244ce6ed2a, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -8005,7 +8005,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &401651479
 GameObject:
@@ -8073,7 +8073,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &417352026
 GameObject:
@@ -8958,8 +8958,8 @@ Light:
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
   m_Shadows:
-    m_Type: 1
-    m_Resolution: 1
+    m_Type: 2
+    m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
     m_Bias: 0
@@ -9010,11 +9010,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 465980231}
   m_LocalRotation: {x: 0.6964775, y: 0.5789996, z: -0.346561, w: 0.24407811}
-  m_LocalPosition: {x: 716, y: 1368, z: 7728.9995}
+  m_LocalPosition: {x: 707.5918, y: 1360.6461, z: 8380.804}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1418495498}
+  m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 47.843, y: 557.346, z: 468.267}
 --- !u!1 &466821278
@@ -9591,7 +9591,7 @@ MonoBehaviour:
   m_text: Eu sei que parece loucura...
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: f525131ca2dc5324281249244ce6ed2a, type: 2}
-  m_sharedMaterial: {fileID: 1640095819935906385, guid: 26d4a3854f3c8a74fb028f7c4c1cbbe8, type: 2}
+  m_sharedMaterial: {fileID: 1640095819935906385, guid: f525131ca2dc5324281249244ce6ed2a, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -10580,7 +10580,7 @@ RectTransform:
   - {fileID: 467104771}
   - {fileID: 1396621734}
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -12395,7 +12395,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1418495498}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
 --- !u!108 &609853602
 Light:
@@ -21172,7 +21172,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1418495498}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: -206.315, z: 0}
 --- !u!108 &1046857120
 Light:
@@ -21414,7 +21414,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1418495498}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: -6.692, z: 0}
 --- !u!1 &1066153591
 GameObject:
@@ -22909,7 +22909,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1418495498}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 114.132996, y: -370.38098, z: -187.095}
 --- !u!108 &1142331548
 Light:
@@ -24899,7 +24899,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1418495498}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 77.983, y: 80.901, z: 77.983}
 --- !u!1 &1192256057
 GameObject:
@@ -25193,7 +25193,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1204694770
 GameObject:
@@ -26329,7 +26329,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1418495498}
-  m_RootOrder: 9
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: -39.686, y: -19.769, z: -8.082}
 --- !u!108 &1255501591
 Light:
@@ -30725,7 +30725,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 465980233}
   - {fileID: 1054455456}
   - {fileID: 1190906102}
   - {fileID: 2081243900}
@@ -32292,7 +32291,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1418495498}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &1486685367
 Animator:
@@ -33039,7 +33038,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1418495498}
-  m_RootOrder: 10
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -79.36}
 --- !u!135 &1509581950
 SphereCollider:
@@ -33434,7 +33433,7 @@ MonoBehaviour:
   m_text: "Mas, Cron\xF3pio, voc\xEA n\xE3o pode mais ficar a\xED."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: f525131ca2dc5324281249244ce6ed2a, type: 2}
-  m_sharedMaterial: {fileID: 1640095819935906385, guid: 26d4a3854f3c8a74fb028f7c4c1cbbe8, type: 2}
+  m_sharedMaterial: {fileID: 1640095819935906385, guid: f525131ca2dc5324281249244ce6ed2a, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -35897,7 +35896,7 @@ Transform:
   - {fileID: 893400251}
   - {fileID: 1418495498}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1645386584
 GameObject:
@@ -36465,7 +36464,7 @@ Transform:
   - {fileID: 1789544995}
   - {fileID: 504215007}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1703105094
 GameObject:
@@ -37133,7 +37132,7 @@ MonoBehaviour:
   m_text: "[R\xC1DIO] Ou\xE7a com aten\xE7\xE3o..."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: f525131ca2dc5324281249244ce6ed2a, type: 2}
-  m_sharedMaterial: {fileID: 1640095819935906385, guid: 26d4a3854f3c8a74fb028f7c4c1cbbe8, type: 2}
+  m_sharedMaterial: {fileID: 1640095819935906385, guid: f525131ca2dc5324281249244ce6ed2a, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -40002,7 +40001,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1418495498}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &1901843900
 Animator:
@@ -40282,7 +40281,7 @@ Transform:
   m_Children:
   - {fileID: 1184257794}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1914825946
 GameObject:
@@ -42137,7 +42136,7 @@ Transform:
   - {fileID: 1143840853486420367}
   - {fileID: 646846825}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2033276567
 GameObject:
@@ -43143,7 +43142,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1418495498}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 61.668, y: -33.751, z: -338.378}
 --- !u!1 &2082363493
 GameObject:
@@ -50178,7 +50177,7 @@ Transform:
   - {fileID: 6402780876680970021}
   - {fileID: 7745965732800286199}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 90, y: -90, z: 90}
 --- !u!95 &1964770029610118232
 Animator:
@@ -60001,7 +60000,7 @@ Transform:
   - {fileID: 4129792704139170662}
   - {fileID: 5558823377457447860}
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &5047912793716933139
 GameObject:
@@ -61713,7 +61712,7 @@ Transform:
   m_Children:
   - {fileID: 5904784241035062403}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 2, y: 0, z: 2}
 --- !u!95 &5588651266486966921
 Animator:
