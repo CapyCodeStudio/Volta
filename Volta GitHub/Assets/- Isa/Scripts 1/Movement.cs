@@ -102,16 +102,7 @@ public class Movement : MonoBehaviour
                 animator.SetBool("Jump", false);
             }
         }
-        /* if (Input.GetButton("Fire2") && Input.GetButton("Vertical") || Input.GetButton("Fire2") && Input.GetButton("Horizontal"))
-         {
-
-             animator.SetBool("Walk", false);
-             animator.SetBool("Crouch Walk", true);
-         }
-         else
-         {
-             animator.SetBool("Crouch Walk", false);
-         }     */
+       
     }
 
 

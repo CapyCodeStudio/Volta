@@ -31,7 +31,7 @@ public class Keypad2 : MonoBehaviour
     }
     public void enterEvent()
     {
-        if (tela.text == ".--...--")
+        if (tela.text == ".--..--")
         {
             tela.text = "CORRETO";
             
