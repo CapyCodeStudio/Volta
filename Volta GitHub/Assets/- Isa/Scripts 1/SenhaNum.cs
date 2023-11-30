@@ -10,6 +10,7 @@ public class SenhaNum : MonoBehaviour
     public Camera main2;
     public GameObject voltar;
     public GameObject mensagem;
+    public GameObject mesh;
 
     public void OnTriggerStay(Collider collision)
     {
@@ -24,6 +25,7 @@ public class SenhaNum : MonoBehaviour
                 main2.gameObject.SetActive(true);
                 voltar.SetActive(true);
                 mensagem.SetActive(false);
+                mesh.SetActive(false);
                 
 
             }
@@ -39,6 +41,7 @@ public class SenhaNum : MonoBehaviour
             main2.gameObject.SetActive(false);
             voltar.SetActive(false);
             mensagem.SetActive(true);
+            mesh.SetActive(true);
 
 
         }
