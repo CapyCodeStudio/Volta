@@ -15,7 +15,7 @@ RenderSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 9
   m_Fog: 1
-  m_FogColor: {r: 0, g: 0, b: 0, a: 1}
+  m_FogColor: {r: 0, g: 0, b: 0.6509804, a: 1}
   m_FogMode: 3
   m_FogDensity: 0.005
   m_LinearFogStart: 0
@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0, g: 0.004977111, b: 0.08843219, a: 1}
+  m_IndirectSpecularColor: {r: 0, g: 0.005014113, b: 0.08865024, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -13539,7 +13539,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &236915889
 RectTransform:
   m_ObjectHideFlags: 0
@@ -22209,7 +22209,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &423535478
 RectTransform:
   m_ObjectHideFlags: 0
@@ -26780,7 +26780,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b9a305e18de0c04dbd257a21cd47087, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sharedProfile: {fileID: 11400000, guid: c2c20ef4c3e589a46937f851201000c7, type: 2}
+  sharedProfile: {fileID: 11400000, guid: 1183378706c30ee4b8aca0caa66b2129, type: 2}
   isGlobal: 1
   blendDistance: 0
   weight: 1
@@ -40972,7 +40972,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &841059082
 RectTransform:
   m_ObjectHideFlags: 0
@@ -42265,7 +42265,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: df0e67621dc22314b8b39c8918d001b6, type: 2}
+  - {fileID: 2100000, guid: 6618daa0ff0f047498dafd36814cad52, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -70060,7 +70060,7 @@ Light:
   serializedVersion: 10
   m_Type: 1
   m_Shape: 0
-  m_Color: {r: 0.9716981, g: 0.9716981, b: 0.9716981, a: 1}
+  m_Color: {r: 0, g: 0.5004747, b: 1, a: 1}
   m_Intensity: 0.75
   m_Range: 10
   m_SpotAngle: 30
@@ -70068,7 +70068,7 @@ Light:
   m_CookieSize: 10
   m_Shadows:
     m_Type: 1
-    m_Resolution: 3
+    m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 0.717
     m_Bias: 0.05
@@ -70118,14 +70118,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1401091715}
-  m_LocalRotation: {x: -0.677373, y: 0.17090023, z: -0.08801773, w: -0.71007884}
-  m_LocalPosition: {x: 0, y: 3, z: 0}
+  m_LocalRotation: {x: 0.7247372, y: 0.035689432, z: -0.6873588, w: 0.031938132}
+  m_LocalPosition: {x: -78, y: 84, z: 3413}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 82.775, y: 280.964, z: -57.895}
+  m_LocalEulerAnglesHint: {x: 174.528, y: 86.946, z: -0.4500122}
 --- !u!1 &1404868984
 GameObject:
   m_ObjectHideFlags: 0
@@ -81942,9 +81942,9 @@ Light:
   m_Type: 0
   m_Shape: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 1
-  m_Range: 10
-  m_SpotAngle: 30
+  m_Intensity: 0.13
+  m_Range: 10.995545
+  m_SpotAngle: 71.56946
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
   m_Shadows:
@@ -102927,6 +102927,7 @@ GameObject:
   - component: {fileID: 2004965990}
   - component: {fileID: 2004965992}
   - component: {fileID: 2004965991}
+  - component: {fileID: 2004965995}
   m_Layer: 0
   m_Name: Camera2
   m_TagString: Untagged
@@ -103108,6 +103109,23 @@ RectTransform:
   m_AnchoredPosition: {x: 756, y: 479}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &2004965995
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2004965985}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b9a305e18de0c04dbd257a21cd47087, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sharedProfile: {fileID: 11400000, guid: 1183378706c30ee4b8aca0caa66b2129, type: 2}
+  isGlobal: 1
+  blendDistance: 0
+  weight: 1
+  priority: 0
 --- !u!1 &2006046289
 GameObject:
   m_ObjectHideFlags: 0
