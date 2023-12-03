@@ -27,7 +27,7 @@ public class Menu : MonoBehaviour
     }
     IEnumerator LoadScene()
     {
-        yield return new WaitForSeconds(3);
+        yield return new WaitForSeconds(2);
         SceneManager.LoadScene(cenaDoJogo);
     }
    
