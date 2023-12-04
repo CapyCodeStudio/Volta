@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0, g: 0.005014113, b: 0.08865024, a: 1}
+  m_IndirectSpecularColor: {r: 0, g: 0.004991242, b: 0.08853432, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -19757,7 +19757,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 353703893}
-  - component: {fileID: 353703892}
+  - component: {fileID: 353703894}
   m_Layer: 0
   m_Name: CodigoPause (2)
   m_TagString: Untagged
@@ -19765,21 +19765,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &353703892
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 353703891}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dfb25c2c94eb9314da183b8d2c5ff1b9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  menuPause: {fileID: 558238821}
-  menuControles: {fileID: 1274455058}
-  menuAudio: {fileID: 1245595328}
 --- !u!4 &353703893
 Transform:
   m_ObjectHideFlags: 0
@@ -19795,6 +19780,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &353703894
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 353703891}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cdc63cf12f52b9943b13f3377ded8bdc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  menuPause: {fileID: 558238821}
+  menuControles: {fileID: 1274455058}
+  menuAudio: {fileID: 1245595328}
 --- !u!1 &355037652
 GameObject:
   m_ObjectHideFlags: 0

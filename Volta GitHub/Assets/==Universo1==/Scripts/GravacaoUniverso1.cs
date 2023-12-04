@@ -23,7 +23,7 @@ public class GravacaoUniverso1 : MonoBehaviour
           "Estou preso em uma prisão interdimensional e ainda não encontrei uma maneira de escapar. Perdi a noção do tempo desde que cheguei aqui - semanas, meses, anos... Certamente, você notou um objeto estranho que emite luz forte, a Voyager. Ela nos leva a diferentes realidades. O núcleo cria um portal no espaço-tempo, enquanto o painel localiza universos por meio de códigos específicos.\r\n\r\n",
           "Eu também tenho uma Voyager, mas algo grave aconteceu, e não estou com ela no momento. Explicarei melhor quando nos encontrarmos. A resposta sobre o que fazer é complexa, mas sem você, não consigo resolver. Precisamos juntos recuperar minha Voyager através da sua.",
           "Caso eu não esteja mais aqui, continue buscando. Não me afastarei muito, a menos que algo inesperado ocorra. Encontrei uma caverna alguns metros daqui. Se não estiver aqui, estarei lá. Boa sorte!",
-          "Desligo"
+          "Desligo."
 
         };
 

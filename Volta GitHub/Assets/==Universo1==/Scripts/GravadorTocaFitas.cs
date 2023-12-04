@@ -59,8 +59,8 @@ public class GravadorTocaFitas : MonoBehaviour
         {
             tocando = true;
             Cursor.lockState = CursorLockMode.Locked;
-            
- 
+
+
 
         }
 
